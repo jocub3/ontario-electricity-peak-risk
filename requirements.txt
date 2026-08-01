@@ -1,0 +1,32 @@
+# Core data analysis
+pandas>=2.2,<3.0
+numpy>=1.26,<3.0
+pyarrow>=16,<22
+
+# Visualization
+matplotlib>=3.8,<4.0
+plotly>=5.22,<7.0
+
+# Machine learning
+scikit-learn>=1.5,<2.0
+xgboost>=2.1,<4.0
+lightgbm>=4.5,<5.0
+
+# Time-series forecasting
+statsmodels>=0.14,<1.0
+prophet>=1.1,<2.0
+
+# Explainability
+shap>=0.46,<1.0
+
+# Data access and configuration
+requests>=2.32,<3.0
+python-dotenv>=1.0,<2.0
+PyYAML>=6.0,<7.0
+holidays>=0.53,<1.0
+
+# Notebooks and quality
+jupyterlab>=4.2,<5.0
+pytest>=8.2,<9.0
+black>=24.4,<26.0
+ruff>=0.5,<1.0
