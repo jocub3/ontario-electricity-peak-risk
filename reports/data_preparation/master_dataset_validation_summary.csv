@@ -1,0 +1,2 @@
+﻿rows,columns,unique_fsas,minimum_timestamp,maximum_timestamp,duplicate_fsa_timestamp_rows,rows_without_calendar,rows_missing_all_core_weather,missing_consumption,negative_consumption
+262944,71,6,2021-01-01,2025-12-31 23:00:00,0,0,141,0,0

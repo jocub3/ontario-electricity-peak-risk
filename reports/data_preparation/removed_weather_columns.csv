@@ -1,0 +1,9 @@
+﻿column,reason,missing_pct
+Flag,100% missing across the combined 2021-2025 weather dataset,100.0
+Temp Flag,100% missing across the combined 2021-2025 weather dataset,100.0
+Precip. Amount Flag,100% missing across the combined 2021-2025 weather dataset,100.0
+Wind Dir Flag,100% missing across the combined 2021-2025 weather dataset,100.0
+Wind Spd Flag,100% missing across the combined 2021-2025 weather dataset,100.0
+Stn Press Flag,100% missing across the combined 2021-2025 weather dataset,100.0
+Hmdx Flag,100% missing across the combined 2021-2025 weather dataset,100.0
+Wind Chill Flag,100% missing across the combined 2021-2025 weather dataset,100.0
