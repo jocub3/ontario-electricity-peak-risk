@@ -1,0 +1,4 @@
+﻿dataset,rows,columns,memory_mb,exact_duplicate_rows,minimum_timestamp,maximum_timestamp,missing_timestamp_rows,source_file_count
+consumption,1046461,11,411.566,0,2021-01-01,2025-12-31 23:00:00,0,6
+weather,87648,33,58.892,0,2021-01-01,2025-12-31 23:00:00,0,2
+calendar,43824,45,31.956,0,2021-01-01,2025-12-31 23:00:00,0,1

@@ -1,0 +1,489 @@
+﻿dataset,column,value,count,pct
+consumption,FSA,L4T,215697,20.612
+consumption,FSA,M9W,212492,20.3058
+consumption,FSA,M9R,209729,20.0417
+consumption,FSA,M6G,203915,19.4862
+consumption,FSA,M5S,103032,9.8458
+consumption,FSA,M5R,101596,9.7085
+consumption,HOUR,14,43816,4.1871
+consumption,HOUR,15,43794,4.185
+consumption,HOUR,16,43785,4.1841
+consumption,HOUR,13,43781,4.1837
+consumption,HOUR,24,43741,4.1799
+consumption,HOUR,17,43728,4.1787
+consumption,HOUR,12,43712,4.1771
+consumption,HOUR,1,43711,4.177
+consumption,HOUR,23,43673,4.1734
+consumption,HOUR,11,43669,4.173
+consumption,HOUR,18,43634,4.1697
+consumption,HOUR,19,43605,4.1669
+consumption,HOUR,10,43595,4.1659
+consumption,HOUR,22,43592,4.1657
+consumption,HOUR,2,43538,4.1605
+consumption,HOUR,8,43500,4.1569
+consumption,HOUR,9,43493,4.1562
+consumption,HOUR,21,43478,4.1548
+consumption,HOUR,20,43472,4.1542
+consumption,HOUR,4,43457,4.1528
+consumption,HOUR,5,43451,4.1522
+consumption,HOUR,7,43419,4.1491
+consumption,HOUR,3,43415,4.1487
+consumption,HOUR,6,43402,4.1475
+consumption,CUSTOMER_TYPE,Residential,739613,70.6776
+consumption,CUSTOMER_TYPE,SGS <50kW,306848,29.3224
+consumption,PRICE_PLAN,TOU,439401,41.9892
+consumption,PRICE_PLAN,Tiered,342959,32.7732
+consumption,PRICE_PLAN,Retailer,209543,20.024
+consumption,PRICE_PLAN,ULO,54558,5.2136
+weather,Longitude (x),-79.4,43824,50.0
+weather,Longitude (x),-79.63,43824,50.0
+weather,Latitude (y),43.67,43824,50.0
+weather,Latitude (y),43.68,43824,50.0
+weather,Station Name,TORONTO CITY,43824,50.0
+weather,Station Name,TORONTO INTL A,43824,50.0
+weather,Climate ID,6158355,43824,50.0
+weather,Climate ID,6158731,43824,50.0
+weather,Year,2024,17568,20.0438
+weather,Year,2021,17520,19.989
+weather,Year,2022,17520,19.989
+weather,Year,2023,17520,19.989
+weather,Year,2025,17520,19.989
+weather,Month,1,7440,8.4885
+weather,Month,3,7440,8.4885
+weather,Month,7,7440,8.4885
+weather,Month,5,7440,8.4885
+weather,Month,12,7440,8.4885
+weather,Month,10,7440,8.4885
+weather,Month,8,7440,8.4885
+weather,Month,4,7200,8.2147
+weather,Month,9,7200,8.2147
+weather,Month,6,7200,8.2147
+weather,Month,11,7200,8.2147
+weather,Month,2,6768,7.7218
+weather,Day,1,2880,3.2859
+weather,Day,2,2880,3.2859
+weather,Day,3,2880,3.2859
+weather,Day,4,2880,3.2859
+weather,Day,5,2880,3.2859
+weather,Day,6,2880,3.2859
+weather,Day,7,2880,3.2859
+weather,Day,8,2880,3.2859
+weather,Day,9,2880,3.2859
+weather,Day,10,2880,3.2859
+weather,Day,11,2880,3.2859
+weather,Day,12,2880,3.2859
+weather,Day,13,2880,3.2859
+weather,Day,14,2880,3.2859
+weather,Day,15,2880,3.2859
+weather,Day,16,2880,3.2859
+weather,Day,17,2880,3.2859
+weather,Day,18,2880,3.2859
+weather,Day,19,2880,3.2859
+weather,Day,20,2880,3.2859
+weather,Day,21,2880,3.2859
+weather,Day,22,2880,3.2859
+weather,Day,23,2880,3.2859
+weather,Day,24,2880,3.2859
+weather,Day,25,2880,3.2859
+weather,Day,26,2880,3.2859
+weather,Day,27,2880,3.2859
+weather,Day,28,2880,3.2859
+weather,Day,29,2688,3.0668
+weather,Day,30,2640,3.012
+weather,Day,31,1680,1.9168
+weather,Time (LST),00:00,3652,4.1667
+weather,Time (LST),01:00,3652,4.1667
+weather,Time (LST),02:00,3652,4.1667
+weather,Time (LST),03:00,3652,4.1667
+weather,Time (LST),04:00,3652,4.1667
+weather,Time (LST),05:00,3652,4.1667
+weather,Time (LST),06:00,3652,4.1667
+weather,Time (LST),07:00,3652,4.1667
+weather,Time (LST),08:00,3652,4.1667
+weather,Time (LST),09:00,3652,4.1667
+weather,Time (LST),10:00,3652,4.1667
+weather,Time (LST),11:00,3652,4.1667
+weather,Time (LST),12:00,3652,4.1667
+weather,Time (LST),13:00,3652,4.1667
+weather,Time (LST),14:00,3652,4.1667
+weather,Time (LST),15:00,3652,4.1667
+weather,Time (LST),16:00,3652,4.1667
+weather,Time (LST),17:00,3652,4.1667
+weather,Time (LST),18:00,3652,4.1667
+weather,Time (LST),19:00,3652,4.1667
+weather,Time (LST),20:00,3652,4.1667
+weather,Time (LST),21:00,3652,4.1667
+weather,Time (LST),22:00,3652,4.1667
+weather,Time (LST),23:00,3652,4.1667
+weather,Dew Point Temp Flag,<MISSING>,87647,99.9989
+weather,Dew Point Temp Flag,M,1,0.0011
+weather,Rel Hum Flag,<MISSING>,87647,99.9989
+weather,Rel Hum Flag,M,1,0.0011
+weather,Wind Dir (10s deg),<MISSING>,44556,50.8352
+weather,Wind Dir (10s deg),36.0,1816,2.0719
+weather,Wind Dir (10s deg),35.0,1796,2.0491
+weather,Wind Dir (10s deg),28.0,1779,2.0297
+weather,Wind Dir (10s deg),27.0,1761,2.0092
+weather,Wind Dir (10s deg),26.0,1758,2.0058
+weather,Wind Dir (10s deg),15.0,1743,1.9886
+weather,Wind Dir (10s deg),25.0,1737,1.9818
+weather,Wind Dir (10s deg),34.0,1722,1.9647
+weather,Wind Dir (10s deg),24.0,1707,1.9476
+weather,Wind Dir (10s deg),31.0,1646,1.878
+weather,Wind Dir (10s deg),30.0,1603,1.8289
+weather,Wind Dir (10s deg),14.0,1557,1.7764
+weather,Wind Dir (10s deg),32.0,1527,1.7422
+weather,Wind Dir (10s deg),29.0,1514,1.7274
+weather,Wind Dir (10s deg),33.0,1229,1.4022
+weather,Wind Dir (10s deg),23.0,1220,1.3919
+weather,Wind Dir (10s deg),16.0,1217,1.3885
+weather,Wind Dir (10s deg),22.0,1194,1.3623
+weather,Wind Dir (10s deg),8.0,1135,1.295
+weather,Wind Dir (10s deg),1.0,1105,1.2607
+weather,Wind Dir (10s deg),9.0,1033,1.1786
+weather,Wind Dir (10s deg),21.0,1016,1.1592
+weather,Wind Dir (10s deg),13.0,999,1.1398
+weather,Wind Dir (10s deg),10.0,968,1.1044
+weather,Wind Dir (10s deg),17.0,857,0.9778
+weather,Wind Dir (10s deg),11.0,807,0.9207
+weather,Wind Dir (10s deg),12.0,805,0.9184
+weather,Wind Dir (10s deg),2.0,789,0.9002
+weather,Wind Dir (10s deg),20.0,777,0.8865
+weather,Wind Dir (10s deg),7.0,707,0.8066
+weather,Wind Dir (10s deg),3.0,635,0.7245
+weather,Wind Dir (10s deg),6.0,611,0.6971
+weather,Wind Dir (10s deg),19.0,590,0.6731
+weather,Wind Dir (10s deg),18.0,583,0.6652
+weather,Wind Dir (10s deg),4.0,580,0.6617
+weather,Wind Dir (10s deg),5.0,569,0.6492
+weather,Visibility (km),<MISSING>,43831,50.008
+weather,Visibility (km),24.1,36506,41.6507
+weather,Visibility (km),19.3,1570,1.7913
+weather,Visibility (km),16.1,1482,1.6909
+weather,Visibility (km),9.7,990,1.1295
+weather,Visibility (km),6.4,572,0.6526
+weather,Visibility (km),4.8,490,0.5591
+weather,Visibility (km),8.1,428,0.4883
+weather,Visibility (km),12.9,421,0.4803
+weather,Visibility (km),4.0,230,0.2624
+weather,Visibility (km),3.2,219,0.2499
+weather,Visibility (km),2.4,166,0.1894
+weather,Visibility (km),1.6,109,0.1244
+weather,Visibility (km),1.2,100,0.1141
+weather,Visibility (km),2.0,100,0.1141
+weather,Visibility (km),0.8,94,0.1072
+weather,Visibility (km),0.2,69,0.0787
+weather,Visibility (km),0.4,67,0.0764
+weather,Visibility (km),0.6,44,0.0502
+weather,Visibility (km),3.6,40,0.0456
+weather,Visibility (km),2.8,31,0.0354
+weather,Visibility (km),11.3,24,0.0274
+weather,Visibility (km),1.0,20,0.0228
+weather,Visibility (km),17.7,17,0.0194
+weather,Visibility (km),22.5,9,0.0103
+weather,Visibility (km),20.9,6,0.0068
+weather,Visibility (km),0.0,6,0.0068
+weather,Visibility (km),72.4,3,0.0034
+weather,Visibility (km),80.5,2,0.0023
+weather,Visibility (km),40.2,1,0.0011
+weather,Visibility (km),32.2,1,0.0011
+weather,Visibility Flag,<MISSING>,87647,99.9989
+weather,Visibility Flag,M,1,0.0011
+weather,Hmdx,<MISSING>,72218,82.3955
+weather,Hmdx,27.0,1851,2.1119
+weather,Hmdx,26.0,1780,2.0309
+weather,Hmdx,25.0,1655,1.8882
+weather,Hmdx,28.0,1604,1.83
+weather,Hmdx,29.0,1563,1.7833
+weather,Hmdx,30.0,1409,1.6076
+weather,Hmdx,31.0,1223,1.3954
+weather,Hmdx,32.0,1013,1.1558
+weather,Hmdx,33.0,834,0.9515
+weather,Hmdx,34.0,700,0.7986
+weather,Hmdx,35.0,525,0.599
+weather,Hmdx,36.0,420,0.4792
+weather,Hmdx,37.0,273,0.3115
+weather,Hmdx,38.0,213,0.243
+weather,Hmdx,39.0,164,0.1871
+weather,Hmdx,40.0,86,0.0981
+weather,Hmdx,41.0,52,0.0593
+weather,Hmdx,43.0,28,0.0319
+weather,Hmdx,42.0,20,0.0228
+weather,Hmdx,44.0,9,0.0103
+weather,Hmdx,45.0,5,0.0057
+weather,Hmdx,46.0,3,0.0034
+weather,Wind Chill,<MISSING>,78866,89.9804
+weather,Wind Chill,-6.0,795,0.907
+weather,Wind Chill,-7.0,791,0.9025
+weather,Wind Chill,-8.0,780,0.8899
+weather,Wind Chill,-9.0,632,0.7211
+weather,Wind Chill,-5.0,613,0.6994
+weather,Wind Chill,-10.0,575,0.656
+weather,Wind Chill,-11.0,509,0.5807
+weather,Wind Chill,-12.0,488,0.5568
+weather,Wind Chill,-13.0,471,0.5374
+weather,Wind Chill,-14.0,418,0.4769
+weather,Wind Chill,-4.0,377,0.4301
+weather,Wind Chill,-15.0,355,0.405
+weather,Wind Chill,-17.0,302,0.3446
+weather,Wind Chill,-16.0,301,0.3434
+weather,Wind Chill,-18.0,259,0.2955
+weather,Wind Chill,-3.0,226,0.2578
+weather,Wind Chill,-19.0,200,0.2282
+weather,Wind Chill,-20.0,128,0.146
+weather,Wind Chill,-2.0,110,0.1255
+weather,Wind Chill,-21.0,101,0.1152
+weather,Wind Chill,-22.0,86,0.0981
+weather,Wind Chill,-23.0,67,0.0764
+weather,Wind Chill,-24.0,37,0.0422
+weather,Wind Chill,-26.0,34,0.0388
+weather,Wind Chill,-25.0,34,0.0388
+weather,Wind Chill,-1.0,26,0.0297
+weather,Wind Chill,-27.0,17,0.0194
+weather,Wind Chill,-28.0,16,0.0183
+weather,Wind Chill,-29.0,11,0.0126
+weather,Wind Chill,-30.0,10,0.0114
+weather,Wind Chill,-31.0,7,0.008
+weather,Wind Chill,-32.0,4,0.0046
+weather,Wind Chill,-33.0,1,0.0011
+weather,Wind Chill,-34.0,1,0.0011
+calendar,year,2024,8784,20.0438
+calendar,year,2021,8760,19.989
+calendar,year,2022,8760,19.989
+calendar,year,2023,8760,19.989
+calendar,year,2025,8760,19.989
+calendar,quarter,4,11040,25.1917
+calendar,quarter,3,11040,25.1917
+calendar,quarter,2,10920,24.9179
+calendar,quarter,1,10824,24.6988
+calendar,month,1,3720,8.4885
+calendar,month,3,3720,8.4885
+calendar,month,7,3720,8.4885
+calendar,month,5,3720,8.4885
+calendar,month,12,3720,8.4885
+calendar,month,10,3720,8.4885
+calendar,month,8,3720,8.4885
+calendar,month,4,3600,8.2147
+calendar,month,9,3600,8.2147
+calendar,month,6,3600,8.2147
+calendar,month,11,3600,8.2147
+calendar,month,2,3384,7.7218
+calendar,month_name,January,3720,8.4885
+calendar,month_name,March,3720,8.4885
+calendar,month_name,July,3720,8.4885
+calendar,month_name,May,3720,8.4885
+calendar,month_name,December,3720,8.4885
+calendar,month_name,October,3720,8.4885
+calendar,month_name,August,3720,8.4885
+calendar,month_name,April,3600,8.2147
+calendar,month_name,September,3600,8.2147
+calendar,month_name,June,3600,8.2147
+calendar,month_name,November,3600,8.2147
+calendar,month_name,February,3384,7.7218
+calendar,day_of_month,1,1440,3.2859
+calendar,day_of_month,2,1440,3.2859
+calendar,day_of_month,3,1440,3.2859
+calendar,day_of_month,4,1440,3.2859
+calendar,day_of_month,5,1440,3.2859
+calendar,day_of_month,6,1440,3.2859
+calendar,day_of_month,7,1440,3.2859
+calendar,day_of_month,8,1440,3.2859
+calendar,day_of_month,9,1440,3.2859
+calendar,day_of_month,10,1440,3.2859
+calendar,day_of_month,11,1440,3.2859
+calendar,day_of_month,12,1440,3.2859
+calendar,day_of_month,13,1440,3.2859
+calendar,day_of_month,14,1440,3.2859
+calendar,day_of_month,15,1440,3.2859
+calendar,day_of_month,16,1440,3.2859
+calendar,day_of_month,17,1440,3.2859
+calendar,day_of_month,18,1440,3.2859
+calendar,day_of_month,19,1440,3.2859
+calendar,day_of_month,20,1440,3.2859
+calendar,day_of_month,21,1440,3.2859
+calendar,day_of_month,22,1440,3.2859
+calendar,day_of_month,23,1440,3.2859
+calendar,day_of_month,24,1440,3.2859
+calendar,day_of_month,25,1440,3.2859
+calendar,day_of_month,26,1440,3.2859
+calendar,day_of_month,27,1440,3.2859
+calendar,day_of_month,28,1440,3.2859
+calendar,day_of_month,29,1344,3.0668
+calendar,day_of_month,30,1320,3.012
+calendar,day_of_month,31,840,1.9168
+calendar,hour,0,1826,4.1667
+calendar,hour,1,1826,4.1667
+calendar,hour,2,1826,4.1667
+calendar,hour,3,1826,4.1667
+calendar,hour,4,1826,4.1667
+calendar,hour,5,1826,4.1667
+calendar,hour,6,1826,4.1667
+calendar,hour,7,1826,4.1667
+calendar,hour,8,1826,4.1667
+calendar,hour,9,1826,4.1667
+calendar,hour,10,1826,4.1667
+calendar,hour,11,1826,4.1667
+calendar,hour,12,1826,4.1667
+calendar,hour,13,1826,4.1667
+calendar,hour,14,1826,4.1667
+calendar,hour,15,1826,4.1667
+calendar,hour,16,1826,4.1667
+calendar,hour,17,1826,4.1667
+calendar,hour,18,1826,4.1667
+calendar,hour,19,1826,4.1667
+calendar,hour,20,1826,4.1667
+calendar,hour,21,1826,4.1667
+calendar,hour,22,1826,4.1667
+calendar,hour,23,1826,4.1667
+calendar,hour_group,Night,10956,25.0
+calendar,hour_group,Morning,10956,25.0
+calendar,hour_group,Afternoon,10956,25.0
+calendar,hour_group,Evening,10956,25.0
+calendar,weekday,4,6264,14.2935
+calendar,weekday,5,6264,14.2935
+calendar,weekday,6,6264,14.2935
+calendar,weekday,0,6264,14.2935
+calendar,weekday,1,6264,14.2935
+calendar,weekday,2,6264,14.2935
+calendar,weekday,3,6240,14.2388
+calendar,weekday_name,Friday,6264,14.2935
+calendar,weekday_name,Saturday,6264,14.2935
+calendar,weekday_name,Sunday,6264,14.2935
+calendar,weekday_name,Monday,6264,14.2935
+calendar,weekday_name,Tuesday,6264,14.2935
+calendar,weekday_name,Wednesday,6264,14.2935
+calendar,weekday_name,Thursday,6240,14.2388
+calendar,is_weekend,0,31296,71.4129
+calendar,is_weekend,1,12528,28.5871
+calendar,is_workday,1,30264,69.0581
+calendar,is_workday,0,13560,30.9419
+calendar,is_monday,0,37560,85.7065
+calendar,is_monday,1,6264,14.2935
+calendar,is_friday,0,37560,85.7065
+calendar,is_friday,1,6264,14.2935
+calendar,season,Spring,11040,25.1917
+calendar,season,Summer,11040,25.1917
+calendar,season,Fall,10920,24.9179
+calendar,season,Winter,10824,24.6988
+calendar,is_business_hour,0,30784,70.2446
+calendar,is_business_hour,1,13040,29.7554
+calendar,is_peak_hour_window,0,27390,62.5
+calendar,is_peak_hour_window,1,16434,37.5
+calendar,is_month_start,0,42384,96.7141
+calendar,is_month_start,1,1440,3.2859
+calendar,is_month_end,0,42384,96.7141
+calendar,is_month_end,1,1440,3.2859
+calendar,is_year_start,0,43704,99.7262
+calendar,is_year_start,1,120,0.2738
+calendar,is_year_end,0,43704,99.7262
+calendar,is_year_end,1,120,0.2738
+calendar,is_public_holiday,0,42648,97.3165
+calendar,is_public_holiday,1,1176,2.6835
+calendar,holiday_name,<MISSING>,42648,97.3165
+calendar,holiday_name,New Year's Day,120,0.2738
+calendar,holiday_name,Family Day,120,0.2738
+calendar,holiday_name,Good Friday,120,0.2738
+calendar,holiday_name,Victoria Day,120,0.2738
+calendar,holiday_name,Canada Day,120,0.2738
+calendar,holiday_name,Labor Day,120,0.2738
+calendar,holiday_name,Thanksgiving Day,120,0.2738
+calendar,holiday_name,Christmas Day,120,0.2738
+calendar,holiday_name,Boxing Day,96,0.2191
+calendar,holiday_name,New Year's Day (observed),48,0.1095
+calendar,holiday_name,Christmas Day (observed),24,0.0548
+calendar,holiday_name,Boxing Day (observed),24,0.0548
+calendar,holiday_name,Boxing Day; Christmas Day (observed),24,0.0548
+calendar,is_day_before_holiday,0,42648,97.3165
+calendar,is_day_before_holiday,1,1176,2.6835
+calendar,is_day_after_holiday,0,42648,97.3165
+calendar,is_day_after_holiday,1,1176,2.6835
+calendar,is_long_weekend,0,41880,95.5641
+calendar,is_long_weekend,1,1944,4.4359
+calendar,is_daylight_saving_time,1,28555,65.1584
+calendar,is_daylight_saving_time,0,15269,34.8416
+calendar,is_dst_transition_day,0,43584,99.4524
+calendar,is_dst_transition_day,1,240,0.5476
+calendar,is_spring_forward_day,0,43704,99.7262
+calendar,is_spring_forward_day,1,120,0.2738
+calendar,is_fall_back_day,0,43704,99.7262
+calendar,is_fall_back_day,1,120,0.2738
+calendar,utc_offset_hours,-4,28555,65.1584
+calendar,utc_offset_hours,-5,15269,34.8416
+calendar,hour_sin,0.7071067811865476,3652,8.3333
+calendar,hour_sin,0.4999999999999999,3652,8.3333
+calendar,hour_sin,-0.9659258262890684,3652,8.3333
+calendar,hour_sin,0.9659258262890684,3652,8.3333
+calendar,hour_sin,0.0,1826,4.1667
+calendar,hour_sin,0.2588190451025207,1826,4.1667
+calendar,hour_sin,1.0,1826,4.1667
+calendar,hour_sin,0.8660254037844386,1826,4.1667
+calendar,hour_sin,0.258819045102521,1826,4.1667
+calendar,hour_sin,1.2246467991473532e-16,1826,4.1667
+calendar,hour_sin,-0.2588190451025208,1826,4.1667
+calendar,hour_sin,0.8660254037844387,1826,4.1667
+calendar,hour_sin,-0.4999999999999997,1826,4.1667
+calendar,hour_sin,-0.7071067811865471,1826,4.1667
+calendar,hour_sin,-0.8660254037844385,1826,4.1667
+calendar,hour_sin,-1.0,1826,4.1667
+calendar,hour_sin,-0.8660254037844386,1826,4.1667
+calendar,hour_sin,-0.7071067811865477,1826,4.1667
+calendar,hour_sin,-0.5000000000000004,1826,4.1667
+calendar,hour_sin,-0.2588190451025215,1826,4.1667
+calendar,hour_cos,0.5000000000000001,3652,8.3333
+calendar,hour_cos,-0.2588190451025206,3652,8.3333
+calendar,hour_cos,0.9659258262890684,1826,4.1667
+calendar,hour_cos,0.8660254037844387,1826,4.1667
+calendar,hour_cos,0.7071067811865476,1826,4.1667
+calendar,hour_cos,1.0,1826,4.1667
+calendar,hour_cos,0.2588190451025207,1826,4.1667
+calendar,hour_cos,6.123233995736766e-17,1826,4.1667
+calendar,hour_cos,-0.4999999999999998,1826,4.1667
+calendar,hour_cos,-0.7071067811865475,1826,4.1667
+calendar,hour_cos,-0.8660254037844387,1826,4.1667
+calendar,hour_cos,-0.9659258262890682,1826,4.1667
+calendar,hour_cos,-1.0,1826,4.1667
+calendar,hour_cos,-0.9659258262890684,1826,4.1667
+calendar,hour_cos,-0.8660254037844388,1826,4.1667
+calendar,hour_cos,-0.7071067811865479,1826,4.1667
+calendar,hour_cos,-0.5000000000000004,1826,4.1667
+calendar,hour_cos,-1.8369701987210294e-16,1826,4.1667
+calendar,hour_cos,0.2588190451025203,1826,4.1667
+calendar,hour_cos,0.7071067811865474,1826,4.1667
+calendar,hour_cos,0.8660254037844384,1826,4.1667
+calendar,hour_cos,0.965925826289068,1826,4.1667
+calendar,weekday_sin,-0.433883739117558,6264,14.2935
+calendar,weekday_sin,-0.9749279121818236,6264,14.2935
+calendar,weekday_sin,-0.7818314824680299,6264,14.2935
+calendar,weekday_sin,0.0,6264,14.2935
+calendar,weekday_sin,0.7818314824680298,6264,14.2935
+calendar,weekday_sin,0.9749279121818236,6264,14.2935
+calendar,weekday_sin,0.4338837391175582,6240,14.2388
+calendar,weekday_cos,-0.9009688679024191,6264,14.2935
+calendar,weekday_cos,-0.2225209339563146,6264,14.2935
+calendar,weekday_cos,0.6234898018587334,6264,14.2935
+calendar,weekday_cos,1.0,6264,14.2935
+calendar,weekday_cos,0.6234898018587336,6264,14.2935
+calendar,weekday_cos,-0.2225209339563143,6264,14.2935
+calendar,weekday_cos,-0.900968867902419,6240,14.2388
+calendar,month_sin,0.4999999999999999,6984,15.9365
+calendar,month_sin,0.0,3720,8.4885
+calendar,month_sin,0.8660254037844386,3720,8.4885
+calendar,month_sin,0.8660254037844387,3720,8.4885
+calendar,month_sin,1.2246467991473532e-16,3720,8.4885
+calendar,month_sin,-0.4999999999999997,3720,8.4885
+calendar,month_sin,-1.0,3720,8.4885
+calendar,month_sin,-0.5000000000000004,3720,8.4885
+calendar,month_sin,1.0,3600,8.2147
+calendar,month_sin,-0.8660254037844385,3600,8.2147
+calendar,month_sin,-0.8660254037844386,3600,8.2147
+calendar,month_cos,0.5000000000000001,7320,16.7032
+calendar,month_cos,1.0,3720,8.4885
+calendar,month_cos,-0.4999999999999998,3720,8.4885
+calendar,month_cos,0.8660254037844384,3720,8.4885
+calendar,month_cos,-1.0,3720,8.4885
+calendar,month_cos,-1.8369701987210294e-16,3720,8.4885
+calendar,month_cos,-0.8660254037844388,3720,8.4885
+calendar,month_cos,-0.8660254037844387,3600,8.2147
+calendar,month_cos,6.123233995736766e-17,3600,8.2147
+calendar,month_cos,-0.5000000000000004,3600,8.2147
+calendar,month_cos,0.8660254037844387,3384,7.7218

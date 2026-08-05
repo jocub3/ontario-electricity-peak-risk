@@ -1,0 +1,10 @@
+﻿dataset,entity,minimum_timestamp,maximum_timestamp,observed_unique_hours,expected_continuous_hours,missing_hour_count,duplicate_timestamp_rows,days_with_less_than_24_unique_hours,days_with_more_than_24_unique_hours,minimum_hours_in_a_day,maximum_hours_in_a_day,first_missing_hour_examples
+consumption,FSA=L4T,2021-01-01,2025-12-31 23:00:00,43824,43824,0,215697,0,0,24,24,
+consumption,FSA=M5R,2021-01-01,2025-12-31 23:00:00,43824,43824,0,101596,0,0,24,24,
+consumption,FSA=M5S,2021-01-01,2025-12-31 23:00:00,43824,43824,0,103032,0,0,24,24,
+consumption,FSA=M6G,2021-01-01,2025-12-31 23:00:00,43824,43824,0,203915,0,0,24,24,
+consumption,FSA=M9R,2021-01-01,2025-12-31 23:00:00,43824,43824,0,209729,0,0,24,24,
+consumption,FSA=M9W,2021-01-01,2025-12-31 23:00:00,43824,43824,0,212492,0,0,24,24,
+weather,Climate ID=6158355 | Station Name=TORONTO CITY,2021-01-01,2025-12-31 23:00:00,43824,43824,0,0,0,0,24,24,
+weather,Climate ID=6158731 | Station Name=TORONTO INTL A,2021-01-01,2025-12-31 23:00:00,43824,43824,0,0,0,0,24,24,
+calendar,ALL,2021-01-01,2025-12-31 23:00:00,43824,43824,0,0,0,0,24,24,
