@@ -1,0 +1,138 @@
+﻿stage,column,dtype,rows,non_null_count,missing_count,missing_pct,unique_count
+before_cleaning,fsa,object,262944,262944,0,0.0,6
+before_cleaning,timestamp,datetime64[ns],262944,262944,0,0.0,43824
+before_cleaning,total_consumption_kwh,float64,262944,262944,0,0.0,157393
+before_cleaning,reported_premise_count,int64,262944,262944,0,0.0,1269
+before_cleaning,source_segment_count,int64,262944,262944,0,0.0,6
+before_cleaning,customer_type_count,int64,262944,262944,0,0.0,2
+before_cleaning,price_plan_count,int64,262944,262944,0,0.0,3
+before_cleaning,timestamp_utc,"datetime64[ns, UTC]",262944,262944,0,0.0,43824
+before_cleaning,timestamp_toronto,"datetime64[ns, UTC]",262944,262944,0,0.0,43824
+before_cleaning,date,datetime64[ns],262944,262944,0,0.0,1826
+before_cleaning,year,int64,262944,262944,0,0.0,5
+before_cleaning,quarter,int64,262944,262944,0,0.0,4
+before_cleaning,month,int64,262944,262944,0,0.0,12
+before_cleaning,month_name,object,262944,262944,0,0.0,12
+before_cleaning,week_of_year,int64,262944,262944,0,0.0,53
+before_cleaning,day_of_year,int64,262944,262944,0,0.0,366
+before_cleaning,day_of_month,int64,262944,262944,0,0.0,31
+before_cleaning,hour,int64,262944,262944,0,0.0,24
+before_cleaning,hour_group,object,262944,262944,0,0.0,4
+before_cleaning,weekday,int64,262944,262944,0,0.0,7
+before_cleaning,weekday_name,object,262944,262944,0,0.0,7
+before_cleaning,is_weekend,int64,262944,262944,0,0.0,2
+before_cleaning,is_workday,int64,262944,262944,0,0.0,2
+before_cleaning,is_monday,int64,262944,262944,0,0.0,2
+before_cleaning,is_friday,int64,262944,262944,0,0.0,2
+before_cleaning,season,object,262944,262944,0,0.0,4
+before_cleaning,is_business_hour,int64,262944,262944,0,0.0,2
+before_cleaning,is_peak_hour_window,int64,262944,262944,0,0.0,2
+before_cleaning,is_month_start,int64,262944,262944,0,0.0,2
+before_cleaning,is_month_end,int64,262944,262944,0,0.0,2
+before_cleaning,is_year_start,int64,262944,262944,0,0.0,2
+before_cleaning,is_year_end,int64,262944,262944,0,0.0,2
+before_cleaning,is_public_holiday,int64,262944,262944,0,0.0,2
+before_cleaning,holiday_name,object,262944,7056,255888,97.316539,13
+before_cleaning,is_day_before_holiday,int64,262944,262944,0,0.0,2
+before_cleaning,is_day_after_holiday,int64,262944,262944,0,0.0,2
+before_cleaning,days_to_holiday,int64,262944,262944,0,0.0,77
+before_cleaning,days_after_holiday,int64,262944,262944,0,0.0,77
+before_cleaning,is_long_weekend,int64,262944,262944,0,0.0,2
+before_cleaning,is_daylight_saving_time,int64,262944,262944,0,0.0,2
+before_cleaning,is_dst_transition_day,int64,262944,262944,0,0.0,2
+before_cleaning,is_spring_forward_day,int64,262944,262944,0,0.0,2
+before_cleaning,is_fall_back_day,int64,262944,262944,0,0.0,2
+before_cleaning,utc_offset_hours,int64,262944,262944,0,0.0,2
+before_cleaning,date_index,int64,262944,262944,0,0.0,1826
+before_cleaning,hour_sin,float64,262944,262944,0,0.0,20
+before_cleaning,hour_cos,float64,262944,262944,0,0.0,22
+before_cleaning,weekday_sin,float64,262944,262944,0,0.0,7
+before_cleaning,weekday_cos,float64,262944,262944,0,0.0,7
+before_cleaning,month_sin,float64,262944,262944,0,0.0,11
+before_cleaning,month_cos,float64,262944,262944,0,0.0,11
+before_cleaning,assigned_climate_id,int64,262944,262944,0,0.0,2
+before_cleaning,assigned_station_name,object,262944,262944,0,0.0,2
+before_cleaning,Longitude (x),float64,262944,262944,0,0.0,2
+before_cleaning,Latitude (y),float64,262944,262944,0,0.0,2
+before_cleaning,Temp (°C),float64,262944,262803,141,0.053624,564
+before_cleaning,Dew Point Temp (°C),float64,262944,262800,144,0.054765,541
+before_cleaning,Dew Point Temp Flag,object,262944,3,262941,99.998859,1
+before_cleaning,Rel Hum (%),float64,262944,262800,144,0.054765,87
+before_cleaning,Rel Hum Flag,object,262944,3,262941,99.998859,1
+before_cleaning,Precip. Amount (mm),float64,262944,131349,131595,50.046778,108
+before_cleaning,Wind Dir (10s deg),float64,262944,129276,133668,50.835159,36
+before_cleaning,Wind Spd (km/h),float64,262944,131454,131490,50.006846,65
+before_cleaning,Visibility (km),float64,262944,131451,131493,50.007986,30
+before_cleaning,Visibility Flag,object,262944,3,262941,99.998859,1
+before_cleaning,Stn Press (kPa),float64,262944,262803,141,0.053624,664
+before_cleaning,Hmdx,float64,262944,46290,216654,82.395491,22
+before_cleaning,Wind Chill,float64,262944,26346,236598,89.980376,34
+before_cleaning,Weather,object,262944,56160,206784,78.64184,70
+before_cleaning,SOURCE_FILE,object,262944,262944,0,0.0,60
+before_cleaning,SOURCE_PERIOD,int64,262944,262944,0,0.0,60
+after_cleaning,fsa,category,262944,262944,0,0.0,6
+after_cleaning,timestamp,datetime64[ns],262944,262944,0,0.0,43824
+after_cleaning,total_consumption_kwh,float64,262944,262944,0,0.0,157393
+after_cleaning,reported_premise_count,Int64,262944,262944,0,0.0,1269
+after_cleaning,source_segment_count,Int8,262944,262944,0,0.0,6
+after_cleaning,customer_type_count,Int8,262944,262944,0,0.0,2
+after_cleaning,price_plan_count,Int8,262944,262944,0,0.0,3
+after_cleaning,timestamp_utc,"datetime64[ns, UTC]",262944,262944,0,0.0,43824
+after_cleaning,timestamp_toronto,"datetime64[ns, UTC]",262944,262944,0,0.0,43824
+after_cleaning,date,datetime64[ns],262944,262944,0,0.0,1826
+after_cleaning,year,Int16,262944,262944,0,0.0,5
+after_cleaning,quarter,Int8,262944,262944,0,0.0,4
+after_cleaning,month,Int8,262944,262944,0,0.0,12
+after_cleaning,month_name,category,262944,262944,0,0.0,12
+after_cleaning,week_of_year,Int8,262944,262944,0,0.0,53
+after_cleaning,day_of_year,Int16,262944,262944,0,0.0,366
+after_cleaning,day_of_month,Int8,262944,262944,0,0.0,31
+after_cleaning,hour,Int8,262944,262944,0,0.0,24
+after_cleaning,hour_group,category,262944,262944,0,0.0,4
+after_cleaning,weekday,Int8,262944,262944,0,0.0,7
+after_cleaning,weekday_name,category,262944,262944,0,0.0,7
+after_cleaning,is_weekend,Int8,262944,262944,0,0.0,2
+after_cleaning,is_workday,Int8,262944,262944,0,0.0,2
+after_cleaning,is_monday,Int8,262944,262944,0,0.0,2
+after_cleaning,is_friday,Int8,262944,262944,0,0.0,2
+after_cleaning,season,category,262944,262944,0,0.0,4
+after_cleaning,is_business_hour,Int8,262944,262944,0,0.0,2
+after_cleaning,is_peak_hour_window,Int8,262944,262944,0,0.0,2
+after_cleaning,is_month_start,Int8,262944,262944,0,0.0,2
+after_cleaning,is_month_end,Int8,262944,262944,0,0.0,2
+after_cleaning,is_year_start,Int8,262944,262944,0,0.0,2
+after_cleaning,is_year_end,Int8,262944,262944,0,0.0,2
+after_cleaning,is_public_holiday,Int8,262944,262944,0,0.0,2
+after_cleaning,holiday_name,category,262944,262944,0,0.0,14
+after_cleaning,is_day_before_holiday,Int8,262944,262944,0,0.0,2
+after_cleaning,is_day_after_holiday,Int8,262944,262944,0,0.0,2
+after_cleaning,days_to_holiday,Int16,262944,262944,0,0.0,77
+after_cleaning,days_after_holiday,Int16,262944,262944,0,0.0,77
+after_cleaning,is_long_weekend,Int8,262944,262944,0,0.0,2
+after_cleaning,is_daylight_saving_time,Int8,262944,262944,0,0.0,2
+after_cleaning,is_dst_transition_day,Int8,262944,262944,0,0.0,2
+after_cleaning,is_spring_forward_day,Int8,262944,262944,0,0.0,2
+after_cleaning,is_fall_back_day,Int8,262944,262944,0,0.0,2
+after_cleaning,utc_offset_hours,Int8,262944,262944,0,0.0,2
+after_cleaning,date_index,Int32,262944,262944,0,0.0,1826
+after_cleaning,hour_sin,float64,262944,262944,0,0.0,20
+after_cleaning,hour_cos,float64,262944,262944,0,0.0,22
+after_cleaning,weekday_sin,float64,262944,262944,0,0.0,7
+after_cleaning,weekday_cos,float64,262944,262944,0,0.0,7
+after_cleaning,month_sin,float64,262944,262944,0,0.0,11
+after_cleaning,month_cos,float64,262944,262944,0,0.0,11
+after_cleaning,assigned_climate_id,Int64,262944,262944,0,0.0,2
+after_cleaning,assigned_station_name,category,262944,262944,0,0.0,2
+after_cleaning,Longitude (x),float64,262944,262944,0,0.0,2
+after_cleaning,Latitude (y),float64,262944,262944,0,0.0,2
+after_cleaning,Temp (°C),float64,262944,262803,141,0.053624,564
+after_cleaning,Dew Point Temp (°C),float64,262944,262800,144,0.054765,541
+after_cleaning,Rel Hum (%),float64,262944,262800,144,0.054765,87
+after_cleaning,Precip. Amount (mm),float64,262944,131349,131595,50.046778,108
+after_cleaning,Wind Dir (10s deg),float64,262944,129276,133668,50.835159,36
+after_cleaning,Wind Spd (km/h),float64,262944,131454,131490,50.006846,65
+after_cleaning,Visibility (km),float64,262944,131451,131493,50.007986,30
+after_cleaning,Stn Press (kPa),float64,262944,262803,141,0.053624,664
+after_cleaning,Hmdx,float64,262944,46290,216654,82.395491,22
+after_cleaning,Wind Chill,float64,262944,26346,236598,89.980376,34
+after_cleaning,Weather,category,262944,56160,206784,78.64184,70
