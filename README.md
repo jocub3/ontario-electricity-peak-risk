@@ -85,14 +85,14 @@ cd ontario-electricity-peak-risk
 Windows PowerShell:
 
 ```powershell
-py -3.11 -m venv .venv
+py -3.13 -m venv .venv
 .\.venv\Scripts\Activate.ps1
 ```
 
 macOS/Linux:
 
 ```bash
-python3.11 -m venv .venv
+python3.13 -m venv .venv
 source .venv/bin/activate
 ```
 
