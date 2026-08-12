@@ -1,0 +1,61 @@
+paths:
+  input_clean_dataset: "data/processed/master_dataset_clean.parquet"
+  reports_dir: "reports/eda"
+  figures_dir: "reports/figures/eda"
+  docs_dir: "docs/eda"
+
+analysis:
+  exploratory_peak_percentile: 0.975
+  minimum_weather_coverage_pct: 20.0
+  high_missingness_threshold_pct: 50.0
+  rolling_trend_window_hours: 168
+  autocorrelation_lags:
+    - 1
+    - 24
+    - 48
+    - 168
+  top_n_extreme_hours: 50
+  top_n_extreme_days: 20
+
+columns:
+  key:
+    - "fsa"
+    - "timestamp"
+  target: "total_consumption_kwh"
+  station_id: "assigned_climate_id"
+  station_name: "assigned_station_name"
+
+  core_weather:
+    - "Temp (°C)"
+    - "Dew Point Temp (°C)"
+    - "Rel Hum (%)"
+    - "Stn Press (kPa)"
+    - "Wind Spd (km/h)"
+    - "Precip. Amount (mm)"
+    - "Visibility (km)"
+    - "Wind Dir (10s deg)"
+    - "Hmdx"
+    - "Wind Chill"
+
+  calendar:
+    - "year"
+    - "quarter"
+    - "month"
+    - "month_name"
+    - "week_of_year"
+    - "day_of_year"
+    - "day_of_month"
+    - "hour"
+    - "hour_group"
+    - "weekday"
+    - "weekday_name"
+    - "is_weekend"
+    - "is_workday"
+    - "season"
+    - "is_business_hour"
+    - "is_peak_hour_window"
+    - "is_public_holiday"
+    - "holiday_name"
+    - "is_long_weekend"
+    - "is_daylight_saving_time"
+    - "is_dst_transition_day"
