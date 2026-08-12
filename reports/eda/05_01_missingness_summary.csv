@@ -1,0 +1,67 @@
+﻿column,missing_count,missing_pct
+Wind Chill,236598,89.980376
+Hmdx,216654,82.395491
+Weather,206784,78.64184
+Wind Dir (10s deg),133668,50.835159
+Precip. Amount (mm),131595,50.046778
+Visibility (km),131493,50.007986
+Wind Spd (km/h),131490,50.006846
+Dew Point Temp (°C),144,0.054765
+Rel Hum (%),144,0.054765
+Temp (°C),141,0.053624
+Stn Press (kPa),141,0.053624
+fsa,0,0.0
+timestamp,0,0.0
+total_consumption_kwh,0,0.0
+price_plan_count,0,0.0
+reported_premise_count,0,0.0
+source_segment_count,0,0.0
+customer_type_count,0,0.0
+hour_group,0,0.0
+weekday,0,0.0
+weekday_name,0,0.0
+is_weekend,0,0.0
+is_workday,0,0.0
+timestamp_utc,0,0.0
+timestamp_toronto,0,0.0
+date,0,0.0
+year,0,0.0
+quarter,0,0.0
+month,0,0.0
+month_name,0,0.0
+week_of_year,0,0.0
+day_of_year,0,0.0
+day_of_month,0,0.0
+hour,0,0.0
+holiday_name,0,0.0
+is_public_holiday,0,0.0
+is_year_end,0,0.0
+is_year_start,0,0.0
+is_month_end,0,0.0
+is_month_start,0,0.0
+is_peak_hour_window,0,0.0
+is_business_hour,0,0.0
+season,0,0.0
+is_friday,0,0.0
+is_monday,0,0.0
+is_day_before_holiday,0,0.0
+is_long_weekend,0,0.0
+is_day_after_holiday,0,0.0
+days_to_holiday,0,0.0
+days_after_holiday,0,0.0
+month_sin,0,0.0
+weekday_cos,0,0.0
+weekday_sin,0,0.0
+hour_cos,0,0.0
+hour_sin,0,0.0
+date_index,0,0.0
+utc_offset_hours,0,0.0
+is_fall_back_day,0,0.0
+is_spring_forward_day,0,0.0
+is_dst_transition_day,0,0.0
+is_daylight_saving_time,0,0.0
+Latitude (y),0,0.0
+month_cos,0,0.0
+assigned_climate_id,0,0.0
+assigned_station_name,0,0.0
+Longitude (x),0,0.0
