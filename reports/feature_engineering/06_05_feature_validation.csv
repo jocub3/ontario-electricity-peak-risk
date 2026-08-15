@@ -1,0 +1,22 @@
+﻿check,violations,status,description
+row_count_preserved,0,PASS,Feature Engineering must not silently add or remove rows.
+unique_key,0,PASS,FSA + timestamp must remain unique.
+key_not_null,0,PASS,Key columns must not contain null values.
+no_infinite_values,0,PASS,Numeric engineered features must not contain positive or negative infinity.
+lag_1h_alignment,0,PASS,One-hour target lag must equal the prior FSA observation.
+rolling_history_required::total_consumption_kwh_rolling_mean_3h,0,PASS,Rolling target features must require historical observations.
+rolling_history_required::total_consumption_kwh_rolling_std_3h,0,PASS,Rolling target features must require historical observations.
+rolling_history_required::total_consumption_kwh_rolling_min_3h,0,PASS,Rolling target features must require historical observations.
+rolling_history_required::total_consumption_kwh_rolling_max_3h,0,PASS,Rolling target features must require historical observations.
+rolling_history_required::total_consumption_kwh_rolling_mean_6h,0,PASS,Rolling target features must require historical observations.
+rolling_history_required::total_consumption_kwh_rolling_std_6h,0,PASS,Rolling target features must require historical observations.
+rolling_history_required::total_consumption_kwh_rolling_min_6h,0,PASS,Rolling target features must require historical observations.
+rolling_history_required::total_consumption_kwh_rolling_max_6h,0,PASS,Rolling target features must require historical observations.
+rolling_history_required::total_consumption_kwh_rolling_mean_24h,0,PASS,Rolling target features must require historical observations.
+rolling_history_required::total_consumption_kwh_rolling_std_24h,0,PASS,Rolling target features must require historical observations.
+rolling_history_required::total_consumption_kwh_rolling_min_24h,0,PASS,Rolling target features must require historical observations.
+rolling_history_required::total_consumption_kwh_rolling_max_24h,0,PASS,Rolling target features must require historical observations.
+rolling_history_required::total_consumption_kwh_rolling_mean_168h,0,PASS,Rolling target features must require historical observations.
+rolling_history_required::total_consumption_kwh_rolling_std_168h,0,PASS,Rolling target features must require historical observations.
+rolling_history_required::total_consumption_kwh_rolling_min_168h,0,PASS,Rolling target features must require historical observations.
+rolling_history_required::total_consumption_kwh_rolling_max_168h,0,PASS,Rolling target features must require historical observations.
