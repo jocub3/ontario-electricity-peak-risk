@@ -1,0 +1,27 @@
+﻿check,violations,status,description
+target_origin_row_count,0,PASS,Target matrix must preserve one forecast origin per feature row.
+unique_forecast_origin,0,PASS,FSA + forecast origin must remain unique.
+alignment_h01,0,PASS,h+1 target must equal observed consumption exactly 1 hour(s) after forecast origin.
+alignment_h02,0,PASS,h+2 target must equal observed consumption exactly 2 hour(s) after forecast origin.
+alignment_h03,0,PASS,h+3 target must equal observed consumption exactly 3 hour(s) after forecast origin.
+alignment_h04,0,PASS,h+4 target must equal observed consumption exactly 4 hour(s) after forecast origin.
+alignment_h05,0,PASS,h+5 target must equal observed consumption exactly 5 hour(s) after forecast origin.
+alignment_h06,0,PASS,h+6 target must equal observed consumption exactly 6 hour(s) after forecast origin.
+alignment_h07,0,PASS,h+7 target must equal observed consumption exactly 7 hour(s) after forecast origin.
+alignment_h08,0,PASS,h+8 target must equal observed consumption exactly 8 hour(s) after forecast origin.
+alignment_h09,0,PASS,h+9 target must equal observed consumption exactly 9 hour(s) after forecast origin.
+alignment_h10,0,PASS,h+10 target must equal observed consumption exactly 10 hour(s) after forecast origin.
+alignment_h11,0,PASS,h+11 target must equal observed consumption exactly 11 hour(s) after forecast origin.
+alignment_h12,0,PASS,h+12 target must equal observed consumption exactly 12 hour(s) after forecast origin.
+alignment_h13,0,PASS,h+13 target must equal observed consumption exactly 13 hour(s) after forecast origin.
+alignment_h14,0,PASS,h+14 target must equal observed consumption exactly 14 hour(s) after forecast origin.
+alignment_h15,0,PASS,h+15 target must equal observed consumption exactly 15 hour(s) after forecast origin.
+alignment_h16,0,PASS,h+16 target must equal observed consumption exactly 16 hour(s) after forecast origin.
+alignment_h17,0,PASS,h+17 target must equal observed consumption exactly 17 hour(s) after forecast origin.
+alignment_h18,0,PASS,h+18 target must equal observed consumption exactly 18 hour(s) after forecast origin.
+alignment_h19,0,PASS,h+19 target must equal observed consumption exactly 19 hour(s) after forecast origin.
+alignment_h20,0,PASS,h+20 target must equal observed consumption exactly 20 hour(s) after forecast origin.
+alignment_h21,0,PASS,h+21 target must equal observed consumption exactly 21 hour(s) after forecast origin.
+alignment_h22,0,PASS,h+22 target must equal observed consumption exactly 22 hour(s) after forecast origin.
+alignment_h23,0,PASS,h+23 target must equal observed consumption exactly 23 hour(s) after forecast origin.
+alignment_h24,0,PASS,h+24 target must equal observed consumption exactly 24 hour(s) after forecast origin.
