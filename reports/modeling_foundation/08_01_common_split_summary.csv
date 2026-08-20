@@ -1,0 +1,4 @@
+﻿fold,role,configured_train_start,configured_train_end,safe_train_origin_end,train_rows,train_first_origin,train_last_origin,train_fsas,configured_evaluation_start,configured_evaluation_end,safe_evaluation_origin_end,evaluation_rows,evaluation_first_origin,evaluation_last_origin,evaluation_fsas,max_horizon_hours
+fold_2023,validation,2021-01-01,2022-12-31 23:00:00,2022-12-30 23:00:00,104976,2021-01-01,2022-12-30 23:00:00,6,2023-01-01,2023-12-31 23:00:00,2023-12-30 23:00:00,52416,2023-01-01,2023-12-30 23:00:00,6,24
+fold_2024,validation,2021-01-01,2023-12-31 23:00:00,2023-12-30 23:00:00,157536,2021-01-01,2023-12-30 23:00:00,6,2024-01-01,2024-12-31 23:00:00,2024-12-30 23:00:00,52560,2024-01-01,2024-12-30 23:00:00,6,24
+test_2025,test,2021-01-01,2024-12-31 23:00:00,2024-12-30 23:00:00,210240,2021-01-01,2024-12-30 23:00:00,6,2025-01-01,2025-12-31 23:00:00,2025-12-30 23:00:00,52416,2025-01-01,2025-12-30 23:00:00,6,24
