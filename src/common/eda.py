@@ -4,7 +4,9 @@ import matplotlib.pyplot as plt
 import pandas as pd
 
 
-def plot_distribution(df: pd.DataFrame, column: str, by: str | None = None, bins: int = 60) -> plt.Figure:
+def plot_distribution(
+    df: pd.DataFrame, column: str, by: str | None = None, bins: int = 60
+) -> plt.Figure:
     """Histogram of a numeric column, optionally overlaid per group."""
     fig, ax = plt.subplots(figsize=(9, 4))
     if by is None:
@@ -59,12 +61,16 @@ def iqr_outlier_summary(df: pd.DataFrame, column: str, group_by: str | None = No
     return pd.DataFrame(rows)[cols]
 
 
-def average_profile(df: pd.DataFrame, column: str, period_col: str, group_by: str = "FSA") -> pd.DataFrame:
+def average_profile(
+    df: pd.DataFrame, column: str, period_col: str, group_by: str = "FSA"
+) -> pd.DataFrame:
     """Average of a numeric column by a time period (hour/weekday/month/...), one column per group."""
     return df.groupby([period_col, group_by])[column].mean().unstack(group_by)
 
 
-def plot_average_profile(df: pd.DataFrame, column: str, period_col: str, group_by: str = "FSA") -> plt.Figure:
+def plot_average_profile(
+    df: pd.DataFrame, column: str, period_col: str, group_by: str = "FSA"
+) -> plt.Figure:
     """Line plot of the average profile returned by average_profile()."""
     profile = average_profile(df, column, period_col, group_by)
     fig, ax = plt.subplots(figsize=(9, 4))
@@ -77,8 +83,13 @@ def plot_average_profile(df: pd.DataFrame, column: str, period_col: str, group_b
     return fig
 
 
-def plot_time_series(df: pd.DataFrame, column: str, timestamp_col: str = "timestamp_local",
-                      group_by: str = "FSA", freq: str = "D") -> plt.Figure:
+def plot_time_series(
+    df: pd.DataFrame,
+    column: str,
+    timestamp_col: str = "timestamp_local",
+    group_by: str = "FSA",
+    freq: str = "D",
+) -> plt.Figure:
     """Resampled time series line plot, one line per group."""
     fig, ax = plt.subplots(figsize=(12, 4))
     for key, group in df.groupby(group_by):
