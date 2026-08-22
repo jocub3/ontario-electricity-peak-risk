@@ -1,4 +1,4 @@
-"""Load raw calendar, weather, and consumption data. No cleaning, no joining - that happens later."""
+"""Load raw calendar, weather, and consumption data."""
 
 from pathlib import Path
 
