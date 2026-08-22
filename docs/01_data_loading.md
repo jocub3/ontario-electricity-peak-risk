@@ -2,8 +2,8 @@
 
 ## Purpose
 
-1. Load the four raw source files (calendar, two weather stations, six consumption files) with no cleaning or joining applied.
-2. Confirm each file's shape, column types, and structure before building cleaning and join logic.
+1. The four raw source files (calendar, two weather stations, six consumption files) are loaded, with no cleaning or joining applied.
+2. Each file's shape, column types, and structure are confirmed before the cleaning and join logic is built.
 
 ## Design
 

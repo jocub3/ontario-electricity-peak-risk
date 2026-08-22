@@ -1,4 +1,4 @@
-"""Clean each raw dataset independently, before any joining happens."""
+"""Each raw dataset is cleaned independently, before any joining happens."""
 
 import pandas as pd
 
@@ -19,7 +19,7 @@ CALENDAR_COLUMNS_TO_DROP = [
 
 
 def clean_calendar(df: pd.DataFrame) -> pd.DataFrame:
-    """Drop redundant calendar columns and fix the join-key dtype."""
+    """Redundant calendar columns are dropped and the join-key dtype is fixed."""
     df = df.drop(columns=CALENDAR_COLUMNS_TO_DROP)
     df["timestamp_local"] = pd.to_datetime(df["timestamp_local"])
     return df
@@ -27,11 +27,11 @@ def clean_calendar(df: pd.DataFrame) -> pd.DataFrame:
 
 # Station metadata (constant within a file), duplicate calendar fields, ingestion metadata, and
 # the *Flag columns (essentially 0% populated) are dropped as internal redundancy/no-information.
-# Wind Chill and Hmdx are dropped too - both are derived from columns we're keeping (Temp+Wind Spd,
+# Wind Chill and Hmdx are dropped too - both are derived from columns being kept (Temp+Wind Spd,
 # Temp+Dew Point/Rel Hum) and are themselves mostly null even within the station that reports them.
-# Precip. Amount, Wind Dir, Wind Spd, and Visibility stay - each is an independent measurement, not
-# a duplicate of anything else, so whether they matter for consumption is left for the correlation
-# analysis rather than decided here on intuition.
+# Precip. Amount, Wind Dir, Wind Spd, and Visibility are kept - each is an independent measurement,
+# not a duplicate of anything else, so whether they matter for consumption is left for the
+# correlation analysis rather than decided here on intuition.
 WEATHER_COLUMNS_TO_DROP = [
     "Longitude (x)",
     "Latitude (y)",
@@ -62,8 +62,8 @@ WEATHER_COLUMNS_TO_DROP = [
 
 # These four are reported by both stations and only have short, scattered gaps (a handful of hours
 # at a time) within the 2021-2025 modeling window, so a same-column time interpolation is enough -
-# it only looks at the immediate neighboring hours, not a global statistic, so it's safe to do here
-# rather than waiting for the train/test fold split.
+# it only looks at the immediate neighboring hours, not a global statistic, so it is safe to do
+# here rather than waiting for the train/test fold split.
 WEATHER_COLUMNS_TO_INTERPOLATE = [
     "Temp (°C)",
     "Dew Point Temp (°C)",
@@ -73,7 +73,7 @@ WEATHER_COLUMNS_TO_INTERPOLATE = [
 
 
 def clean_weather(df: pd.DataFrame) -> pd.DataFrame:
-    """Drop redundant/uninformative weather columns, fix the join-key dtype, and interpolate short gaps."""
+    """Redundant and uninformative weather columns are dropped, the join-key dtype is fixed, and short gaps are interpolated."""
     df = df.drop(columns=WEATHER_COLUMNS_TO_DROP)
     df["timestamp_local"] = pd.to_datetime(df["timestamp_local"])
 
@@ -86,7 +86,7 @@ def clean_weather(df: pd.DataFrame) -> pd.DataFrame:
 
 
 def clean_consumption(df: pd.DataFrame) -> pd.DataFrame:
-    """Fix the join-key dtype for an already-aggregated FSA consumption dataset."""
+    """The join-key dtype is fixed for an already-aggregated FSA consumption dataset."""
     df = df.copy()
     df["timestamp_local"] = pd.to_datetime(df["timestamp_local"])
     return df

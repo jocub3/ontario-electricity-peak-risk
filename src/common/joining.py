@@ -1,4 +1,4 @@
-"""Join the cleaned calendar, weather, and consumption datasets into one FSA-hourly dataset."""
+"""The cleaned calendar, weather, and consumption datasets are joined into one FSA-hourly dataset."""
 
 import pandas as pd
 
@@ -7,11 +7,11 @@ from .data_loading import FSA_TO_STATION, load_calendar, load_consumption, load_
 
 
 def build_fsa_hourly_dataset(fsa: str) -> pd.DataFrame:
-    """Build the cleaned, joined hourly dataset for a single FSA.
+    """The cleaned, joined hourly dataset for a single FSA is built here.
 
-    Consumption only covers 2021-2025, while calendar/weather extend into 2026, so joining
-    calendar/weather onto consumption (rather than the other way around) keeps the result
-    bounded to the years consumption actually has data for.
+    Consumption only covers 2021-2025, while calendar and weather extend into 2026. Calendar
+    and weather are joined onto consumption, rather than the other way around, keeping the
+    result bounded to the years consumption actually has data for.
     """
     fsa = fsa.upper()
     consumption = clean_consumption(load_consumption(fsa))
@@ -24,7 +24,7 @@ def build_fsa_hourly_dataset(fsa: str) -> pd.DataFrame:
 
 
 def build_all_fsa_dataset() -> pd.DataFrame:
-    """Build the pooled, cleaned hourly dataset for all 6 FSAs."""
+    """The pooled, cleaned hourly dataset for all 6 FSAs is built here."""
     return pd.concat(
         [build_fsa_hourly_dataset(fsa) for fsa in FSA_TO_STATION],
         ignore_index=True,
