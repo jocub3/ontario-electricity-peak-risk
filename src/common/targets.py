@@ -1,11 +1,11 @@
-"""Origin -> horizon pivot: builds the forecast targets (actual consumption h hours ahead)
+"""Origin to horizon pivot: builds the forecast targets (actual consumption h hours ahead)
 in long form (one row per FSA/origin/horizon, used by the classifier) and wide form
 (one row per FSA/origin with 24 horizon columns, used by the multi-output regressor).
 
-Each FSA is a complete, gap-free hourly grid (confirmed in Day 2 cleaning), so "h hours
-later" is exactly "h rows later" within that FSA's own series - shifting per FSA group is
-enough, no timestamp lookup/join needed. Origins near the end of each FSA's series don't
-have a full 24 hours of future data available and are dropped.
+Each FSA is a complete, gap-free hourly grid, confirmed during cleaning, so "h hours
+later" is exactly "h rows later" within that FSA's own series, shifting per FSA group is
+enough, no timestamp lookup or join needed. Origins near the end of each FSA's series do
+not have a full 24 hours of future data available and are dropped.
 """
 
 import pandas as pd

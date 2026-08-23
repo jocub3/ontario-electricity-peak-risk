@@ -12,7 +12,7 @@ FOLDS = {
 def split_fold(
     df: pd.DataFrame, fold_name: str, year_col: str = "year"
 ) -> tuple[pd.DataFrame, pd.DataFrame]:
-    """Return (train_df, test_df) for one fold."""
+    """(train_df, test_df) are returned for one fold."""
     fold = FOLDS[fold_name]
     start_year, end_year = fold["train_years"]
     train_df = df[df[year_col].between(start_year, end_year)]
@@ -21,7 +21,7 @@ def split_fold(
 
 
 def iter_folds(df: pd.DataFrame, year_col: str = "year"):
-    """Yield (fold_name, train_df, test_df) for all 3 folds, in order."""
+    """(fold_name, train_df, test_df) are yielded for all 3 folds, in order."""
     for fold_name in FOLDS:
         train_df, test_df = split_fold(df, fold_name, year_col)
         yield fold_name, train_df, test_df
