@@ -15,7 +15,7 @@ CATEGORICAL_COLUMNS = ["FSA", "season"]
 def add_log_target(
     df: pd.DataFrame, source_col: str = "TOTAL_CONSUMPTION", target_col: str = "log_consumption"
 ) -> pd.DataFrame:
-    """Add a log1p-transformed copy of the target, keeping the original column.
+    """A log1p-transformed copy of the target is added, keeping the original column.
 
     Training on log1p(consumption) makes a given percentage error contribute the same
     amount to the loss regardless of an FSA's scale, instead of squared-error naturally
@@ -30,7 +30,7 @@ def add_log_target(
 def set_categorical_dtypes(
     df: pd.DataFrame, columns: list[str] = CATEGORICAL_COLUMNS
 ) -> pd.DataFrame:
-    """Cast the given columns to pandas category dtype for native XGBoost categorical handling."""
+    """The given columns are cast to pandas category dtype for native XGBoost categorical handling."""
     df = df.copy()
     for col in columns:
         df[col] = df[col].astype("category")
