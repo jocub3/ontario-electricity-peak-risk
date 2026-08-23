@@ -27,12 +27,12 @@ def label_peaks(
     value_col: str = "TOTAL_CONSUMPTION",
     season_col: str = "season",
 ) -> pd.DataFrame:
-    """Add actual_peak (1/0): 1 where value_col exceeds its (FSA, season) threshold.
+    """actual_peak (1/0) is added: 1 where value_col exceeds its (FSA, season) threshold.
 
-    season_col lets a caller point at a season column that isn't literally named "season" -
+    season_col lets a caller point at a season column that is not literally named "season",
     the classifier's training table keeps two: the origin's season (a model feature) and the
-    forecast_timestamp's season (what the threshold must match, since that's the hour being
-    judged as a peak or not). They're usually the same value but can differ across a
+    forecast_timestamp's season (what the threshold must match, since that is the hour being
+    judged as a peak or not). They are usually the same value but can differ across a
     season boundary within the horizon window.
     """
     thresholds = thresholds.rename(columns={"season": season_col})

@@ -26,7 +26,7 @@ def wape(actual, prediction) -> float:
     """Weighted Absolute Percentage Error: total absolute error over total actual volume.
 
     Unlike a plain average of per-row percentage errors, this is a single ratio of sums, so
-    it isn't distorted by rows where actual is near zero - the team's primary forecast metric.
+    it is not distorted by rows where actual is near zero, the team's primary forecast metric.
     """
     actual, prediction = np.asarray(actual), np.asarray(prediction)
     return float(np.sum(np.abs(actual - prediction)) / np.sum(np.abs(actual)))
