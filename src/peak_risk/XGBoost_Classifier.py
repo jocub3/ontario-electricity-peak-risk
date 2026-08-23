@@ -14,17 +14,17 @@ CLASSIFIER_FEATURES = SELECTED_FEATURES + ["horizon"]
 
 
 def build_training_table(df: pd.DataFrame) -> pd.DataFrame:
-    """Reshape the joined hourly dataset into one row per (FSA, origin_timestamp, horizon).
+    """The joined hourly dataset is reshaped into one row per (FSA, origin_timestamp, horizon).
 
-    Each row asks: from origin_timestamp, using only what's known then (weather/calendar
+    Each row asks: from origin_timestamp, using only what is known then (weather/calendar
     persisted from origin, same assumption as the regressor), is forecast_timestamp
-    (horizon hours later) a peak? actual_peak itself isn't added here - the peak threshold
+    (horizon hours later) a peak? actual_peak itself is not added here, the peak threshold
     can only be computed from a fold's own training data, so labeling happens per fold in
     train_and_predict(), not in this fold-independent table.
 
     Two season columns are kept on purpose: "season" is the origin's season (a model
     feature, part of SELECTED_FEATURES), "forecast_season" is the season of the hour being
-    judged as a peak or not - they matter for different things and are usually but not
+    judged as a peak or not, they matter for different things and are usually but not
     always the same value.
     """
     df = set_categorical_dtypes(df)
@@ -68,7 +68,7 @@ def make_model(scale_pos_weight: float) -> xgb.XGBClassifier:
 def train_and_predict(
     train_table: pd.DataFrame, test_table: pd.DataFrame, thresholds: pd.DataFrame
 ) -> pd.DataFrame:
-    """Label both tables with the fold's thresholds, fit on train, predict on test.
+    """Both tables are labeled with the fold's thresholds, the model is fit on train and predicts on test.
 
     thresholds must come from compute_peak_thresholds() run on that fold's own raw training
     hours (not on train_table) - the pivoted table repeats most real hours once per horizon
@@ -83,7 +83,7 @@ def train_and_predict(
     )
 
     # the merge above can downcast FSA/season from category to object if thresholds' own
-    # FSA/season columns aren't category (e.g. computed from a raw, not-yet-cast dataframe)
+    # FSA/season columns are not category (e.g. computed from a raw, not-yet-cast dataframe)
     train_labeled = set_categorical_dtypes(train_labeled)
     test_labeled = set_categorical_dtypes(test_labeled)
 
