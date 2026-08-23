@@ -15,7 +15,7 @@ REAL_TARGET_COLUMNS = [f"real_h{h}" for h in HORIZONS]
 
 
 def build_training_table(df: pd.DataFrame) -> pd.DataFrame:
-    """Merge SELECTED_FEATURES (at origin_timestamp) with the 24-horizon wide targets.
+    """SELECTED_FEATURES (at origin_timestamp) are merged with the 24-horizon wide targets.
 
     Two versions of the targets are kept: the log-scale columns (actual_h1..actual_h24, what
     the model is fit on) and the real-kWh columns (real_h1..real_h24, used only for reporting
@@ -57,7 +57,7 @@ def make_model() -> xgb.XGBRegressor:
 
 
 def train_and_predict(train_df: pd.DataFrame, test_df: pd.DataFrame) -> pd.DataFrame:
-    """Fit on train_df, predict on test_df, return long-form results in the required output schema."""
+    """The model is fit on train_df, predicted on test_df, and long-form results are returned in the required output schema."""
     model = make_model()
     model.fit(train_df[SELECTED_FEATURES], train_df[LOG_TARGET_COLUMNS])
 
