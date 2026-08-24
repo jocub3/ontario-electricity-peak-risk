@@ -42,6 +42,8 @@ Dropped as unimportant, not re-validated individually (gain too low to be worth 
 `Stn Press (kPa)`, the three rare DST transition flags, `is_day_before_holiday`, `is_day_after_holiday`.
 """
 
+import pandas as pd
+
 SELECTED_FEATURES = [
     "FSA",
     "season",
@@ -62,3 +64,14 @@ SELECTED_FEATURES = [
     "Wind Spd (km/h)",
     "Visibility (km)",
 ]
+
+
+def gain_importance(model, features: list[str]) -> pd.Series:
+    """Gain-based feature importance from an already-fitted model, sorted descending.
+
+    Works for both XGBRegressor and XGBClassifier, both expose feature_importances_ in
+    the same order as the columns they were fit on. This only describes how the given
+    model split on the given features, it says nothing about whether a different feature
+    set would have scored better, that needs a separate validation check per model.
+    """
+    return pd.Series(model.feature_importances_, index=features).sort_values(ascending=False)
