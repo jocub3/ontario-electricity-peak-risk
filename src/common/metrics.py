@@ -9,6 +9,14 @@ from __future__ import annotations
 
 import numpy as np
 import pandas as pd
+from sklearn.metrics import (
+    average_precision_score,
+    brier_score_loss,
+    f1_score,
+    precision_score,
+    recall_score,
+    roc_auc_score,
+)
 
 
 def _drop_missing_actual(actual: np.ndarray, prediction: np.ndarray) -> tuple[np.ndarray, np.ndarray]:
@@ -63,3 +71,56 @@ def metrics_by_group(forecast: pd.DataFrame, group_column: str) -> pd.DataFrame:
 def metrics_by_horizon(forecast: pd.DataFrame) -> pd.DataFrame:
     """MAE, WAPE, RMSE, and MAPE per forecast horizon (h+1 .. h+24)."""
     return metrics_by_group(forecast, "horizon")
+
+
+def classification_summary_metrics(forecast: pd.DataFrame) -> dict[str, float]:
+    """PR-AUC, ROC-AUC, Brier score, precision, recall, and F1 over a peak-risk forecast
+    dataframe (columns ``actual_peak``, ``peak_probability``, ``predicted_peak``)."""
+    actual = forecast["actual_peak"].to_numpy()
+    probability = forecast["peak_probability"].to_numpy()
+    predicted = forecast["predicted_peak"].to_numpy()
+    return {
+        "pr_auc": average_precision_score(actual, probability),
+        "roc_auc": roc_auc_score(actual, probability),
+        "brier": brier_score_loss(actual, probability),
+        "precision": precision_score(actual, predicted, zero_division=0),
+        "recall": recall_score(actual, predicted, zero_division=0),
+        "f1": f1_score(actual, predicted, zero_division=0),
+    }
+
+
+def classification_metrics_by_group(forecast: pd.DataFrame, group_column: str) -> pd.DataFrame:
+    """Classification metrics grouped by an arbitrary column (e.g. ``fold``, ``fsa``)."""
+    rows = []
+    for group_value, group in forecast.groupby(group_column):
+        rows.append({group_column: group_value, **classification_summary_metrics(group)})
+    return pd.DataFrame(rows).sort_values(group_column).reset_index(drop=True)
+
+
+def top_k_capture_rate(forecast: pd.DataFrame, k_fraction: float = 0.025) -> float:
+    """Share of the true peaks caught within the top ``k_fraction`` highest-probability rows.
+
+    Defaults to 2.5%, matching the peak definition, so a perfect model scores 1.0.
+    """
+    n_top = max(1, int(len(forecast) * k_fraction))
+    top = forecast.nlargest(n_top, "peak_probability")
+    total_actual_peaks = forecast["actual_peak"].sum()
+    return top["actual_peak"].sum() / total_actual_peaks
+
+
+def calibration_table(forecast: pd.DataFrame, n_bins: int = 10) -> pd.DataFrame:
+    """Mean predicted probability vs. actual peak rate, in ``n_bins`` equal-width bins.
+
+    A well-calibrated model has ``actual_rate`` close to ``mean_predicted`` in every bin.
+    """
+    binned = forecast[["peak_probability", "actual_peak"]].copy()
+    binned["bin"] = pd.cut(binned["peak_probability"], bins=n_bins, include_lowest=True)
+    return (
+        binned.groupby("bin", observed=True)
+        .agg(
+            mean_predicted=("peak_probability", "mean"),
+            actual_rate=("actual_peak", "mean"),
+            n=("actual_peak", "size"),
+        )
+        .reset_index()
+    )

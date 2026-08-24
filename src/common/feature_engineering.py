@@ -13,6 +13,8 @@ CONSUMPTION_COLUMN = "electricity_consumption"
 LAG_HOURS = (1, 2, 3, 24, 48, 168)
 ROLLING_WINDOWS = (24, 168)
 HORIZONS = tuple(range(1, 25))
+HOT_THRESHOLD_C = 28.0
+COLD_THRESHOLD_C = -10.0
 
 
 def add_lag_features(
@@ -61,4 +63,30 @@ def add_multi_output_targets(
     grouped = df.groupby("fsa")[consumption_column]
     for horizon in horizons:
         df[f"target_h{horizon}"] = grouped.shift(-horizon)
+    return df
+
+
+def add_temperature_episode_features(
+    df: pd.DataFrame,
+    hot_threshold_c: float = HOT_THRESHOLD_C,
+    cold_threshold_c: float = COLD_THRESHOLD_C,
+    temperature_column: str = "temperature_c",
+) -> pd.DataFrame:
+    """Add running hour-counts of the current hot/cold spell, per FSA.
+
+    ``heat_episode_hours``/``cold_episode_hours`` count consecutive hours at or above
+    ``hot_threshold_c`` / at or below ``cold_threshold_c``, resetting to 0 when the streak
+    breaks (including at FSA boundaries and missing readings).
+    """
+    df = df.sort_values(["fsa", "timestamp_local"]).copy()
+    new_fsa = df["fsa"] != df["fsa"].shift()
+
+    for column, condition in [
+        ("heat_episode_hours", df[temperature_column] >= hot_threshold_c),
+        ("cold_episode_hours", df[temperature_column] <= cold_threshold_c),
+    ]:
+        condition = condition.fillna(False)
+        streak_id = (~condition | new_fsa).cumsum()
+        df[column] = condition.astype(int).groupby(streak_id).cumsum()
+
     return df
