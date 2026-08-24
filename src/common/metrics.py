@@ -45,13 +45,26 @@ def mape(actual, prediction, epsilon: float = 1e-6) -> float:
     return float(np.mean(np.abs((actual - prediction) / np.maximum(np.abs(actual), epsilon))) * 100)
 
 
+def bias(actual, prediction) -> float:
+    """Mean signed error (actual - prediction), in the same units as actual (kWh).
+
+    Unlike MAE/WAPE/RMSE, the sign is kept: a positive value means the model
+    under-predicts on average, a negative value means it over-predicts on average.
+    A model can score near zero here while MAE stays large, since errors in
+    opposite directions cancel out in this metric but not in an absolute one.
+    """
+    actual, prediction = np.asarray(actual), np.asarray(prediction)
+    return float(np.mean(actual - prediction))
+
+
 def forecast_metrics(actual, prediction) -> dict:
-    """MAE, WAPE, RMSE, and MAPE together, for a quick per-fold summary."""
+    """MAE, WAPE, RMSE, MAPE, and bias together, for a quick per-fold summary."""
     return {
         "mae": mae(actual, prediction),
         "wape": wape(actual, prediction),
         "rmse": rmse(actual, prediction),
         "mape": mape(actual, prediction),
+        "bias": bias(actual, prediction),
     }
 
 
@@ -73,9 +86,20 @@ def forecast_metrics_by_horizon(
 # --- Peak-risk ---
 
 
+def peak_rate_bias(actual_peak, predicted_peak) -> float:
+    """Predicted peak rate minus actual peak rate, at the chosen probability threshold.
+
+    A positive value means the classifier flags more hours as peaks than are actually
+    peaks (over-flagging), a negative value means it flags fewer (under-flagging). Zero
+    does not imply the flagged hours are the right ones, only that the two rates match.
+    """
+    actual_peak, predicted_peak = np.asarray(actual_peak), np.asarray(predicted_peak)
+    return float(np.mean(predicted_peak) - np.mean(actual_peak))
+
+
 def peak_risk_metrics(actual_peak, peak_probability, predicted_peak) -> dict:
     """PR-AUC (the team's primary metric), precision/recall/F1 at the chosen threshold,
-    ROC-AUC, and Brier score, together for a quick per-fold summary."""
+    ROC-AUC, Brier score, and peak-rate bias, together for a quick per-fold summary."""
     return {
         "pr_auc": average_precision_score(actual_peak, peak_probability),
         "precision": precision_score(actual_peak, predicted_peak, zero_division=0),
@@ -83,6 +107,7 @@ def peak_risk_metrics(actual_peak, peak_probability, predicted_peak) -> dict:
         "f1": f1_score(actual_peak, predicted_peak, zero_division=0),
         "roc_auc": roc_auc_score(actual_peak, peak_probability),
         "brier": brier_score_loss(actual_peak, peak_probability),
+        "peak_rate_bias": peak_rate_bias(actual_peak, predicted_peak),
     }
 
 

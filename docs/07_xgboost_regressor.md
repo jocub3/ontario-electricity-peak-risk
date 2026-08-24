@@ -16,7 +16,8 @@
 
 Findings come from `02_04_xgboost_regressor_training.ipynb`, which trains and evaluates the model on all 3 folds.
 
-1. Overall WAPE is 12.15% for fold_1 (test 2023), 6.08% for fold_2 (test 2024), and 6.35% for fold_3 (test 2025). fold_1 is clearly the weakest of the three across every metric (MAE, WAPE, RMSE, MAPE).
+1. Overall WAPE is 12.15% for fold_1 (test 2023), 6.08% for fold_2 (test 2024), and 6.35% for fold_3 (test 2025). fold_1 is clearly the weakest of the three across every metric (MAE, WAPE, RMSE, MAPE, bias).
 2. fold_1 has the least training data of the three folds (2021-2022 only, versus 3 and 4 years for fold_2 and fold_3), consistent with its weaker result, though the folds also differ in which year they test on, so the two effects are not fully separated by this comparison alone.
 3. WAPE grows with horizon in every fold: fold_2 goes from 4.65% at h+1 to 7.14% at h+24, fold_3 from 4.99% to 7.75%, both roughly a 55% relative increase. fold_1 grows from 10.92% to 13.19%, a smaller relative jump (about 21%) but starting from, and staying at, a much higher error throughout. The degradation is smooth and gradual, not a sharp jump at any single horizon.
-4. The output dataframe matches the required schema exactly, column names and order both, confirmed directly against `fold_results["fold_3"].head()`.
+4. `bias` (mean signed error, `actual - prediction`) is positive in all 3 folds: about +735 kWh in fold_1, +85 kWh in fold_2, +315 kWh in fold_3. A positive value means the model under-predicts on average, so this is a consistent tendency, not something limited to the weakest fold. It fits the same pattern already found for the peak thresholds: training years sit earlier than the test year, and if consumption trends upward over time, a model anchored to the past tends to fall short of a still-rising target. Why fold_2 has the smallest bias despite training on fewer years than fold_3 is not explained by that story alone and is left as an open question.
+5. The output dataframe matches the required schema exactly, column names and order both, confirmed directly against `fold_results["fold_3"].head()`.
