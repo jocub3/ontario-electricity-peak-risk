@@ -11,6 +11,7 @@ import numpy as np
 import pandas as pd
 from sklearn.metrics import (
     average_precision_score,
+    balanced_accuracy_score,
     brier_score_loss,
     f1_score,
     precision_score,
@@ -49,14 +50,22 @@ def mape(actual: np.ndarray, prediction: np.ndarray) -> float:
     return float(np.mean(np.abs((actual - prediction) / actual)) * 100)
 
 
+def bias(actual: np.ndarray, prediction: np.ndarray) -> float:
+    """Mean signed error (prediction minus actual): positive over-predicts, negative
+    under-predicts, and errors can cancel out here unlike MAE/RMSE."""
+    actual, prediction = _drop_missing_actual(np.asarray(actual), np.asarray(prediction))
+    return float(np.mean(prediction - actual))
+
+
 def summary_metrics(forecast: pd.DataFrame) -> dict[str, float]:
-    """MAE, WAPE, RMSE, and MAPE over an entire long-format forecast dataframe."""
+    """MAE, WAPE, RMSE, MAPE, and BIAS over an entire long-format forecast dataframe."""
     actual, prediction = forecast["actual"].to_numpy(), forecast["prediction"].to_numpy()
     return {
         "mae": mae(actual, prediction),
         "wape": wape(actual, prediction),
         "rmse": rmse(actual, prediction),
         "mape": mape(actual, prediction),
+        "bias": bias(actual, prediction),
     }
 
 
@@ -74,18 +83,20 @@ def metrics_by_horizon(forecast: pd.DataFrame) -> pd.DataFrame:
 
 
 def classification_summary_metrics(forecast: pd.DataFrame) -> dict[str, float]:
-    """PR-AUC, ROC-AUC, Brier score, precision, recall, and F1 over a peak-risk forecast
-    dataframe (columns ``actual_peak``, ``peak_probability``, ``predicted_peak``)."""
+    """All the peak-risk classification metrics the team tracks, over a forecast dataframe
+    (columns ``actual_peak``, ``peak_probability``, ``predicted_peak``)."""
     actual = forecast["actual_peak"].to_numpy()
     probability = forecast["peak_probability"].to_numpy()
     predicted = forecast["predicted_peak"].to_numpy()
     return {
-        "pr_auc": average_precision_score(actual, probability),
-        "roc_auc": roc_auc_score(actual, probability),
-        "brier": brier_score_loss(actual, probability),
         "precision": precision_score(actual, predicted, zero_division=0),
         "recall": recall_score(actual, predicted, zero_division=0),
         "f1": f1_score(actual, predicted, zero_division=0),
+        "balanced_accuracy": balanced_accuracy_score(actual, predicted),
+        "positive_rate_pct": float(actual.mean() * 100),
+        "pr_auc": average_precision_score(actual, probability),
+        "roc_auc": roc_auc_score(actual, probability),
+        "brier": brier_score_loss(actual, probability),
     }
 
 
