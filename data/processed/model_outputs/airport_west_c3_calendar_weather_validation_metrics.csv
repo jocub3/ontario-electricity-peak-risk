@@ -1,0 +1,2 @@
+Region,Model,Feature_Set,Order,Seasonal_Order,MAE,RMSE,MAPE_Percent,Fit_Time_Minutes,Rolling_Time_Minutes
+AIRPORT_WEST,SARIMAX C3 + Weather,Calendar + Weather,"(2,0,1)","(0,1,0,24)",1941.6161506324374,3186.755992593047,5.483171664045765,15.265010090668996,8.456618436177571
