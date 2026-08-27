@@ -1,0 +1,2 @@
+Region,Model,Feature_Set,Order,Seasonal_Order,MAE,RMSE,MAPE_Percent,Fit_Time_Minutes,Rolling_Time_Minutes
+DOWNTOWN,SARIMAX C3 + Weather,Calendar + Weather,"(2,0,1)","(0,1,0,24)",1121.4879330172016,1763.9198465987365,4.552490418210146,7.737754770119985,5.292136589686076
