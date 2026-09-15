@@ -1,0 +1,15 @@
+model:
+  name: "seasonal_naive_daily"
+  branch: "forecasting/seasonal-naive-baseline"
+  seasonal_period_hours: 24
+  target_prefix: "target_h"
+  horizons: 24
+  evaluate_final_holdout: false
+
+paths:
+  modeling_foundation_config: "configs/modeling_foundation.yaml"
+  feature_dataset: "data/processed/feature_dataset.parquet"
+  forecast_targets: "data/processed/target_definition/forecast_target_complete.parquet"
+  reports_dir: "reports/modeling/forecasting/seasonal_naive"
+  docs_dir: "docs/modeling/forecasting/seasonal_naive"
+  outputs_dir: "outputs/modeling/forecasting/seasonal_naive"
