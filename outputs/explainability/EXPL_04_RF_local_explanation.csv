@@ -1,0 +1,11 @@
+task,horizon,feature,feature_value,shap_contribution,abs_contribution,direction
+rf,18,target_lag_24h,24513.699999999997,12394.991697030446,12394.991697030446,increases forecast
+rf,18,target_lag_48h,20248.8,2113.7881650771506,2113.7881650771506,increases forecast
+rf,18,origin_rolling_std_24h,5485.158704002664,1046.1519184703834,1046.1519184703834,increases forecast
+rf,18,target_lag_168h,21929.3,1002.1635369572775,1002.1635369572775,increases forecast
+rf,18,origin__Stn Press (kPa),99.78,685.077290275467,685.077290275467,increases forecast
+rf,18,origin_rolling_mean_24h,17679.3875,369.8502290932339,369.8502290932339,increases forecast
+rf,18,origin__reported_premise_count,11173,291.14631362872035,291.14631362872035,increases forecast
+rf,18,origin_rolling_mean_168h,16919.842857142856,199.87882753937654,199.87882753937654,increases forecast
+rf,18,fsa,M9W,148.75911640786634,148.75911640786634,increases forecast
+rf,18,origin__Rel Hum (%),82.0,134.14754067075853,134.14754067075853,increases forecast

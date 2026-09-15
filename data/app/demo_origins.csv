@@ -1,0 +1,4 @@
+forecast_origin,demand_history_status,weather_grid_status,fsa_count
+2026-01-08 00:00:00,PASS,PASS,6
+2026-03-05 12:00:00,PASS,PASS,6
+2026-04-30 23:00:00,PASS,PASS,6

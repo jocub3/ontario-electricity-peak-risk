@@ -1,0 +1,108 @@
+paths:
+  feature_dataset: "data/processed/feature_dataset.parquet"
+  forecast_targets: "data/processed/target_definition/forecast_target_complete.parquet"
+  reports_dir: "reports/modeling_foundation"
+  docs_dir: "docs/modeling_foundation"
+  outputs_dir: "outputs/modeling_foundation"
+
+modeling:
+  random_seed: 42
+
+  time:
+    time_column: "timestamp"
+    group_column: "fsa"
+
+  forecasting:
+    target_prefix: "target_h"
+    horizons: 24
+
+    # Main metric used for model ranking.
+    selection_metric: "mae"
+
+    primary_metrics:
+      - "mae"
+      - "rmse"
+      - "mape"
+
+    secondary_metrics:
+      - "wape"
+      - "bias"
+
+  peak_risk:
+    target_column: "total_consumption_kwh"
+
+    # Peak definition.
+    percentile_threshold: 0.975
+    threshold_grouping:
+      - "fsa"
+      - "season"
+
+    # Peak-Risk uses the same forecast horizon as Forecasting.
+    target_prefix: "peak_h"
+    horizons: 24
+
+    # Fixed threshold used for the initial fair comparison of classifiers.
+    # A different operational threshold may be optimized later using
+    # validation data only.
+    probability_threshold: 0.50
+
+    # Main metric used for initial model ranking.
+    selection_metric: "pr_auc"
+
+    primary_metrics:
+      - "precision"
+      - "recall"
+      - "f1"
+      - "pr_auc"
+
+    secondary_metrics:
+      - "roc_auc"
+      - "balanced_accuracy"
+
+  splits:
+    # These are observation-window boundaries.
+    # Forecast-origin boundaries are derived automatically by subtracting
+    # the maximum forecast horizon from the end of each period.
+
+    validation_folds:
+      - name: "fold_2023"
+        train_start: "2021-01-01 00:00:00"
+        train_end: "2022-12-31 23:00:00"
+        validation_start: "2023-01-01 00:00:00"
+        validation_end: "2023-12-31 23:00:00"
+
+      - name: "fold_2024"
+        train_start: "2021-01-01 00:00:00"
+        train_end: "2023-12-31 23:00:00"
+        validation_start: "2024-01-01 00:00:00"
+        validation_end: "2024-12-31 23:00:00"
+
+    final_holdout:
+      name: "test_2025"
+      train_start: "2021-01-01 00:00:00"
+      train_end: "2024-12-31 23:00:00"
+      test_start: "2025-01-01 00:00:00"
+      test_end: "2025-12-31 23:00:00"
+
+  preprocessing:
+    numeric_scaling:
+      default_linear: "standard"
+      default_tree: "none"
+      robust_option: "robust"
+
+    missing_values:
+      numeric_strategy: "median"
+      categorical_strategy: "most_frequent"
+
+    categorical_encoding:
+      default_linear: "one_hot"
+      default_tree: "model_specific"
+
+    fit_scope: "training_only"
+
+  evaluation:
+    report_global_metrics: true
+    report_by_fsa: true
+    report_by_fold: true
+    report_by_horizon: true
+    preserve_2025_holdout: true

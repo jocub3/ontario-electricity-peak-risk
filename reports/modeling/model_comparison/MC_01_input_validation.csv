@@ -1,0 +1,11 @@
+model_key,model,task,report_dir,global_metrics,fold_metrics,fsa_metrics,horizon_metrics,threshold_analysis,tuning_details,runtime_diagnostics
+seasonal_naive,Seasonal Naive,forecasting,E:\jcuenca\OneDrive - GUSCanada\5toTerm\01_Capstone\DataLocal\ontario-electricity-peak-risk\reports\modeling\forecasting\seasonal_naive,True,True,True,True,False,False,False
+random_forest,Random Forest Regressor,forecasting,E:\jcuenca\OneDrive - GUSCanada\5toTerm\01_Capstone\DataLocal\ontario-electricity-peak-risk\reports\modeling\forecasting\random_forest,True,True,True,True,False,True,False
+sarimax,SARIMAX Rolling,forecasting,E:\jcuenca\OneDrive - GUSCanada\5toTerm\01_Capstone\DataLocal\ontario-electricity-peak-risk\reports\modeling\forecasting\sarimax_rolling,True,True,True,True,False,False,True
+xgboost,XGBoost Regressor,forecasting,E:\jcuenca\OneDrive - GUSCanada\5toTerm\01_Capstone\DataLocal\ontario-electricity-peak-risk\reports\modeling\forecasting\xgboost,True,True,True,True,False,True,False
+lightgbm,LightGBM Regressor,forecasting,E:\jcuenca\OneDrive - GUSCanada\5toTerm\01_Capstone\DataLocal\ontario-electricity-peak-risk\reports\modeling\forecasting\lightgbm,True,True,True,True,False,True,False
+logistic_regression,Logistic Regression,peak_risk,E:\jcuenca\OneDrive - GUSCanada\5toTerm\01_Capstone\DataLocal\ontario-electricity-peak-risk\reports\modeling\peak_risk\logistic_regression,True,True,True,True,False,False,False
+hist_gradient_boosting,HistGradientBoosting,peak_risk,E:\jcuenca\OneDrive - GUSCanada\5toTerm\01_Capstone\DataLocal\ontario-electricity-peak-risk\reports\modeling\peak_risk\hist_gradient_boosting,True,True,True,True,False,True,False
+random_forest,Random Forest Classifier,peak_risk,E:\jcuenca\OneDrive - GUSCanada\5toTerm\01_Capstone\DataLocal\ontario-electricity-peak-risk\reports\modeling\peak_risk\random_forest,True,True,True,True,True,True,False
+xgboost,XGBoost Classifier,peak_risk,E:\jcuenca\OneDrive - GUSCanada\5toTerm\01_Capstone\DataLocal\ontario-electricity-peak-risk\reports\modeling\peak_risk\xgboost,True,True,True,True,True,True,False
+lightgbm,LightGBM Classifier,peak_risk,E:\jcuenca\OneDrive - GUSCanada\5toTerm\01_Capstone\DataLocal\ontario-electricity-peak-risk\reports\modeling\peak_risk\lightgbm,True,True,True,True,True,True,False

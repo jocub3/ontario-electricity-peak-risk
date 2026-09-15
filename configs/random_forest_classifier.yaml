@@ -1,0 +1,40 @@
+model:
+  name: "random_forest_classifier"
+  branch: "peak-risk/random-forest-classifier"
+  horizons: 24
+  target_prefix: "peak_h"
+  probability_threshold: 0.50
+  peak_percentile: 0.975
+  evaluate_final_holdout: false
+  random_seed: 42
+
+  tuning:
+    representative_horizons: [1, 12, 24]
+    selection_metric: "pr_auc"
+    parameter_grid:
+
+      - n_estimators: 250
+        max_depth: 14
+        min_samples_leaf: 5
+        max_features: "sqrt"
+        class_weight: "balanced_subsample"
+      - n_estimators: 400
+        max_depth: null
+        min_samples_leaf: 8
+        max_features: 0.7
+        class_weight: "balanced_subsample"
+      - n_estimators: 300
+        max_depth: 20
+        min_samples_leaf: 10
+        max_features: 0.5
+        class_weight: "balanced"
+
+
+paths:
+  modeling_foundation_config: "configs/modeling_foundation.yaml"
+  feature_dataset: "data/processed/feature_dataset.parquet"
+  forecast_targets: "data/processed/target_definition/forecast_target_complete.parquet"
+  reports_dir: "reports/modeling/peak_risk/random_forest"
+  docs_dir: "docs/modeling/peak_risk/random_forest"
+  outputs_dir: "outputs/modeling/peak_risk/random_forest"
+  figures_dir: "reports/figures/modeling/peak_risk/random_forest"

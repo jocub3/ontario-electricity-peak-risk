@@ -1,0 +1,301 @@
+﻿fsa,year,column,coverage_pct
+L4T,2021,Temp (°C),99.977169
+L4T,2021,Dew Point Temp (°C),99.965753
+L4T,2021,Rel Hum (%),99.965753
+L4T,2021,Stn Press (kPa),99.977169
+L4T,2021,Wind Spd (km/h),99.977169
+L4T,2021,Precip. Amount (mm),0.0
+L4T,2021,Visibility (km),99.965753
+L4T,2021,Wind Dir (10s deg),98.378995
+L4T,2021,Hmdx,18.527397
+L4T,2021,Wind Chill,19.703196
+L4T,2022,Temp (°C),99.988584
+L4T,2022,Dew Point Temp (°C),99.988584
+L4T,2022,Rel Hum (%),99.988584
+L4T,2022,Stn Press (kPa),99.988584
+L4T,2022,Wind Spd (km/h),99.988584
+L4T,2022,Precip. Amount (mm),0.0
+L4T,2022,Visibility (km),99.988584
+L4T,2022,Wind Dir (10s deg),98.344749
+L4T,2022,Hmdx,17.545662
+L4T,2022,Wind Chill,23.447489
+L4T,2023,Temp (°C),99.988584
+L4T,2023,Dew Point Temp (°C),99.988584
+L4T,2023,Rel Hum (%),99.988584
+L4T,2023,Stn Press (kPa),99.988584
+L4T,2023,Wind Spd (km/h),99.988584
+L4T,2023,Precip. Amount (mm),0.0
+L4T,2023,Visibility (km),99.988584
+L4T,2023,Wind Dir (10s deg),98.710046
+L4T,2023,Hmdx,15.707763
+L4T,2023,Wind Chill,16.061644
+L4T,2024,Temp (°C),99.988616
+L4T,2024,Dew Point Temp (°C),99.988616
+L4T,2024,Rel Hum (%),99.988616
+L4T,2024,Stn Press (kPa),99.988616
+L4T,2024,Wind Spd (km/h),99.988616
+L4T,2024,Precip. Amount (mm),0.0
+L4T,2024,Visibility (km),99.988616
+L4T,2024,Wind Dir (10s deg),98.041894
+L4T,2024,Hmdx,18.237705
+L4T,2024,Wind Chill,15.733151
+L4T,2025,Temp (°C),99.988584
+L4T,2025,Dew Point Temp (°C),99.988584
+L4T,2025,Rel Hum (%),99.988584
+L4T,2025,Stn Press (kPa),99.988584
+L4T,2025,Wind Spd (km/h),99.988584
+L4T,2025,Precip. Amount (mm),0.0
+L4T,2025,Visibility (km),99.988584
+L4T,2025,Wind Dir (10s deg),98.173516
+L4T,2025,Hmdx,17.442922
+L4T,2025,Wind Chill,25.262557
+M5R,2021,Temp (°C),99.920091
+M5R,2021,Dew Point Temp (°C),99.920091
+M5R,2021,Rel Hum (%),99.920091
+M5R,2021,Stn Press (kPa),99.920091
+M5R,2021,Wind Spd (km/h),0.0
+M5R,2021,Precip. Amount (mm),99.920091
+M5R,2021,Visibility (km),0.0
+M5R,2021,Wind Dir (10s deg),0.0
+M5R,2021,Hmdx,18.847032
+M5R,2021,Wind Chill,0.0
+M5R,2022,Temp (°C),99.942922
+M5R,2022,Dew Point Temp (°C),99.942922
+M5R,2022,Rel Hum (%),99.942922
+M5R,2022,Stn Press (kPa),99.942922
+M5R,2022,Wind Spd (km/h),0.0
+M5R,2022,Precip. Amount (mm),99.942922
+M5R,2022,Visibility (km),0.0
+M5R,2022,Wind Dir (10s deg),0.0
+M5R,2022,Hmdx,17.888128
+M5R,2022,Wind Chill,0.0
+M5R,2023,Temp (°C),99.931507
+M5R,2023,Dew Point Temp (°C),99.931507
+M5R,2023,Rel Hum (%),99.931507
+M5R,2023,Stn Press (kPa),99.931507
+M5R,2023,Wind Spd (km/h),0.0
+M5R,2023,Precip. Amount (mm),99.931507
+M5R,2023,Visibility (km),0.0
+M5R,2023,Wind Dir (10s deg),0.0
+M5R,2023,Hmdx,15.684932
+M5R,2023,Wind Chill,0.0
+M5R,2024,Temp (°C),99.92031
+M5R,2024,Dew Point Temp (°C),99.92031
+M5R,2024,Rel Hum (%),99.92031
+M5R,2024,Stn Press (kPa),99.92031
+M5R,2024,Wind Spd (km/h),0.0
+M5R,2024,Precip. Amount (mm),99.92031
+M5R,2024,Visibility (km),0.0
+M5R,2024,Wind Dir (10s deg),0.0
+M5R,2024,Hmdx,18.590619
+M5R,2024,Wind Chill,0.0
+M5R,2025,Temp (°C),99.817352
+M5R,2025,Dew Point Temp (°C),99.817352
+M5R,2025,Rel Hum (%),99.817352
+M5R,2025,Stn Press (kPa),99.817352
+M5R,2025,Wind Spd (km/h),0.0
+M5R,2025,Precip. Amount (mm),99.817352
+M5R,2025,Visibility (km),0.0
+M5R,2025,Wind Dir (10s deg),0.0
+M5R,2025,Hmdx,17.568493
+M5R,2025,Wind Chill,0.0
+M5S,2021,Temp (°C),99.920091
+M5S,2021,Dew Point Temp (°C),99.920091
+M5S,2021,Rel Hum (%),99.920091
+M5S,2021,Stn Press (kPa),99.920091
+M5S,2021,Wind Spd (km/h),0.0
+M5S,2021,Precip. Amount (mm),99.920091
+M5S,2021,Visibility (km),0.0
+M5S,2021,Wind Dir (10s deg),0.0
+M5S,2021,Hmdx,18.847032
+M5S,2021,Wind Chill,0.0
+M5S,2022,Temp (°C),99.942922
+M5S,2022,Dew Point Temp (°C),99.942922
+M5S,2022,Rel Hum (%),99.942922
+M5S,2022,Stn Press (kPa),99.942922
+M5S,2022,Wind Spd (km/h),0.0
+M5S,2022,Precip. Amount (mm),99.942922
+M5S,2022,Visibility (km),0.0
+M5S,2022,Wind Dir (10s deg),0.0
+M5S,2022,Hmdx,17.888128
+M5S,2022,Wind Chill,0.0
+M5S,2023,Temp (°C),99.931507
+M5S,2023,Dew Point Temp (°C),99.931507
+M5S,2023,Rel Hum (%),99.931507
+M5S,2023,Stn Press (kPa),99.931507
+M5S,2023,Wind Spd (km/h),0.0
+M5S,2023,Precip. Amount (mm),99.931507
+M5S,2023,Visibility (km),0.0
+M5S,2023,Wind Dir (10s deg),0.0
+M5S,2023,Hmdx,15.684932
+M5S,2023,Wind Chill,0.0
+M5S,2024,Temp (°C),99.92031
+M5S,2024,Dew Point Temp (°C),99.92031
+M5S,2024,Rel Hum (%),99.92031
+M5S,2024,Stn Press (kPa),99.92031
+M5S,2024,Wind Spd (km/h),0.0
+M5S,2024,Precip. Amount (mm),99.92031
+M5S,2024,Visibility (km),0.0
+M5S,2024,Wind Dir (10s deg),0.0
+M5S,2024,Hmdx,18.590619
+M5S,2024,Wind Chill,0.0
+M5S,2025,Temp (°C),99.817352
+M5S,2025,Dew Point Temp (°C),99.817352
+M5S,2025,Rel Hum (%),99.817352
+M5S,2025,Stn Press (kPa),99.817352
+M5S,2025,Wind Spd (km/h),0.0
+M5S,2025,Precip. Amount (mm),99.817352
+M5S,2025,Visibility (km),0.0
+M5S,2025,Wind Dir (10s deg),0.0
+M5S,2025,Hmdx,17.568493
+M5S,2025,Wind Chill,0.0
+M6G,2021,Temp (°C),99.920091
+M6G,2021,Dew Point Temp (°C),99.920091
+M6G,2021,Rel Hum (%),99.920091
+M6G,2021,Stn Press (kPa),99.920091
+M6G,2021,Wind Spd (km/h),0.0
+M6G,2021,Precip. Amount (mm),99.920091
+M6G,2021,Visibility (km),0.0
+M6G,2021,Wind Dir (10s deg),0.0
+M6G,2021,Hmdx,18.847032
+M6G,2021,Wind Chill,0.0
+M6G,2022,Temp (°C),99.942922
+M6G,2022,Dew Point Temp (°C),99.942922
+M6G,2022,Rel Hum (%),99.942922
+M6G,2022,Stn Press (kPa),99.942922
+M6G,2022,Wind Spd (km/h),0.0
+M6G,2022,Precip. Amount (mm),99.942922
+M6G,2022,Visibility (km),0.0
+M6G,2022,Wind Dir (10s deg),0.0
+M6G,2022,Hmdx,17.888128
+M6G,2022,Wind Chill,0.0
+M6G,2023,Temp (°C),99.931507
+M6G,2023,Dew Point Temp (°C),99.931507
+M6G,2023,Rel Hum (%),99.931507
+M6G,2023,Stn Press (kPa),99.931507
+M6G,2023,Wind Spd (km/h),0.0
+M6G,2023,Precip. Amount (mm),99.931507
+M6G,2023,Visibility (km),0.0
+M6G,2023,Wind Dir (10s deg),0.0
+M6G,2023,Hmdx,15.684932
+M6G,2023,Wind Chill,0.0
+M6G,2024,Temp (°C),99.92031
+M6G,2024,Dew Point Temp (°C),99.92031
+M6G,2024,Rel Hum (%),99.92031
+M6G,2024,Stn Press (kPa),99.92031
+M6G,2024,Wind Spd (km/h),0.0
+M6G,2024,Precip. Amount (mm),99.92031
+M6G,2024,Visibility (km),0.0
+M6G,2024,Wind Dir (10s deg),0.0
+M6G,2024,Hmdx,18.590619
+M6G,2024,Wind Chill,0.0
+M6G,2025,Temp (°C),99.817352
+M6G,2025,Dew Point Temp (°C),99.817352
+M6G,2025,Rel Hum (%),99.817352
+M6G,2025,Stn Press (kPa),99.817352
+M6G,2025,Wind Spd (km/h),0.0
+M6G,2025,Precip. Amount (mm),99.817352
+M6G,2025,Visibility (km),0.0
+M6G,2025,Wind Dir (10s deg),0.0
+M6G,2025,Hmdx,17.568493
+M6G,2025,Wind Chill,0.0
+M9R,2021,Temp (°C),99.977169
+M9R,2021,Dew Point Temp (°C),99.965753
+M9R,2021,Rel Hum (%),99.965753
+M9R,2021,Stn Press (kPa),99.977169
+M9R,2021,Wind Spd (km/h),99.977169
+M9R,2021,Precip. Amount (mm),0.0
+M9R,2021,Visibility (km),99.965753
+M9R,2021,Wind Dir (10s deg),98.378995
+M9R,2021,Hmdx,18.527397
+M9R,2021,Wind Chill,19.703196
+M9R,2022,Temp (°C),99.988584
+M9R,2022,Dew Point Temp (°C),99.988584
+M9R,2022,Rel Hum (%),99.988584
+M9R,2022,Stn Press (kPa),99.988584
+M9R,2022,Wind Spd (km/h),99.988584
+M9R,2022,Precip. Amount (mm),0.0
+M9R,2022,Visibility (km),99.988584
+M9R,2022,Wind Dir (10s deg),98.344749
+M9R,2022,Hmdx,17.545662
+M9R,2022,Wind Chill,23.447489
+M9R,2023,Temp (°C),99.988584
+M9R,2023,Dew Point Temp (°C),99.988584
+M9R,2023,Rel Hum (%),99.988584
+M9R,2023,Stn Press (kPa),99.988584
+M9R,2023,Wind Spd (km/h),99.988584
+M9R,2023,Precip. Amount (mm),0.0
+M9R,2023,Visibility (km),99.988584
+M9R,2023,Wind Dir (10s deg),98.710046
+M9R,2023,Hmdx,15.707763
+M9R,2023,Wind Chill,16.061644
+M9R,2024,Temp (°C),99.988616
+M9R,2024,Dew Point Temp (°C),99.988616
+M9R,2024,Rel Hum (%),99.988616
+M9R,2024,Stn Press (kPa),99.988616
+M9R,2024,Wind Spd (km/h),99.988616
+M9R,2024,Precip. Amount (mm),0.0
+M9R,2024,Visibility (km),99.988616
+M9R,2024,Wind Dir (10s deg),98.041894
+M9R,2024,Hmdx,18.237705
+M9R,2024,Wind Chill,15.733151
+M9R,2025,Temp (°C),99.988584
+M9R,2025,Dew Point Temp (°C),99.988584
+M9R,2025,Rel Hum (%),99.988584
+M9R,2025,Stn Press (kPa),99.988584
+M9R,2025,Wind Spd (km/h),99.988584
+M9R,2025,Precip. Amount (mm),0.0
+M9R,2025,Visibility (km),99.988584
+M9R,2025,Wind Dir (10s deg),98.173516
+M9R,2025,Hmdx,17.442922
+M9R,2025,Wind Chill,25.262557
+M9W,2021,Temp (°C),99.977169
+M9W,2021,Dew Point Temp (°C),99.965753
+M9W,2021,Rel Hum (%),99.965753
+M9W,2021,Stn Press (kPa),99.977169
+M9W,2021,Wind Spd (km/h),99.977169
+M9W,2021,Precip. Amount (mm),0.0
+M9W,2021,Visibility (km),99.965753
+M9W,2021,Wind Dir (10s deg),98.378995
+M9W,2021,Hmdx,18.527397
+M9W,2021,Wind Chill,19.703196
+M9W,2022,Temp (°C),99.988584
+M9W,2022,Dew Point Temp (°C),99.988584
+M9W,2022,Rel Hum (%),99.988584
+M9W,2022,Stn Press (kPa),99.988584
+M9W,2022,Wind Spd (km/h),99.988584
+M9W,2022,Precip. Amount (mm),0.0
+M9W,2022,Visibility (km),99.988584
+M9W,2022,Wind Dir (10s deg),98.344749
+M9W,2022,Hmdx,17.545662
+M9W,2022,Wind Chill,23.447489
+M9W,2023,Temp (°C),99.988584
+M9W,2023,Dew Point Temp (°C),99.988584
+M9W,2023,Rel Hum (%),99.988584
+M9W,2023,Stn Press (kPa),99.988584
+M9W,2023,Wind Spd (km/h),99.988584
+M9W,2023,Precip. Amount (mm),0.0
+M9W,2023,Visibility (km),99.988584
+M9W,2023,Wind Dir (10s deg),98.710046
+M9W,2023,Hmdx,15.707763
+M9W,2023,Wind Chill,16.061644
+M9W,2024,Temp (°C),99.988616
+M9W,2024,Dew Point Temp (°C),99.988616
+M9W,2024,Rel Hum (%),99.988616
+M9W,2024,Stn Press (kPa),99.988616
+M9W,2024,Wind Spd (km/h),99.988616
+M9W,2024,Precip. Amount (mm),0.0
+M9W,2024,Visibility (km),99.988616
+M9W,2024,Wind Dir (10s deg),98.041894
+M9W,2024,Hmdx,18.237705
+M9W,2024,Wind Chill,15.733151
+M9W,2025,Temp (°C),99.988584
+M9W,2025,Dew Point Temp (°C),99.988584
+M9W,2025,Rel Hum (%),99.988584
+M9W,2025,Stn Press (kPa),99.988584
+M9W,2025,Wind Spd (km/h),99.988584
+M9W,2025,Precip. Amount (mm),0.0
+M9W,2025,Visibility (km),99.988584
+M9W,2025,Wind Dir (10s deg),98.173516
+M9W,2025,Hmdx,17.442922
+M9W,2025,Wind Chill,25.262557

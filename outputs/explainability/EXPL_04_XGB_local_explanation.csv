@@ -1,0 +1,11 @@
+task,horizon,feature,feature_value,shap_contribution,abs_contribution,direction
+xgb,18,target_lag_24h,24513.699999999997,3.172536611557007,3.172536611557007,increases risk score
+xgb,18,fsa,M9W,-0.9924635093193501,0.9924635093193501,decreases risk score
+xgb,18,origin_rolling_std_24h,5557.375755772668,0.9266891479492188,0.9266891479492188,increases risk score
+xgb,18,target_month_cos,-1.0,-0.8363945484161377,0.8363945484161377,decreases risk score
+xgb,18,target_hour,17,0.544708251953125,0.544708251953125,increases risk score
+xgb,18,target_hour_sin,-0.9659258262890683,0.5436546206474304,0.5436546206474304,increases risk score
+xgb,18,target_weekday_cos,-0.900968867902419,-0.3263668715953827,0.3263668715953827,decreases risk score
+xgb,18,origin_rolling_mean_168h,16949.061904761907,-0.258432000875473,0.258432000875473,decreases risk score
+xgb,18,origin__Temp (°C),20.8,-0.22215156257152557,0.22215156257152557,decreases risk score
+xgb,18,target_season,Summer,-0.2038931083661737,0.2038931083661737,decreases risk score

@@ -1,0 +1,35 @@
+paths:
+  input_feature_dataset: "data/processed/feature_dataset.parquet"
+  output_dir: "data/processed/target_definition"
+  reports_dir: "reports/target_definition"
+  docs_dir: "docs/target_definition"
+
+target_definition:
+  key_columns:
+    - "fsa"
+    - "timestamp"
+
+  forecasting:
+    target_column: "total_consumption_kwh"
+    horizon_hours: 24
+    target_prefix: "target_h"
+    require_complete_horizon_for_modeling: true
+
+  peak_risk:
+    target_column: "total_consumption_kwh"
+    percentile_threshold: 0.975
+    grouping_columns:
+      - "fsa"
+      - "season"
+
+    # Diagnostic labels are generated walk-forward by calendar year.
+    # For each year Y, thresholds are fitted using only years < Y.
+    # These labels are for target validation/distribution analysis only.
+    diagnostic_time_column: "year"
+    minimum_training_years: 1
+
+  validation:
+    require_unique_key: true
+    require_hourly_alignment: true
+    reject_duplicate_target_origins: true
+    allow_incomplete_last_horizon_rows: true

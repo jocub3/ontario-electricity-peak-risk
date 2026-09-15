@@ -1,0 +1,7 @@
+{
+  "status": "FINAL_MODELS_TRAINED",
+  "rf_artifact_count": 24,
+  "xgb_artifact_count": 24,
+  "peak_threshold_table": "peak_risk_xgboost/peak_thresholds.parquet",
+  "holdout_results_were_not_used_to_change_configuration": true
+}

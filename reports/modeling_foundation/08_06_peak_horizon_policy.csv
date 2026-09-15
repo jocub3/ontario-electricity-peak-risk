@@ -1,0 +1,25 @@
+﻿horizon,target,target_offset_hours,definition,threshold_scope
+1,peak_h01,1,Peak status of the corresponding FSA at forecast_origin + 1 hour(s),training_only_fsa_season
+2,peak_h02,2,Peak status of the corresponding FSA at forecast_origin + 2 hour(s),training_only_fsa_season
+3,peak_h03,3,Peak status of the corresponding FSA at forecast_origin + 3 hour(s),training_only_fsa_season
+4,peak_h04,4,Peak status of the corresponding FSA at forecast_origin + 4 hour(s),training_only_fsa_season
+5,peak_h05,5,Peak status of the corresponding FSA at forecast_origin + 5 hour(s),training_only_fsa_season
+6,peak_h06,6,Peak status of the corresponding FSA at forecast_origin + 6 hour(s),training_only_fsa_season
+7,peak_h07,7,Peak status of the corresponding FSA at forecast_origin + 7 hour(s),training_only_fsa_season
+8,peak_h08,8,Peak status of the corresponding FSA at forecast_origin + 8 hour(s),training_only_fsa_season
+9,peak_h09,9,Peak status of the corresponding FSA at forecast_origin + 9 hour(s),training_only_fsa_season
+10,peak_h10,10,Peak status of the corresponding FSA at forecast_origin + 10 hour(s),training_only_fsa_season
+11,peak_h11,11,Peak status of the corresponding FSA at forecast_origin + 11 hour(s),training_only_fsa_season
+12,peak_h12,12,Peak status of the corresponding FSA at forecast_origin + 12 hour(s),training_only_fsa_season
+13,peak_h13,13,Peak status of the corresponding FSA at forecast_origin + 13 hour(s),training_only_fsa_season
+14,peak_h14,14,Peak status of the corresponding FSA at forecast_origin + 14 hour(s),training_only_fsa_season
+15,peak_h15,15,Peak status of the corresponding FSA at forecast_origin + 15 hour(s),training_only_fsa_season
+16,peak_h16,16,Peak status of the corresponding FSA at forecast_origin + 16 hour(s),training_only_fsa_season
+17,peak_h17,17,Peak status of the corresponding FSA at forecast_origin + 17 hour(s),training_only_fsa_season
+18,peak_h18,18,Peak status of the corresponding FSA at forecast_origin + 18 hour(s),training_only_fsa_season
+19,peak_h19,19,Peak status of the corresponding FSA at forecast_origin + 19 hour(s),training_only_fsa_season
+20,peak_h20,20,Peak status of the corresponding FSA at forecast_origin + 20 hour(s),training_only_fsa_season
+21,peak_h21,21,Peak status of the corresponding FSA at forecast_origin + 21 hour(s),training_only_fsa_season
+22,peak_h22,22,Peak status of the corresponding FSA at forecast_origin + 22 hour(s),training_only_fsa_season
+23,peak_h23,23,Peak status of the corresponding FSA at forecast_origin + 23 hour(s),training_only_fsa_season
+24,peak_h24,24,Peak status of the corresponding FSA at forecast_origin + 24 hour(s),training_only_fsa_season

@@ -1,0 +1,51 @@
+phase:
+  name: "operational_inference_feature_builder"
+  branch: "pipeline/inference-feature-builder"
+
+paths:
+  modeling_foundation_config: "configs/modeling_foundation.yaml"
+  artifacts_dir: "artifacts/final_models"
+  operational_root: "data/operational"
+  demand_updates_dir: "data/operational/demand"
+  weather_history_updates_dir: "data/operational/weather/history"
+  weather_forecasts_dir: "data/operational/weather/forecast"
+  templates_dir: "data/operational/templates"
+  outputs_dir: "outputs/inference_feature_builder"
+  reports_dir: "reports/inference_feature_builder"
+  figures_dir: "reports/figures/inference_feature_builder"
+  docs_dir: "docs/inference_feature_builder"
+
+inference:
+  fsas: ["L4T", "M5R", "M5S", "M6G", "M9R", "M9W"]
+  horizons: 24
+  timezone: "America/Toronto"
+  required_history_hours_before_origin: 168
+  require_origin_observation: true
+  require_future_weather_grid: true
+  fail_on_missing_demand_history: true
+  fail_on_feature_contract_mismatch: true
+  warn_on_out_of_domain: true
+
+columns:
+  timestamp: "timestamp"
+  fsa: "fsa"
+  demand: "total_consumption_kwh"
+  premise_count: "reported_premise_count"
+  temperature: "Temp (°C)"
+  humidity: "Rel Hum (%)"
+  pressure: "Stn Press (kPa)"
+
+operational_files:
+  demand_pattern: "*.csv"
+  weather_history_pattern: "*.csv"
+  weather_forecast_pattern: "*.csv"
+
+duplicate_policy:
+  keep: "last"
+
+domain_checks:
+  variables:
+    - "total_consumption_kwh"
+    - "Temp (°C)"
+    - "Rel Hum (%)"
+    - "Stn Press (kPa)"

@@ -1,0 +1,101 @@
+﻿variable_1,variable_2,both_missing_count,both_missing_pct
+Temp (°C),Temp (°C),141,0.053624
+Temp (°C),Dew Point Temp (°C),141,0.053624
+Temp (°C),Rel Hum (%),141,0.053624
+Temp (°C),Stn Press (kPa),141,0.053624
+Temp (°C),Wind Spd (km/h),141,0.053624
+Temp (°C),Precip. Amount (mm),141,0.053624
+Temp (°C),Visibility (km),141,0.053624
+Temp (°C),Wind Dir (10s deg),141,0.053624
+Temp (°C),Hmdx,141,0.053624
+Temp (°C),Wind Chill,141,0.053624
+Dew Point Temp (°C),Temp (°C),141,0.053624
+Dew Point Temp (°C),Dew Point Temp (°C),144,0.054765
+Dew Point Temp (°C),Rel Hum (%),144,0.054765
+Dew Point Temp (°C),Stn Press (kPa),141,0.053624
+Dew Point Temp (°C),Wind Spd (km/h),141,0.053624
+Dew Point Temp (°C),Precip. Amount (mm),144,0.054765
+Dew Point Temp (°C),Visibility (km),141,0.053624
+Dew Point Temp (°C),Wind Dir (10s deg),141,0.053624
+Dew Point Temp (°C),Hmdx,144,0.054765
+Dew Point Temp (°C),Wind Chill,141,0.053624
+Rel Hum (%),Temp (°C),141,0.053624
+Rel Hum (%),Dew Point Temp (°C),144,0.054765
+Rel Hum (%),Rel Hum (%),144,0.054765
+Rel Hum (%),Stn Press (kPa),141,0.053624
+Rel Hum (%),Wind Spd (km/h),141,0.053624
+Rel Hum (%),Precip. Amount (mm),144,0.054765
+Rel Hum (%),Visibility (km),141,0.053624
+Rel Hum (%),Wind Dir (10s deg),141,0.053624
+Rel Hum (%),Hmdx,144,0.054765
+Rel Hum (%),Wind Chill,141,0.053624
+Stn Press (kPa),Temp (°C),141,0.053624
+Stn Press (kPa),Dew Point Temp (°C),141,0.053624
+Stn Press (kPa),Rel Hum (%),141,0.053624
+Stn Press (kPa),Stn Press (kPa),141,0.053624
+Stn Press (kPa),Wind Spd (km/h),141,0.053624
+Stn Press (kPa),Precip. Amount (mm),141,0.053624
+Stn Press (kPa),Visibility (km),141,0.053624
+Stn Press (kPa),Wind Dir (10s deg),141,0.053624
+Stn Press (kPa),Hmdx,141,0.053624
+Stn Press (kPa),Wind Chill,141,0.053624
+Wind Spd (km/h),Temp (°C),141,0.053624
+Wind Spd (km/h),Dew Point Temp (°C),141,0.053624
+Wind Spd (km/h),Rel Hum (%),141,0.053624
+Wind Spd (km/h),Stn Press (kPa),141,0.053624
+Wind Spd (km/h),Wind Spd (km/h),131490,50.006846
+Wind Spd (km/h),Precip. Amount (mm),141,0.053624
+Wind Spd (km/h),Visibility (km),131490,50.006846
+Wind Spd (km/h),Wind Dir (10s deg),131490,50.006846
+Wind Spd (km/h),Hmdx,108198,41.148686
+Wind Spd (km/h),Wind Chill,131490,50.006846
+Precip. Amount (mm),Temp (°C),141,0.053624
+Precip. Amount (mm),Dew Point Temp (°C),144,0.054765
+Precip. Amount (mm),Rel Hum (%),144,0.054765
+Precip. Amount (mm),Stn Press (kPa),141,0.053624
+Precip. Amount (mm),Wind Spd (km/h),141,0.053624
+Precip. Amount (mm),Precip. Amount (mm),131595,50.046778
+Precip. Amount (mm),Visibility (km),144,0.054765
+Precip. Amount (mm),Wind Dir (10s deg),2319,0.881937
+Precip. Amount (mm),Hmdx,108597,41.300429
+Precip. Amount (mm),Wind Chill,105249,40.027154
+Visibility (km),Temp (°C),141,0.053624
+Visibility (km),Dew Point Temp (°C),141,0.053624
+Visibility (km),Rel Hum (%),141,0.053624
+Visibility (km),Stn Press (kPa),141,0.053624
+Visibility (km),Wind Spd (km/h),131490,50.006846
+Visibility (km),Precip. Amount (mm),144,0.054765
+Visibility (km),Visibility (km),131493,50.007986
+Visibility (km),Wind Dir (10s deg),131490,50.006846
+Visibility (km),Hmdx,108198,41.148686
+Visibility (km),Wind Chill,131493,50.007986
+Wind Dir (10s deg),Temp (°C),141,0.053624
+Wind Dir (10s deg),Dew Point Temp (°C),141,0.053624
+Wind Dir (10s deg),Rel Hum (%),141,0.053624
+Wind Dir (10s deg),Stn Press (kPa),141,0.053624
+Wind Dir (10s deg),Wind Spd (km/h),131490,50.006846
+Wind Dir (10s deg),Precip. Amount (mm),2319,0.881937
+Wind Dir (10s deg),Visibility (km),131490,50.006846
+Wind Dir (10s deg),Wind Dir (10s deg),133668,50.835159
+Wind Dir (10s deg),Hmdx,110094,41.869752
+Wind Dir (10s deg),Wind Chill,133668,50.835159
+Hmdx,Temp (°C),141,0.053624
+Hmdx,Dew Point Temp (°C),144,0.054765
+Hmdx,Rel Hum (%),144,0.054765
+Hmdx,Stn Press (kPa),141,0.053624
+Hmdx,Wind Spd (km/h),108198,41.148686
+Hmdx,Precip. Amount (mm),108597,41.300429
+Hmdx,Visibility (km),108198,41.148686
+Hmdx,Wind Dir (10s deg),110094,41.869752
+Hmdx,Hmdx,216654,82.395491
+Hmdx,Wind Chill,190308,72.375867
+Wind Chill,Temp (°C),141,0.053624
+Wind Chill,Dew Point Temp (°C),141,0.053624
+Wind Chill,Rel Hum (%),141,0.053624
+Wind Chill,Stn Press (kPa),141,0.053624
+Wind Chill,Wind Spd (km/h),131490,50.006846
+Wind Chill,Precip. Amount (mm),105249,40.027154
+Wind Chill,Visibility (km),131493,50.007986
+Wind Chill,Wind Dir (10s deg),133668,50.835159
+Wind Chill,Hmdx,190308,72.375867
+Wind Chill,Wind Chill,236598,89.980376

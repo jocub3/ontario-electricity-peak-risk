@@ -1,0 +1,13 @@
+﻿column,non_null_count,minimum,p01,q1,median,q3,p99,maximum,iqr_lower_bound,iqr_upper_bound,iqr_outlier_count,iqr_outlier_pct,action
+total_consumption_kwh,262944,1377.7,2586.3289999999997,5224.900000000001,8111.4,11543.999999999998,21178.170000000006,33712.2,-4253.749999999995,21022.649999999994,2768,1.052696,reported_only_not_removed
+reported_premise_count,262944,5803.0,5873.0,6024.0,8674.0,11176.0,12099.0,12120.0,-1704.0,18904.0,0,0.0,reported_only_not_removed
+Temp (°C),262803,-21.8,-11.9,1.9,10.1,19.2,29.4,35.8,-24.050000000000004,45.150000000000006,0,0.0,reported_only_not_removed
+Dew Point Temp (°C),262800,-30.1,-17.9,-3.2,3.9,12.6,21.5,26.0,-26.900000000000002,36.300000000000004,108,0.041096,reported_only_not_removed
+Rel Hum (%),262800,14.0,28.0,56.0,68.0,80.0,100.0,100.0,20.0,116.0,165,0.062785,reported_only_not_removed
+Precip. Amount (mm),131349,0.0,0.0,0.0,0.0,0.0,2.3,45.0,0.0,0.0,10791,8.215517,reported_only_not_removed
+Wind Dir (10s deg),129276,1.0,1.0,14.0,24.0,30.0,36.0,36.0,-10.0,54.0,0,0.0,reported_only_not_removed
+Wind Spd (km/h),131454,0.0,0.0,9.0,14.0,21.0,43.0,67.0,-9.0,39.0,2520,1.91702,reported_only_not_removed
+Visibility (km),131451,0.0,1.6,24.1,24.1,24.1,24.1,80.5,24.1,24.1,21933,16.685305,reported_only_not_removed
+Stn Press (kPa),262803,95.7,97.7,99.31,99.88,100.43,101.72,103.25,97.63,102.11000000000001,2802,1.066198,reported_only_not_removed
+Hmdx,46290,25.0,25.0,27.0,29.0,32.0,40.0,46.0,19.5,39.5,609,1.315619,reported_only_not_removed
+Wind Chill,26346,-34.0,-26.0,-14.0,-10.0,-7.0,-2.0,-1.0,-24.5,3.5,405,1.537235,reported_only_not_removed

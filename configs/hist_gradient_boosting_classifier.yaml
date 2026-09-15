@@ -1,0 +1,40 @@
+model:
+  name: "hist_gradient_boosting_classifier"
+  branch: "peak-risk/hist-gradient-boosting-classifier"
+  horizons: 24
+  target_prefix: "peak_h"
+  probability_threshold: 0.50
+  evaluate_final_holdout: false
+  random_seed: 42
+
+  tuning:
+    representative_horizons: [1, 12, 24]
+    parameter_grid:
+      - learning_rate: 0.05
+        max_iter: 160
+        max_leaf_nodes: 15
+        min_samples_leaf: 20
+        l2_regularization: 0.0
+      - learning_rate: 0.05
+        max_iter: 200
+        max_leaf_nodes: 31
+        min_samples_leaf: 30
+        l2_regularization: 0.5
+      - learning_rate: 0.08
+        max_iter: 160
+        max_leaf_nodes: 31
+        min_samples_leaf: 40
+        l2_regularization: 1.0
+      - learning_rate: 0.10
+        max_iter: 120
+        max_leaf_nodes: 15
+        min_samples_leaf: 30
+        l2_regularization: 1.0
+
+paths:
+  modeling_foundation_config: "configs/modeling_foundation.yaml"
+  feature_dataset: "data/processed/feature_dataset.parquet"
+  reports_dir: "reports/modeling/peak_risk/hist_gradient_boosting"
+  docs_dir: "docs/modeling/peak_risk/hist_gradient_boosting"
+  outputs_dir: "outputs/modeling/peak_risk/hist_gradient_boosting"
+  figures_dir: "reports/figures/modeling/peak_risk/hist_gradient_boosting"

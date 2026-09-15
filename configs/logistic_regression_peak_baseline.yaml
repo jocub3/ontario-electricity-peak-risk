@@ -1,0 +1,20 @@
+model:
+  name: "logistic_regression_peak_baseline"
+  branch: "peak-risk/logistic-regression-baseline"
+  horizons: 24
+  target_prefix: "peak_h"
+  probability_threshold: 0.50
+  evaluate_final_holdout: false
+
+  logistic_regression:
+    C: 1.0
+    max_iter: 1000
+    solver: "lbfgs"
+    class_weight: null
+
+paths:
+  modeling_foundation_config: "configs/modeling_foundation.yaml"
+  feature_dataset: "data/processed/feature_dataset.parquet"
+  reports_dir: "reports/modeling/peak_risk/logistic_regression"
+  docs_dir: "docs/modeling/peak_risk/logistic_regression"
+  outputs_dir: "outputs/modeling/peak_risk/logistic_regression"

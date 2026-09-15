@@ -1,0 +1,11 @@
+﻿column,mean_coverage_pct,spearman_correlation,spearman_strength,eda_recommendation
+Dew Point Temp (°C),99.9452355,-0.00356791616498941,very weak,retain_pending_multivariate_review
+Hmdx,17.604509,0.3140408377366172,weak,review_for_exclusion_low_coverage
+Precip. Amount (mm),49.953222,0.012150760639700935,very weak,retain_for_eda_review_before_modeling
+Rel Hum (%),99.9452355,-0.09946570318790755,very weak,retain_pending_multivariate_review
+Stn Press (kPa),99.9463765,-0.11267642125539463,very weak,retain_pending_multivariate_review
+Temp (°C),99.9463765,0.03222906899098427,very weak,retain_pending_multivariate_review
+Visibility (km),49.9920135,-0.01434788197587506,very weak,retain_for_eda_review_before_modeling
+Wind Chill,10.019624,-0.08026284381755164,very weak,review_for_exclusion_low_coverage
+Wind Dir (10s deg),49.164841,-0.03003593254586486,very weak,retain_for_eda_review_before_modeling
+Wind Spd (km/h),49.9931545,0.12157502479246458,very weak,retain_for_eda_review_before_modeling

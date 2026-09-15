@@ -1,0 +1,9 @@
+stage,seconds
+config,0.07401149999714107
+data_loading,8.825893900000665
+operational_input_preparation,0.602662599998439
+input_validation,0.5961435999997775
+feature_construction,2.027791399999842
+feature_contract_validation,0.006129299999884097
+model_frame_construction,0.1332207000014023
+total,14.891327099998307

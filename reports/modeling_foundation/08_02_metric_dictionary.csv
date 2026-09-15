@@ -1,0 +1,12 @@
+﻿task,metric,role,direction,description
+forecasting,MAE,primary,lower_is_better,Mean absolute forecast error in kWh.
+forecasting,RMSE,primary,lower_is_better,Root mean squared forecast error in kWh.
+forecasting,MAPE,primary,lower_is_better,Mean absolute percentage error for non-zero demand.
+forecasting,WAPE,secondary,lower_is_better,Absolute error relative to total observed demand.
+forecasting,Bias,secondary,closer_to_zero,Mean signed forecast error.
+peak_risk,Precision,primary,higher_is_better,Share of predicted Peaks that are true Peaks.
+peak_risk,Recall,primary,higher_is_better,Share of true Peaks correctly detected.
+peak_risk,F1,primary,higher_is_better,Harmonic mean of Precision and Recall.
+peak_risk,PR-AUC,primary,higher_is_better,Precision-Recall area; emphasized for class imbalance.
+peak_risk,ROC-AUC,secondary,higher_is_better,Area under the ROC curve.
+peak_risk,Balanced Accuracy,secondary,higher_is_better,Average recall across both classes.

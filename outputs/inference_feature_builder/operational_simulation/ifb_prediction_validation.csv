@@ -1,0 +1,10 @@
+check,status,detail
+required_columns_present,PASS,all required columns available
+expected_row_count,PASS,"actual=144, expected=144"
+unique_prediction_key,PASS,duplicate_rows=0
+fsa_coverage,PASS,"actual=['L4T', 'M5R', 'M5S', 'M6G', 'M9R', 'M9W'], expected=['L4T', 'M5R', 'M5S', 'M6G', 'M9R', 'M9W']"
+complete_horizon_coverage_by_fsa,PASS,h1..h24 complete for every FSA
+prediction_values_not_missing,PASS,missing_values=0
+forecast_consumption_positive,PASS,invalid_rows=0
+peak_risk_score_in_0_1,PASS,invalid_rows=0
+peak_alert_threshold_consistency,PASS,"inconsistent_rows=0, threshold=0.06"

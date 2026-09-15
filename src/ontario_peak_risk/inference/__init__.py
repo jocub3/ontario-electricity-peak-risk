@@ -1,0 +1,1 @@
+"""Integrated 24-hour inference pipeline."""

@@ -1,0 +1,30 @@
+{
+  "status": "FROZEN_FOR_FINAL_HOLDOUT",
+  "task": "forecasting",
+  "algorithm": "RandomForestRegressor",
+  "forecast_horizons": 24,
+  "hyperparameters": {
+    "n_estimators": 160,
+    "max_depth": null,
+    "min_samples_leaf": 5,
+    "max_features": 0.7
+  },
+  "feature_policy": "Use the existing Random Forest forecasting feature set unchanged.",
+  "preprocessing_policy": "Use the existing Random Forest forecasting preprocessing unchanged.",
+  "selection_evidence": {
+    "selected_refinement_id": "R0_incumbent",
+    "mean_mae": 528.7229365406797,
+    "minimum_improvement_pct_required": 0.25,
+    "decision": "KEEP_INCUMBENT: no local alternative exceeded the configured minimum MAE improvement required to justify changing the already-selected forecasting model.",
+    "representative_horizons": [
+      1,
+      12,
+      24
+    ],
+    "development_folds_only": true
+  },
+  "original_model_config_sha256": "5623240c29a786479d26025f036f4ef8e1302de50d322129405477919c0fd7f9",
+  "refinement_config_sha256": "5c2600b23db4203f8d3a674ec6b3df5eadc0d083681e762e1ead20ff14ccf11e",
+  "final_2025_holdout_evaluated": false,
+  "holdout_policy": "The final 2025 holdout remains untouched until this refinement is approved and frozen."
+}

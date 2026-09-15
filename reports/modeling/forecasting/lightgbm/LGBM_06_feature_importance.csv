@@ -1,0 +1,31 @@
+﻿feature,importance
+origin__Temp (°C),2794.8958333333335
+origin_rolling_mean_168h,2155.6041666666665
+origin__reported_premise_count,2131.0416666666665
+origin__Stn Press (kPa),2113.3958333333335
+origin_rolling_mean_24h,1846.9166666666667
+origin_rolling_std_24h,1517.6666666666667
+target_lag_24h,1477.625
+target_weekday,1289.7083333333333
+origin__Rel Hum (%),1241.8333333333333
+target_lag_168h,1234.0208333333333
+target_hour,894.0208333333334
+target_month,875.75
+target_lag_48h,762.6458333333334
+target_weekday_sin,713.9583333333334
+target_month_cos,712.0625
+target_hour_cos,572.0625
+target_hour_sin,532.1666666666666
+target_weekday_cos,523.3958333333334
+target_month_sin,417.0416666666667
+fsa_M9W,218.72916666666666
+fsa_M5R,214.875
+fsa_L4T,171.625
+target_is_weekend,88.25
+fsa_M5S,75.20833333333333
+fsa_M9R,67.8125
+fsa_M6G,58.1875
+target_season_Summer,50.0625
+target_season_Spring,17.9375
+target_season_Fall,16.416666666666668
+target_season_Winter,15.083333333333334

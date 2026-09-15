@@ -1,0 +1,106 @@
+paths:
+  input_clean_dataset: "data/processed/master_dataset_clean.parquet"
+  base_dataset: "data/interim/feature_dataset_base.parquet"
+  final_dataset: "data/processed/feature_dataset.parquet"
+  reports_dir: "reports/feature_engineering"
+  docs_dir: "docs/feature_engineering"
+
+feature_engineering:
+  key_columns:
+    - "fsa"
+    - "timestamp"
+
+  target_column: "total_consumption_kwh"
+
+  # Columns retained for audit/traceability but not intended as direct model inputs.
+  traceability_columns:
+    - "timestamp"
+    - "timestamp_utc"
+    - "timestamp_toronto"
+    - "date"
+    - "assigned_climate_id"
+    - "assigned_station_name"
+    - "Longitude (x)"
+    - "Latitude (y)"
+    - "Climate ID"
+
+  # Administrative/redundant fields excluded from the baseline modeling table.
+  baseline_drop_columns:
+    - "month_name"
+    - "weekday_name"
+
+  temporal:
+    use_existing_calendar_fields: true
+    create_cyclical_features: true
+    cyclical_features:
+      hour:
+        period: 24
+      weekday:
+        period: 7
+      month:
+        period: 12
+      day_of_year:
+        period: 365.25
+
+  lags:
+    target_lags_hours:
+      - 1
+      - 2
+      - 3
+      - 24
+      - 48
+      - 168
+
+  rolling:
+    # All rolling target features use shift(1) before the rolling operation.
+    # Therefore the current target value is never included.
+    target_windows_hours:
+      - 3
+      - 6
+      - 24
+      - 168
+    statistics:
+      - "mean"
+      - "std"
+      - "min"
+      - "max"
+
+  weather:
+    temperature_column: "Temp (°C)"
+    humidity_column: "Rel Hum (%)"
+    pressure_column: "Stn Press (kPa)"
+    temperature_difference_lags:
+      - 1
+      - 24
+    humidity_difference_lags:
+      - 1
+    pressure_difference_lags:
+      - 1
+    weather_rolling_windows:
+      - 6
+      - 24
+    heating_base_c: 18.0
+    cooling_base_c: 18.0
+
+  interactions:
+    create_temperature_hour: true
+    create_temperature_weekend: true
+    create_temperature_season: false
+    create_fsa_season: false
+
+  peak:
+    # IMPORTANT:
+    # No final Peak-Risk target is created in Phase 6.
+    # Threshold-dependent features must be generated inside each training window.
+    create_training_window_peak_features: false
+
+  selection:
+    high_missingness_threshold_pct: 80.0
+    medium_missingness_threshold_pct: 50.0
+    correlation_redundancy_threshold: 0.95
+    vif_threshold: 10.0 # Diagnostic reference only; never used for automatic removal
+
+  validation:
+    require_unique_key: true
+    reject_infinite_values: true
+    allow_expected_lag_nans: true

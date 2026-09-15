@@ -1,0 +1,25 @@
+phase:
+  name: "final_holdout_evaluation_2025"
+  branch: "final-evaluation/2025-holdout"
+  holdout_name: "test_2025"
+
+paths:
+  modeling_foundation_config: "configs/modeling_foundation.yaml"
+  random_forest_config: "configs/random_forest_regressor.yaml"
+  xgboost_config: "configs/xgboost_classifier.yaml"
+
+  rf_freeze_manifest: "outputs/modeling/forecasting/random_forest_final_refinement/RF_FORECASTING_FINAL_FREEZE_MANIFEST.json"
+  xgb_freeze_manifest: "outputs/modeling/peak_risk/xgboost_final_refinement/XGBC_FINAL_FREEZE_MANIFEST.json"
+
+  reports_dir: "reports/final_holdout_2025"
+  figures_dir: "reports/figures/final_holdout_2025"
+  outputs_dir: "outputs/final_holdout_2025"
+  docs_dir: "docs/final_holdout_2025"
+
+peak_risk:
+  operational_threshold: 0.06
+
+policy:
+  allow_parameter_changes_after_holdout: false
+  allow_threshold_changes_after_holdout: false
+  allow_feature_changes_after_holdout: false

@@ -1,0 +1,49 @@
+phase:
+  name: "peak_risk_final_refinement"
+  branch: "peak-risk/xgboost-final-refinement"
+  selected_model: "XGBoostClassifier"
+  evaluate_final_holdout: false
+
+paths:
+  validation_predictions: "outputs/modeling/peak_risk/xgboost/xgboost_classifier_validation_predictions.parquet"
+  best_parameters: "outputs/modeling/peak_risk/xgboost/best_parameters.json"
+  feature_dictionary: "reports/modeling/peak_risk/xgboost/XGBC_02_feature_dictionary.csv"
+
+  reports_dir: "reports/modeling/peak_risk/xgboost_final_refinement"
+  figures_dir: "reports/figures/modeling/peak_risk/xgboost_final_refinement"
+  outputs_dir: "outputs/modeling/peak_risk/xgboost_final_refinement"
+  docs_dir: "docs/modeling/peak_risk/xgboost_final_refinement"
+
+threshold_analysis:
+  min_threshold: 0.02
+  max_threshold: 0.90
+  step: 0.01
+
+  # Operational priority: missing a real Peak is more costly than creating
+  # a false alert. These are validation-only decision constraints.
+  minimum_recall_each_fold: 0.60
+  minimum_precision_each_fold: 0.20
+
+  # Robust selection rule:
+  # 1. keep thresholds satisfying fold-level recall/precision constraints;
+  # 2. maximize the worst-fold F1;
+  # 3. break ties by worst-fold recall, mean F1, mean precision;
+  # 4. prefer the larger threshold only as the final tie-breaker
+  #    to reduce unnecessary alerts.
+  selection_metric: "worst_fold_f1"
+
+  # Threshold sensitivity windows used for stability diagnostics.
+  local_window: 0.05
+
+stress_case:
+  fold: "fold_2023"
+  fsa: "M9W"
+
+freeze:
+  peak_definition: "P97.5 by FSA + season, fitted on training data only"
+  horizons: 24
+  preprocessing_policy: "Use the existing XGBoost candidate preprocessing pipeline unchanged."
+  hyperparameter_policy: "Use the previously selected XGBoost hyperparameters unchanged."
+  feature_policy: "Use the existing XGBoost candidate feature set unchanged."
+  threshold_policy: "Use the operational threshold selected only from development validation predictions."
+  holdout_policy: "2025 remains untouched until the frozen configuration is approved."

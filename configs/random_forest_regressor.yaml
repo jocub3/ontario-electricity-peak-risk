@@ -1,0 +1,36 @@
+model:
+  name: "random_forest_regressor"
+  branch: "forecasting/random-forest-regressor"
+  horizons: 24
+  target_prefix: "target_h"
+  evaluate_final_holdout: false
+  random_seed: 42
+
+  tuning:
+    representative_horizons: [1, 12, 24]
+    parameter_grid:
+      - n_estimators: 120
+        max_depth: 12
+        min_samples_leaf: 1
+        max_features: "sqrt"
+      - n_estimators: 120
+        max_depth: 20
+        min_samples_leaf: 1
+        max_features: "sqrt"
+      - n_estimators: 160
+        max_depth: 16
+        min_samples_leaf: 3
+        max_features: 0.7
+      - n_estimators: 160
+        max_depth: null
+        min_samples_leaf: 5
+        max_features: 0.7
+
+paths:
+  modeling_foundation_config: "configs/modeling_foundation.yaml"
+  feature_dataset: "data/processed/feature_dataset.parquet"
+  forecast_targets: "data/processed/target_definition/forecast_target_complete.parquet"
+  reports_dir: "reports/modeling/forecasting/random_forest"
+  docs_dir: "docs/modeling/forecasting/random_forest"
+  outputs_dir: "outputs/modeling/forecasting/random_forest"
+  figures_dir: "reports/figures/modeling/forecasting/random_forest"

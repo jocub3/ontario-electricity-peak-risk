@@ -1,0 +1,113 @@
+phase:
+  name: "model_comparison_selection"
+  branch: "modeling/model-comparison"
+  evaluate_final_holdout: false
+
+paths:
+  reports_root: "reports/modeling"
+  output_reports_dir: "reports/modeling/model_comparison"
+  output_figures_dir: "reports/figures/modeling/model_comparison"
+  output_data_dir: "outputs/modeling/model_comparison"
+  docs_dir: "docs/modeling/model_comparison"
+
+forecasting:
+  primary_metric: "mae"
+  lower_is_better:
+    - mae
+    - rmse
+    - mape
+    - wape
+    - abs_bias
+  models:
+    seasonal_naive:
+      display_name: "Seasonal Naive"
+      family: "Baseline"
+      report_dir: "reports/modeling/forecasting/seasonal_naive"
+      prefixes: ["SNB", "SEASONAL_NAIVE", "seasonal_naive"]
+    random_forest:
+      display_name: "Random Forest Regressor"
+      family: "Bagging"
+      report_dir: "reports/modeling/forecasting/random_forest"
+      prefixes: ["RF", "RFR", "random_forest"]
+    sarimax:
+      display_name: "SARIMAX Rolling"
+      family: "Statistical Time Series"
+      report_dir: "reports/modeling/forecasting/sarimax_rolling"
+      prefixes: ["SARIMAX_ROLLING", "SARIMAX"]
+    xgboost:
+      display_name: "XGBoost Regressor"
+      family: "Gradient Boosting"
+      report_dir: "reports/modeling/forecasting/xgboost"
+      prefixes: ["XGB", "XGBOOST", "xgboost"]
+    lightgbm:
+      display_name: "LightGBM Regressor"
+      family: "Gradient Boosting"
+      report_dir: "reports/modeling/forecasting/lightgbm"
+      prefixes: ["LGBM", "LIGHTGBM", "lightgbm"]
+
+peak_risk:
+  primary_metric: "pr_auc"
+  higher_is_better:
+    - pr_auc
+    - precision
+    - recall
+    - f1
+    - balanced_accuracy
+    - roc_auc
+  lower_is_better:
+    - brier_score
+  common_probability_threshold: 0.50
+  models:
+    logistic_regression:
+      display_name: "Logistic Regression"
+      family: "Baseline"
+      report_dir: "reports/modeling/peak_risk/logistic_regression"
+      prefixes: ["LRB", "LR", "LOGISTIC", "logistic"]
+    hist_gradient_boosting:
+      display_name: "HistGradientBoosting"
+      family: "Gradient Boosting"
+      report_dir: "reports/modeling/peak_risk/hist_gradient_boosting"
+      prefixes: ["HGB", "HIST", "hist_gradient"]
+    random_forest:
+      display_name: "Random Forest Classifier"
+      family: "Bagging"
+      report_dir: "reports/modeling/peak_risk/random_forest"
+      prefixes: ["RFC", "RF", "random_forest"]
+    xgboost:
+      display_name: "XGBoost Classifier"
+      family: "Gradient Boosting"
+      report_dir: "reports/modeling/peak_risk/xgboost"
+      prefixes: ["XGBC", "XGB", "xgboost"]
+    lightgbm:
+      display_name: "LightGBM Classifier"
+      family: "Gradient Boosting"
+      report_dir: "reports/modeling/peak_risk/lightgbm"
+      prefixes: ["LGBC", "LGBM", "lightgbm"]
+
+selection:
+  # Selection remains evidence-based rather than relying on one arbitrary
+  # weighted score. The primary metric defines the initial ranking.
+  # Guardrails are then used to detect material instability or trade-offs.
+  forecasting:
+    primary_metric: "mae"
+    guardrails:
+      - "rmse"
+      - "mape"
+      - "fold_mae_cv"
+      - "m9w_2023_mae"
+      - "horizon_mae_slope"
+  peak_risk:
+    primary_metric: "pr_auc"
+    guardrails:
+      - "f1"
+      - "recall"
+      - "brier_score"
+      - "fold_pr_auc_range"
+      - "m9w_2023_pr_auc"
+      - "m9w_2023_recall"
+
+runtime:
+  # Runtime is compared only when evidence exists in model outputs.
+  # Missing runtime is reported as unavailable and is never invented.
+  allow_manual_overrides: true
+  manual_overrides: {}

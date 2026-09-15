@@ -1,0 +1,28 @@
+phase:
+  name: weather_sensitivity_analysis
+  branch: analysis/weather-sensitivity
+paths:
+  ifb_config: configs/inference_feature_builder.yaml
+  modeling_foundation_config: configs/modeling_foundation.yaml
+  artifacts_dir: artifacts/final_models
+  feature_dataset: data/processed/feature_dataset.parquet
+  outputs_dir: outputs/weather_sensitivity
+  reports_dir: reports/weather_sensitivity
+  figures_dir: reports/figures/weather_sensitivity
+  docs_dir: docs/weather_sensitivity
+models:
+  rf_subdir: forecasting_random_forest
+  xgb_subdir: peak_risk_xgboost
+  rf_pattern: rf_h{horizon:02d}.joblib
+  xgb_pattern: xgb_h{horizon:02d}.joblib
+analysis:
+  forecast_origin: '2026-03-25 23:00:00'
+  fsas: [L4T, M5R, M5S, M6G, M9R, M9W]
+  horizons: 24
+  temperature_feature: 'origin__Temp (°C)'
+  scenarios_c: [-5.0, -2.5, 0.0, 2.5, 5.0]
+  baseline_delta_c: 0.0
+  official_peak_threshold: 0.06
+  caution_quantiles: [0.01, 0.99]
+  model_load_workers: 1
+  use_model_cache: false
