@@ -1,0 +1,4 @@
+﻿dataset,expected_key,available_key_columns,missing_key_rows,duplicate_key_rows,duplicate_key_groups,key_is_unique
+consumption,FSA + TIMESTAMP + CUSTOMER_TYPE + PRICE_PLAN,FSA + TIMESTAMP + CUSTOMER_TYPE + PRICE_PLAN,0,0,0,True
+weather,Climate ID + Date/Time (LST),Climate ID + Date/Time (LST),0,0,0,True
+calendar,timestamp_local,timestamp_local,0,0,0,True

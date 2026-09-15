@@ -1,0 +1,90 @@
+paths:
+  input_master_dataset: "data/processed/master_dataset.parquet"
+  output_clean_dataset: "data/processed/master_dataset_clean.parquet"
+  reports_dir: "reports/data_cleaning"
+  docs_dir: "docs"
+
+cleaning:
+  # These fields are technical traceability fields or almost entirely empty
+  # weather-quality flags. The script documents every attempted action.
+  columns_to_drop:
+    SOURCE_FILE:
+      reason: "Weather source-file traceability is already documented upstream and is not an analytical variable."
+      rule: "drop_if_present"
+    SOURCE_PERIOD:
+      reason: "Monthly source-period traceability is already documented upstream and duplicates information available from timestamp."
+      rule: "drop_if_present"
+    Dew Point Temp Flag:
+      reason: "Near-empty ECCC quality flag; not sufficiently populated for analysis."
+      rule: "drop_if_missing_pct_at_least"
+      threshold_pct: 99.9
+    Rel Hum Flag:
+      reason: "Near-empty ECCC quality flag; not sufficiently populated for analysis."
+      rule: "drop_if_missing_pct_at_least"
+      threshold_pct: 99.9
+    Visibility Flag:
+      reason: "Near-empty ECCC quality flag; not sufficiently populated for analysis."
+      rule: "drop_if_missing_pct_at_least"
+      threshold_pct: 99.9
+
+  # A blank holiday name means that the date is not an Ontario public holiday.
+  semantic_fill:
+    holiday_name: "No holiday"
+
+  # Numeric weather values are intentionally not imputed here. Imputation must
+  # be fitted inside each training window to prevent time-series data leakage.
+  numeric_imputation: "none"
+
+  required_key:
+    - "fsa"
+    - "timestamp"
+
+  required_non_null:
+    - "fsa"
+    - "timestamp"
+    - "total_consumption_kwh"
+    - "reported_premise_count"
+
+  binary_columns:
+    - "is_weekend"
+    - "is_workday"
+    - "is_monday"
+    - "is_friday"
+    - "is_business_hour"
+    - "is_peak_hour_window"
+    - "is_month_start"
+    - "is_month_end"
+    - "is_year_start"
+    - "is_year_end"
+    - "is_public_holiday"
+    - "is_day_before_holiday"
+    - "is_day_after_holiday"
+    - "is_long_weekend"
+    - "is_daylight_saving_time"
+    - "is_dst_transition_day"
+    - "is_spring_forward_day"
+    - "is_fall_back_day"
+
+  categorical_columns:
+    - "fsa"
+    - "assigned_station_name"
+    - "month_name"
+    - "hour_group"
+    - "weekday_name"
+    - "season"
+    - "holiday_name"
+    - "Weather"
+
+  outlier_review_columns:
+    - "total_consumption_kwh"
+    - "reported_premise_count"
+    - "Temp (°C)"
+    - "Dew Point Temp (°C)"
+    - "Rel Hum (%)"
+    - "Precip. Amount (mm)"
+    - "Wind Dir (10s deg)"
+    - "Wind Spd (km/h)"
+    - "Visibility (km)"
+    - "Stn Press (kPa)"
+    - "Hmdx"
+    - "Wind Chill"

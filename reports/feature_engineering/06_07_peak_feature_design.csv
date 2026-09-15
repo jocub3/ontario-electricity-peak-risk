@@ -1,0 +1,4 @@
+﻿candidate_feature,status,reason
+previous_day_peak,deferred_to_training_window,Requires a Peak threshold fitted only on training data.
+previous_week_peak,deferred_to_training_window,Requires a Peak threshold fitted only on training data.
+hours_since_previous_peak,deferred_to_training_window,Requires historical Peak labels derived from a training-only threshold.

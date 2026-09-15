@@ -1,0 +1,67 @@
+﻿column,dtype,non_null_count,missing_pct,unique_count
+fsa,category,262944,0.0,6
+timestamp,datetime64[ns],262944,0.0,43824
+total_consumption_kwh,float64,262944,0.0,157393
+reported_premise_count,Int64,262944,0.0,1269
+source_segment_count,Int8,262944,0.0,6
+customer_type_count,Int8,262944,0.0,2
+price_plan_count,Int8,262944,0.0,3
+timestamp_utc,"datetime64[ns, UTC]",262944,0.0,43824
+timestamp_toronto,"datetime64[ns, UTC]",262944,0.0,43824
+date,datetime64[ns],262944,0.0,1826
+year,Int16,262944,0.0,5
+quarter,Int8,262944,0.0,4
+month,Int8,262944,0.0,12
+month_name,category,262944,0.0,12
+week_of_year,Int8,262944,0.0,53
+day_of_year,Int16,262944,0.0,366
+day_of_month,Int8,262944,0.0,31
+hour,Int8,262944,0.0,24
+hour_group,category,262944,0.0,4
+weekday,Int8,262944,0.0,7
+weekday_name,category,262944,0.0,7
+is_weekend,Int8,262944,0.0,2
+is_workday,Int8,262944,0.0,2
+is_monday,Int8,262944,0.0,2
+is_friday,Int8,262944,0.0,2
+season,category,262944,0.0,4
+is_business_hour,Int8,262944,0.0,2
+is_peak_hour_window,Int8,262944,0.0,2
+is_month_start,Int8,262944,0.0,2
+is_month_end,Int8,262944,0.0,2
+is_year_start,Int8,262944,0.0,2
+is_year_end,Int8,262944,0.0,2
+is_public_holiday,Int8,262944,0.0,2
+holiday_name,category,262944,0.0,14
+is_day_before_holiday,Int8,262944,0.0,2
+is_day_after_holiday,Int8,262944,0.0,2
+days_to_holiday,Int16,262944,0.0,77
+days_after_holiday,Int16,262944,0.0,77
+is_long_weekend,Int8,262944,0.0,2
+is_daylight_saving_time,Int8,262944,0.0,2
+is_dst_transition_day,Int8,262944,0.0,2
+is_spring_forward_day,Int8,262944,0.0,2
+is_fall_back_day,Int8,262944,0.0,2
+utc_offset_hours,Int8,262944,0.0,2
+date_index,Int32,262944,0.0,1826
+hour_sin,float64,262944,0.0,20
+hour_cos,float64,262944,0.0,22
+weekday_sin,float64,262944,0.0,7
+weekday_cos,float64,262944,0.0,7
+month_sin,float64,262944,0.0,11
+month_cos,float64,262944,0.0,11
+assigned_climate_id,Int64,262944,0.0,2
+assigned_station_name,category,262944,0.0,2
+Longitude (x),float64,262944,0.0,2
+Latitude (y),float64,262944,0.0,2
+Temp (°C),float64,262803,0.053624,564
+Dew Point Temp (°C),float64,262800,0.054765,541
+Rel Hum (%),float64,262800,0.054765,87
+Precip. Amount (mm),float64,131349,50.046778,108
+Wind Dir (10s deg),float64,129276,50.835159,36
+Wind Spd (km/h),float64,131454,50.006846,65
+Visibility (km),float64,131451,50.007986,30
+Stn Press (kPa),float64,262803,0.053624,664
+Hmdx,float64,46290,82.395491,22
+Wind Chill,float64,26346,89.980376,34
+Weather,category,56160,78.64184,70

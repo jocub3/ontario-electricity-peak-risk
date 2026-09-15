@@ -1,0 +1,101 @@
+﻿feature,feature_family,dtype,missing_pct,unique_count,preliminary_priority,rationale
+fsa,spatial,category,0.0,6,high,EDA-supported feature family.
+timestamp,traceability,datetime64[ns],0.0,43824,administrative,"Retain for alignment or audit, not as a direct predictor."
+total_consumption_kwh,target,float64,0.0,157393,target,Observed target; excluded from predictor set.
+reported_premise_count,operational_exogenous,Int64,0.0,1269,medium,"Potentially informative operational variable, but forecast-time availability must be confirmed before inclusion in the final predictor set."
+source_segment_count,existing,Int8,0.0,6,medium,Retain for model-specific evaluation.
+customer_type_count,existing,Int8,0.0,2,medium,Retain for model-specific evaluation.
+price_plan_count,existing,Int8,0.0,3,medium,Retain for model-specific evaluation.
+timestamp_utc,traceability,"datetime64[ns, UTC]",0.0,43824,administrative,"Retain for alignment or audit, not as a direct predictor."
+timestamp_toronto,traceability,"datetime64[ns, UTC]",0.0,43824,administrative,"Retain for alignment or audit, not as a direct predictor."
+date,traceability,datetime64[ns],0.0,1826,administrative,"Retain for alignment or audit, not as a direct predictor."
+year,existing,Int16,0.0,5,medium,Retain for model-specific evaluation.
+quarter,existing,Int8,0.0,4,medium,Retain for model-specific evaluation.
+month,existing,Int8,0.0,12,medium,Retain for model-specific evaluation.
+week_of_year,existing,Int8,0.0,53,medium,Retain for model-specific evaluation.
+day_of_year,existing,Int16,0.0,366,medium,Retain for model-specific evaluation.
+day_of_month,existing,Int8,0.0,31,medium,Retain for model-specific evaluation.
+hour,existing,Int8,0.0,24,medium,Retain for model-specific evaluation.
+hour_group,existing,category,0.0,4,medium,Retain for model-specific evaluation.
+weekday,existing,Int8,0.0,7,medium,Retain for model-specific evaluation.
+is_weekend,existing,Int8,0.0,2,medium,Retain for model-specific evaluation.
+is_workday,existing,Int8,0.0,2,medium,Retain for model-specific evaluation.
+is_monday,existing,Int8,0.0,2,medium,Retain for model-specific evaluation.
+is_friday,existing,Int8,0.0,2,medium,Retain for model-specific evaluation.
+season,existing,category,0.0,4,medium,Retain for model-specific evaluation.
+is_business_hour,existing,Int8,0.0,2,medium,Retain for model-specific evaluation.
+is_peak_hour_window,existing,Int8,0.0,2,medium,Retain for model-specific evaluation.
+is_month_start,existing,Int8,0.0,2,medium,Retain for model-specific evaluation.
+is_month_end,existing,Int8,0.0,2,medium,Retain for model-specific evaluation.
+is_year_start,existing,Int8,0.0,2,medium,Retain for model-specific evaluation.
+is_year_end,existing,Int8,0.0,2,medium,Retain for model-specific evaluation.
+is_public_holiday,existing,Int8,0.0,2,medium,Retain for model-specific evaluation.
+holiday_name,existing,category,0.0,14,medium,Retain for model-specific evaluation.
+is_day_before_holiday,existing,Int8,0.0,2,medium,Retain for model-specific evaluation.
+is_day_after_holiday,existing,Int8,0.0,2,medium,Retain for model-specific evaluation.
+days_to_holiday,existing,Int16,0.0,77,medium,Retain for model-specific evaluation.
+days_after_holiday,existing,Int16,0.0,77,medium,Retain for model-specific evaluation.
+is_long_weekend,existing,Int8,0.0,2,medium,Retain for model-specific evaluation.
+is_daylight_saving_time,existing,Int8,0.0,2,medium,Retain for model-specific evaluation.
+is_dst_transition_day,existing,Int8,0.0,2,medium,Retain for model-specific evaluation.
+is_spring_forward_day,existing,Int8,0.0,2,medium,Retain for model-specific evaluation.
+is_fall_back_day,existing,Int8,0.0,2,medium,Retain for model-specific evaluation.
+utc_offset_hours,existing,Int8,0.0,2,medium,Retain for model-specific evaluation.
+date_index,existing,Int32,0.0,1826,medium,Retain for model-specific evaluation.
+hour_sin,temporal_cyclical,Float64,0.0,21,high,EDA-supported feature family.
+hour_cos,temporal_cyclical,Float64,0.0,22,high,EDA-supported feature family.
+weekday_sin,temporal_cyclical,Float64,0.0,7,high,EDA-supported feature family.
+weekday_cos,temporal_cyclical,Float64,0.0,7,high,EDA-supported feature family.
+month_sin,temporal_cyclical,Float64,0.0,11,high,EDA-supported feature family.
+month_cos,temporal_cyclical,Float64,0.0,11,high,EDA-supported feature family.
+assigned_climate_id,traceability,Int64,0.0,2,administrative,"Retain for alignment or audit, not as a direct predictor."
+assigned_station_name,traceability,category,0.0,2,administrative,"Retain for alignment or audit, not as a direct predictor."
+Longitude (x),traceability,float64,0.0,2,administrative,"Retain for alignment or audit, not as a direct predictor."
+Latitude (y),traceability,float64,0.0,2,administrative,"Retain for alignment or audit, not as a direct predictor."
+Temp (°C),existing,float64,0.053624,564,medium,Retain for model-specific evaluation.
+Dew Point Temp (°C),existing,float64,0.054765,541,medium,Retain for model-specific evaluation.
+Rel Hum (%),existing,float64,0.054765,87,medium,Retain for model-specific evaluation.
+Precip. Amount (mm),existing,float64,50.046778,108,medium,Substantial missingness; usefulness must justify treatment.
+Wind Dir (10s deg),existing,float64,50.835159,36,medium,Substantial missingness; usefulness must justify treatment.
+Wind Spd (km/h),existing,float64,50.006846,65,medium,Substantial missingness; usefulness must justify treatment.
+Visibility (km),existing,float64,50.007986,30,medium,Substantial missingness; usefulness must justify treatment.
+Stn Press (kPa),existing,float64,0.053624,664,medium,Retain for model-specific evaluation.
+Hmdx,existing,float64,82.395491,22,low,Very high missingness; model-specific handling required.
+Wind Chill,existing,float64,89.980376,34,low,Very high missingness; model-specific handling required.
+Weather,existing,category,78.64184,70,medium,Substantial missingness; usefulness must justify treatment.
+day_of_year_sin,temporal_cyclical,Float64,0.0,366,high,EDA-supported feature family.
+day_of_year_cos,temporal_cyclical,Float64,0.0,366,high,EDA-supported feature family.
+total_consumption_kwh_lag_1h,target_lag,float64,0.002282,157390,high,EDA-supported feature family.
+total_consumption_kwh_lag_2h,target_lag,float64,0.004564,157388,high,EDA-supported feature family.
+total_consumption_kwh_lag_3h,target_lag,float64,0.006846,157385,high,EDA-supported feature family.
+total_consumption_kwh_lag_24h,target_lag,float64,0.054765,157333,high,EDA-supported feature family.
+total_consumption_kwh_lag_48h,target_lag,float64,0.109529,157267,high,EDA-supported feature family.
+total_consumption_kwh_lag_168h,target_lag,float64,0.383352,156995,high,EDA-supported feature family.
+total_consumption_kwh_rolling_mean_3h,target_rolling,float64,0.006846,254313,high,EDA-supported feature family.
+total_consumption_kwh_rolling_std_3h,target_rolling,float64,0.006846,262924,high,EDA-supported feature family.
+total_consumption_kwh_rolling_min_3h,target_rolling,float64,0.006846,139902,high,EDA-supported feature family.
+total_consumption_kwh_rolling_max_3h,target_rolling,float64,0.006846,142862,high,EDA-supported feature family.
+total_consumption_kwh_rolling_mean_6h,target_rolling,float64,0.013691,235404,high,EDA-supported feature family.
+total_consumption_kwh_rolling_std_6h,target_rolling,float64,0.013691,262907,high,EDA-supported feature family.
+total_consumption_kwh_rolling_min_6h,target_rolling,float64,0.013691,120112,high,EDA-supported feature family.
+total_consumption_kwh_rolling_max_6h,target_rolling,float64,0.013691,125068,high,EDA-supported feature family.
+total_consumption_kwh_rolling_mean_24h,target_rolling,float64,0.054765,254333,high,EDA-supported feature family.
+total_consumption_kwh_rolling_std_24h,target_rolling,float64,0.054765,262778,high,EDA-supported feature family.
+total_consumption_kwh_rolling_min_24h,target_rolling,float64,0.054765,22488,high,EDA-supported feature family.
+total_consumption_kwh_rolling_max_24h,target_rolling,float64,0.054765,27713,high,EDA-supported feature family.
+total_consumption_kwh_rolling_mean_168h,target_rolling,float64,0.383352,260684,high,EDA-supported feature family.
+total_consumption_kwh_rolling_std_168h,target_rolling,float64,0.383352,261925,high,EDA-supported feature family.
+total_consumption_kwh_rolling_min_168h,target_rolling,float64,0.383352,6956,high,EDA-supported feature family.
+total_consumption_kwh_rolling_max_168h,target_rolling,float64,0.383352,7952,high,EDA-supported feature family.
+temperature_change_1h,weather_change,float64,0.081006,592,high,EDA-supported feature family.
+temperature_change_24h,weather_change,float64,0.162012,1364,high,EDA-supported feature family.
+humidity_change_1h,weather_change,float64,0.083288,80,high,EDA-supported feature family.
+pressure_change_1h,weather_change,float64,0.081006,151,high,EDA-supported feature family.
+temperature_rolling_mean_6h,weather_rolling,float64,0.192817,16918,high,EDA-supported feature family.
+temperature_rolling_mean_24h,weather_rolling,float64,0.681134,22760,high,EDA-supported feature family.
+humidity_rolling_mean_6h,weather_rolling,float64,0.199662,491,high,EDA-supported feature family.
+humidity_rolling_mean_24h,weather_rolling,float64,0.708516,1733,high,EDA-supported feature family.
+heating_degree_c,weather_nonlinear,float64,0.053624,393,high,EDA-supported feature family.
+cooling_degree_c,weather_nonlinear,float64,0.053624,172,high,EDA-supported feature family.
+temperature_x_hour,interaction,Float64,0.053624,5402,medium,Retain for model-specific evaluation.
+temperature_x_weekend,interaction,Float64,0.053624,543,medium,Retain for model-specific evaluation.

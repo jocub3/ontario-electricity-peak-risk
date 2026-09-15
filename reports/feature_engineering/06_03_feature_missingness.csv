@@ -1,0 +1,101 @@
+﻿feature,dtype,non_null_count,missing_count,missing_pct
+fsa,category,262944,0,0.0
+timestamp,datetime64[ns],262944,0,0.0
+total_consumption_kwh,float64,262944,0,0.0
+reported_premise_count,Int64,262944,0,0.0
+source_segment_count,Int8,262944,0,0.0
+customer_type_count,Int8,262944,0,0.0
+price_plan_count,Int8,262944,0,0.0
+timestamp_utc,"datetime64[ns, UTC]",262944,0,0.0
+timestamp_toronto,"datetime64[ns, UTC]",262944,0,0.0
+date,datetime64[ns],262944,0,0.0
+year,Int16,262944,0,0.0
+quarter,Int8,262944,0,0.0
+month,Int8,262944,0,0.0
+week_of_year,Int8,262944,0,0.0
+day_of_year,Int16,262944,0,0.0
+day_of_month,Int8,262944,0,0.0
+hour,Int8,262944,0,0.0
+hour_group,category,262944,0,0.0
+weekday,Int8,262944,0,0.0
+is_weekend,Int8,262944,0,0.0
+is_workday,Int8,262944,0,0.0
+is_monday,Int8,262944,0,0.0
+is_friday,Int8,262944,0,0.0
+season,category,262944,0,0.0
+is_business_hour,Int8,262944,0,0.0
+is_peak_hour_window,Int8,262944,0,0.0
+is_month_start,Int8,262944,0,0.0
+is_month_end,Int8,262944,0,0.0
+is_year_start,Int8,262944,0,0.0
+is_year_end,Int8,262944,0,0.0
+is_public_holiday,Int8,262944,0,0.0
+holiday_name,category,262944,0,0.0
+is_day_before_holiday,Int8,262944,0,0.0
+is_day_after_holiday,Int8,262944,0,0.0
+days_to_holiday,Int16,262944,0,0.0
+days_after_holiday,Int16,262944,0,0.0
+is_long_weekend,Int8,262944,0,0.0
+is_daylight_saving_time,Int8,262944,0,0.0
+is_dst_transition_day,Int8,262944,0,0.0
+is_spring_forward_day,Int8,262944,0,0.0
+is_fall_back_day,Int8,262944,0,0.0
+utc_offset_hours,Int8,262944,0,0.0
+date_index,Int32,262944,0,0.0
+hour_sin,Float64,262944,0,0.0
+hour_cos,Float64,262944,0,0.0
+weekday_sin,Float64,262944,0,0.0
+weekday_cos,Float64,262944,0,0.0
+month_sin,Float64,262944,0,0.0
+month_cos,Float64,262944,0,0.0
+assigned_climate_id,Int64,262944,0,0.0
+assigned_station_name,category,262944,0,0.0
+Longitude (x),float64,262944,0,0.0
+Latitude (y),float64,262944,0,0.0
+Temp (°C),float64,262803,141,0.053624
+Dew Point Temp (°C),float64,262800,144,0.054765
+Rel Hum (%),float64,262800,144,0.054765
+Precip. Amount (mm),float64,131349,131595,50.046778
+Wind Dir (10s deg),float64,129276,133668,50.835159
+Wind Spd (km/h),float64,131454,131490,50.006846
+Visibility (km),float64,131451,131493,50.007986
+Stn Press (kPa),float64,262803,141,0.053624
+Hmdx,float64,46290,216654,82.395491
+Wind Chill,float64,26346,236598,89.980376
+Weather,category,56160,206784,78.64184
+day_of_year_sin,Float64,262944,0,0.0
+day_of_year_cos,Float64,262944,0,0.0
+total_consumption_kwh_lag_1h,float64,262938,6,0.002282
+total_consumption_kwh_lag_2h,float64,262932,12,0.004564
+total_consumption_kwh_lag_3h,float64,262926,18,0.006846
+total_consumption_kwh_lag_24h,float64,262800,144,0.054765
+total_consumption_kwh_lag_48h,float64,262656,288,0.109529
+total_consumption_kwh_lag_168h,float64,261936,1008,0.383352
+total_consumption_kwh_rolling_mean_3h,float64,262926,18,0.006846
+total_consumption_kwh_rolling_std_3h,float64,262926,18,0.006846
+total_consumption_kwh_rolling_min_3h,float64,262926,18,0.006846
+total_consumption_kwh_rolling_max_3h,float64,262926,18,0.006846
+total_consumption_kwh_rolling_mean_6h,float64,262908,36,0.013691
+total_consumption_kwh_rolling_std_6h,float64,262908,36,0.013691
+total_consumption_kwh_rolling_min_6h,float64,262908,36,0.013691
+total_consumption_kwh_rolling_max_6h,float64,262908,36,0.013691
+total_consumption_kwh_rolling_mean_24h,float64,262800,144,0.054765
+total_consumption_kwh_rolling_std_24h,float64,262800,144,0.054765
+total_consumption_kwh_rolling_min_24h,float64,262800,144,0.054765
+total_consumption_kwh_rolling_max_24h,float64,262800,144,0.054765
+total_consumption_kwh_rolling_mean_168h,float64,261936,1008,0.383352
+total_consumption_kwh_rolling_std_168h,float64,261936,1008,0.383352
+total_consumption_kwh_rolling_min_168h,float64,261936,1008,0.383352
+total_consumption_kwh_rolling_max_168h,float64,261936,1008,0.383352
+temperature_change_1h,float64,262731,213,0.081006
+temperature_change_24h,float64,262518,426,0.162012
+humidity_change_1h,float64,262725,219,0.083288
+pressure_change_1h,float64,262731,213,0.081006
+temperature_rolling_mean_6h,float64,262437,507,0.192817
+temperature_rolling_mean_24h,float64,261153,1791,0.681134
+humidity_rolling_mean_6h,float64,262419,525,0.199662
+humidity_rolling_mean_24h,float64,261081,1863,0.708516
+heating_degree_c,float64,262803,141,0.053624
+cooling_degree_c,float64,262803,141,0.053624
+temperature_x_hour,Float64,262803,141,0.053624
+temperature_x_weekend,Float64,262803,141,0.053624

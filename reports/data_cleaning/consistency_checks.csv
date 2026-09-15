@@ -1,0 +1,37 @@
+﻿check,violations,severity,status,description
+required_key_not_null,0,error,PASS,FSA and timestamp must be present for every row.
+unique_fsa_timestamp,0,error,PASS,The cleaned dataset must contain one row per FSA and timestamp.
+required_non_null::fsa,0,error,PASS,Required field 'fsa' must not be missing.
+required_non_null::timestamp,0,error,PASS,Required field 'timestamp' must not be missing.
+required_non_null::total_consumption_kwh,0,error,PASS,Required field 'total_consumption_kwh' must not be missing.
+required_non_null::reported_premise_count,0,error,PASS,Required field 'reported_premise_count' must not be missing.
+non_negative_consumption,0,error,PASS,Electricity consumption must not be negative.
+non_negative_premise_count,0,error,PASS,Reported premise count must not be negative.
+relative_humidity_range,0,error,PASS,Relative humidity must be between 0 and 100 percent.
+non_negative::Precip. Amount (mm),0,error,PASS,'Precip. Amount (mm)' must not contain negative values.
+non_negative::Wind Spd (km/h),0,error,PASS,'Wind Spd (km/h)' must not contain negative values.
+non_negative::Visibility (km),0,error,PASS,'Visibility (km)' must not contain negative values.
+wind_direction_range,0,error,PASS,Wind direction in tens of degrees must be between 0 and 36.
+timestamp_year_consistency,0,error,PASS,Calendar year must agree with timestamp.
+timestamp_month_consistency,0,error,PASS,Calendar month must agree with timestamp.
+timestamp_day_consistency,0,error,PASS,Calendar day must agree with timestamp.
+timestamp_hour_consistency,0,error,PASS,Calendar hour must agree with timestamp.
+binary_domain::is_weekend,0,error,PASS,Binary field 'is_weekend' must contain only 0 or 1.
+binary_domain::is_workday,0,error,PASS,Binary field 'is_workday' must contain only 0 or 1.
+binary_domain::is_monday,0,error,PASS,Binary field 'is_monday' must contain only 0 or 1.
+binary_domain::is_friday,0,error,PASS,Binary field 'is_friday' must contain only 0 or 1.
+binary_domain::is_business_hour,0,error,PASS,Binary field 'is_business_hour' must contain only 0 or 1.
+binary_domain::is_peak_hour_window,0,error,PASS,Binary field 'is_peak_hour_window' must contain only 0 or 1.
+binary_domain::is_month_start,0,error,PASS,Binary field 'is_month_start' must contain only 0 or 1.
+binary_domain::is_month_end,0,error,PASS,Binary field 'is_month_end' must contain only 0 or 1.
+binary_domain::is_year_start,0,error,PASS,Binary field 'is_year_start' must contain only 0 or 1.
+binary_domain::is_year_end,0,error,PASS,Binary field 'is_year_end' must contain only 0 or 1.
+binary_domain::is_public_holiday,0,error,PASS,Binary field 'is_public_holiday' must contain only 0 or 1.
+binary_domain::is_day_before_holiday,0,error,PASS,Binary field 'is_day_before_holiday' must contain only 0 or 1.
+binary_domain::is_day_after_holiday,0,error,PASS,Binary field 'is_day_after_holiday' must contain only 0 or 1.
+binary_domain::is_long_weekend,0,error,PASS,Binary field 'is_long_weekend' must contain only 0 or 1.
+binary_domain::is_daylight_saving_time,0,error,PASS,Binary field 'is_daylight_saving_time' must contain only 0 or 1.
+binary_domain::is_dst_transition_day,0,error,PASS,Binary field 'is_dst_transition_day' must contain only 0 or 1.
+binary_domain::is_spring_forward_day,0,error,PASS,Binary field 'is_spring_forward_day' must contain only 0 or 1.
+binary_domain::is_fall_back_day,0,error,PASS,Binary field 'is_fall_back_day' must contain only 0 or 1.
+dst_transition_days_have_24_source_hours,0,error,PASS,Every FSA must preserve 24 source-aligned hours on DST transition dates.

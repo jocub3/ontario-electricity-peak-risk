@@ -1,0 +1,6 @@
+﻿column,action,rule,missing_pct_before,reason
+SOURCE_FILE,dropped,drop_if_present,0.0,Weather source-file traceability is already documented upstream and is not an analytical variable.
+SOURCE_PERIOD,dropped,drop_if_present,0.0,Monthly source-period traceability is already documented upstream and duplicates information available from timestamp.
+Dew Point Temp Flag,dropped,drop_if_missing_pct_at_least,99.998859,Near-empty ECCC quality flag; not sufficiently populated for analysis.
+Rel Hum Flag,dropped,drop_if_missing_pct_at_least,99.998859,Near-empty ECCC quality flag; not sufficiently populated for analysis.
+Visibility Flag,dropped,drop_if_missing_pct_at_least,99.998859,Near-empty ECCC quality flag; not sufficiently populated for analysis.

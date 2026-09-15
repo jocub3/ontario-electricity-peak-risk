@@ -1,0 +1,9 @@
+﻿dataset,entity,unique_timestamps,timestamps_missing_from_calendar,calendar_timestamps_without_entity_data
+consumption,FSA=L4T,43824,0,0
+consumption,FSA=M5R,43824,0,0
+consumption,FSA=M5S,43824,0,0
+consumption,FSA=M6G,43824,0,0
+consumption,FSA=M9R,43824,0,0
+consumption,FSA=M9W,43824,0,0
+weather,Climate ID=6158355 | Station=TORONTO CITY,43824,0,0
+weather,Climate ID=6158731 | Station=TORONTO INTL A,43824,0,0

@@ -1,0 +1,17 @@
+analysis_period:
+  start_year: 2021
+  end_year: 2025
+paths:
+  processed_data_dir: data/processed
+  master_dataset: data/processed/master_dataset.parquet
+  reports_dir: reports/data_preparation
+  docs_dir: docs
+fsa_station_mapping:
+  M5S: {climate_id: 6158355, station_name: TORONTO CITY}
+  M5R: {climate_id: 6158355, station_name: TORONTO CITY}
+  M6G: {climate_id: 6158355, station_name: TORONTO CITY}
+  L4T: {climate_id: 6158731, station_name: TORONTO INTL A}
+  M9W: {climate_id: 6158731, station_name: TORONTO INTL A}
+  M9R: {climate_id: 6158731, station_name: TORONTO INTL A}
+
+

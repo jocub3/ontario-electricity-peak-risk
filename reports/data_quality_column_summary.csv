@@ -1,0 +1,90 @@
+﻿dataset,column,dtype,rows,non_null_count,missing_count,missing_pct,unique_count,constant_column
+consumption,FSA,string,1046461,1046461,0,0.0,6,False
+consumption,DATE,datetime64[ns],1046461,1046461,0,0.0,1826,False
+consumption,HOUR,int64,1046461,1046461,0,0.0,24,False
+consumption,CUSTOMER_TYPE,string,1046461,1046461,0,0.0,2,False
+consumption,PRICE_PLAN,string,1046461,1046461,0,0.0,4,False
+consumption,TOTAL_CONSUMPTION,float64,1046461,1046461,0,0.0,118781,False
+consumption,PREMISE_COUNT,int64,1046461,1046461,0,0.0,2389,False
+consumption,SOURCE_PERIOD,int64,1046461,1046461,0,0.0,60,False
+consumption,INTERVAL_START_TIMESTAMP,datetime64[ns],1046461,1046461,0,0.0,43824,False
+consumption,INTERVAL_END_TIMESTAMP,datetime64[ns],1046461,1046461,0,0.0,43824,False
+consumption,TIMESTAMP,datetime64[ns],1046461,1046461,0,0.0,43824,False
+weather,Longitude (x),float64,87648,87648,0,0.0,2,False
+weather,Latitude (y),float64,87648,87648,0,0.0,2,False
+weather,Station Name,string,87648,87648,0,0.0,2,False
+weather,Climate ID,Int64,87648,87648,0,0.0,2,False
+weather,Date/Time (LST),datetime64[ns],87648,87648,0,0.0,43824,False
+weather,Year,int64,87648,87648,0,0.0,5,False
+weather,Month,int64,87648,87648,0,0.0,12,False
+weather,Day,int64,87648,87648,0,0.0,31,False
+weather,Time (LST),object,87648,87648,0,0.0,24,False
+weather,Flag,float64,87648,0,87648,100.0,0,True
+weather,Temp (°C),float64,87648,87601,47,0.0536,564,False
+weather,Temp Flag,float64,87648,0,87648,100.0,0,True
+weather,Dew Point Temp (°C),float64,87648,87600,48,0.0548,541,False
+weather,Dew Point Temp Flag,object,87648,1,87647,99.9989,1,True
+weather,Rel Hum (%),float64,87648,87600,48,0.0548,87,False
+weather,Rel Hum Flag,object,87648,1,87647,99.9989,1,True
+weather,Precip. Amount (mm),float64,87648,43783,43865,50.0468,108,False
+weather,Precip. Amount Flag,float64,87648,0,87648,100.0,0,True
+weather,Wind Dir (10s deg),float64,87648,43092,44556,50.8352,36,False
+weather,Wind Dir Flag,float64,87648,0,87648,100.0,0,True
+weather,Wind Spd (km/h),float64,87648,43818,43830,50.0068,65,False
+weather,Wind Spd Flag,float64,87648,0,87648,100.0,0,True
+weather,Visibility (km),float64,87648,43817,43831,50.008,30,False
+weather,Visibility Flag,object,87648,1,87647,99.9989,1,True
+weather,Stn Press (kPa),float64,87648,87601,47,0.0536,664,False
+weather,Stn Press Flag,float64,87648,0,87648,100.0,0,True
+weather,Hmdx,float64,87648,15430,72218,82.3955,22,False
+weather,Hmdx Flag,float64,87648,0,87648,100.0,0,True
+weather,Wind Chill,float64,87648,8782,78866,89.9804,34,False
+weather,Wind Chill Flag,float64,87648,0,87648,100.0,0,True
+weather,Weather,object,87648,18720,68928,78.6418,70,False
+weather,SOURCE_FILE,object,87648,87648,0,0.0,60,False
+weather,SOURCE_PERIOD,int64,87648,87648,0,0.0,60,False
+calendar,timestamp_utc,"datetime64[ns, UTC]",43824,43824,0,0.0,43824,False
+calendar,timestamp_local,datetime64[ns],43824,43824,0,0.0,43824,False
+calendar,timestamp_toronto,"datetime64[ns, UTC]",43824,43824,0,0.0,43824,False
+calendar,date,datetime64[ns],43824,43824,0,0.0,1826,False
+calendar,year,int64,43824,43824,0,0.0,5,False
+calendar,quarter,int64,43824,43824,0,0.0,4,False
+calendar,month,int64,43824,43824,0,0.0,12,False
+calendar,month_name,object,43824,43824,0,0.0,12,False
+calendar,week_of_year,int64,43824,43824,0,0.0,53,False
+calendar,day_of_year,int64,43824,43824,0,0.0,366,False
+calendar,day_of_month,int64,43824,43824,0,0.0,31,False
+calendar,hour,int64,43824,43824,0,0.0,24,False
+calendar,hour_group,object,43824,43824,0,0.0,4,False
+calendar,weekday,int64,43824,43824,0,0.0,7,False
+calendar,weekday_name,object,43824,43824,0,0.0,7,False
+calendar,is_weekend,int64,43824,43824,0,0.0,2,False
+calendar,is_workday,int64,43824,43824,0,0.0,2,False
+calendar,is_monday,int64,43824,43824,0,0.0,2,False
+calendar,is_friday,int64,43824,43824,0,0.0,2,False
+calendar,season,object,43824,43824,0,0.0,4,False
+calendar,is_business_hour,int64,43824,43824,0,0.0,2,False
+calendar,is_peak_hour_window,int64,43824,43824,0,0.0,2,False
+calendar,is_month_start,int64,43824,43824,0,0.0,2,False
+calendar,is_month_end,int64,43824,43824,0,0.0,2,False
+calendar,is_year_start,int64,43824,43824,0,0.0,2,False
+calendar,is_year_end,int64,43824,43824,0,0.0,2,False
+calendar,is_public_holiday,int64,43824,43824,0,0.0,2,False
+calendar,holiday_name,object,43824,1176,42648,97.3165,13,False
+calendar,is_day_before_holiday,int64,43824,43824,0,0.0,2,False
+calendar,is_day_after_holiday,int64,43824,43824,0,0.0,2,False
+calendar,days_to_holiday,int64,43824,43824,0,0.0,77,False
+calendar,days_after_holiday,int64,43824,43824,0,0.0,77,False
+calendar,is_long_weekend,int64,43824,43824,0,0.0,2,False
+calendar,is_daylight_saving_time,int64,43824,43824,0,0.0,2,False
+calendar,is_dst_transition_day,int64,43824,43824,0,0.0,2,False
+calendar,is_spring_forward_day,int64,43824,43824,0,0.0,2,False
+calendar,is_fall_back_day,int64,43824,43824,0,0.0,2,False
+calendar,utc_offset_hours,int64,43824,43824,0,0.0,2,False
+calendar,date_index,int64,43824,43824,0,0.0,1826,False
+calendar,hour_sin,float64,43824,43824,0,0.0,20,False
+calendar,hour_cos,float64,43824,43824,0,0.0,22,False
+calendar,weekday_sin,float64,43824,43824,0,0.0,7,False
+calendar,weekday_cos,float64,43824,43824,0,0.0,7,False
+calendar,month_sin,float64,43824,43824,0,0.0,11,False
+calendar,month_cos,float64,43824,43824,0,0.0,11,False

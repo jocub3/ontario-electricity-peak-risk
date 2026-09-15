@@ -1,0 +1,67 @@
+﻿column,dtype,missing_pct,unique_count,preliminary_recommendation,reason
+fsa,category,0.0,6,retain_candidate,Potentially useful predictor; final selection requires validation.
+timestamp,datetime64[ns],0.0,43824,retain_for_traceability_not_directly_as_numeric_feature,Identifier or temporal audit field.
+total_consumption_kwh,float64,0.0,157393,target_keep,Primary forecasting target.
+reported_premise_count,Int64,0.0,1269,retain_candidate,Potentially useful predictor; final selection requires validation.
+source_segment_count,Int8,0.0,6,retain_candidate,Potentially useful predictor; final selection requires validation.
+customer_type_count,Int8,0.0,2,retain_candidate,Potentially useful predictor; final selection requires validation.
+price_plan_count,Int8,0.0,3,retain_candidate,Potentially useful predictor; final selection requires validation.
+timestamp_utc,"datetime64[ns, UTC]",0.0,43824,retain_for_traceability_not_directly_as_numeric_feature,Identifier or temporal audit field.
+timestamp_toronto,"datetime64[ns, UTC]",0.0,43824,retain_for_traceability_not_directly_as_numeric_feature,Identifier or temporal audit field.
+date,datetime64[ns],0.0,1826,retain_for_traceability_not_directly_as_numeric_feature,Identifier or temporal audit field.
+year,Int16,0.0,5,retain_candidate,Potentially useful predictor; final selection requires validation.
+quarter,Int8,0.0,4,retain_candidate,Potentially useful predictor; final selection requires validation.
+month,Int8,0.0,12,retain_candidate,Potentially useful predictor; final selection requires validation.
+month_name,category,0.0,12,review_encoding_or_redundancy,Categorical/descriptive field may duplicate encoded calendar information.
+week_of_year,Int8,0.0,53,retain_candidate,Potentially useful predictor; final selection requires validation.
+day_of_year,Int16,0.0,366,retain_candidate,Potentially useful predictor; final selection requires validation.
+day_of_month,Int8,0.0,31,retain_candidate,Potentially useful predictor; final selection requires validation.
+hour,Int8,0.0,24,retain_candidate,Potentially useful predictor; final selection requires validation.
+hour_group,category,0.0,4,retain_candidate,Potentially useful predictor; final selection requires validation.
+weekday,Int8,0.0,7,retain_candidate,Potentially useful predictor; final selection requires validation.
+weekday_name,category,0.0,7,review_encoding_or_redundancy,Categorical/descriptive field may duplicate encoded calendar information.
+is_weekend,Int8,0.0,2,retain_candidate,Potentially useful predictor; final selection requires validation.
+is_workday,Int8,0.0,2,retain_candidate,Potentially useful predictor; final selection requires validation.
+is_monday,Int8,0.0,2,retain_candidate,Potentially useful predictor; final selection requires validation.
+is_friday,Int8,0.0,2,retain_candidate,Potentially useful predictor; final selection requires validation.
+season,category,0.0,4,retain_candidate,Potentially useful predictor; final selection requires validation.
+is_business_hour,Int8,0.0,2,retain_candidate,Potentially useful predictor; final selection requires validation.
+is_peak_hour_window,Int8,0.0,2,retain_candidate,Potentially useful predictor; final selection requires validation.
+is_month_start,Int8,0.0,2,retain_candidate,Potentially useful predictor; final selection requires validation.
+is_month_end,Int8,0.0,2,retain_candidate,Potentially useful predictor; final selection requires validation.
+is_year_start,Int8,0.0,2,retain_candidate,Potentially useful predictor; final selection requires validation.
+is_year_end,Int8,0.0,2,retain_candidate,Potentially useful predictor; final selection requires validation.
+is_public_holiday,Int8,0.0,2,retain_candidate,Potentially useful predictor; final selection requires validation.
+holiday_name,category,0.0,14,review_encoding_or_redundancy,Categorical/descriptive field may duplicate encoded calendar information.
+is_day_before_holiday,Int8,0.0,2,retain_candidate,Potentially useful predictor; final selection requires validation.
+is_day_after_holiday,Int8,0.0,2,retain_candidate,Potentially useful predictor; final selection requires validation.
+days_to_holiday,Int16,0.0,77,retain_candidate,Potentially useful predictor; final selection requires validation.
+days_after_holiday,Int16,0.0,77,retain_candidate,Potentially useful predictor; final selection requires validation.
+is_long_weekend,Int8,0.0,2,retain_candidate,Potentially useful predictor; final selection requires validation.
+is_daylight_saving_time,Int8,0.0,2,retain_candidate,Potentially useful predictor; final selection requires validation.
+is_dst_transition_day,Int8,0.0,2,retain_candidate,Potentially useful predictor; final selection requires validation.
+is_spring_forward_day,Int8,0.0,2,retain_candidate,Potentially useful predictor; final selection requires validation.
+is_fall_back_day,Int8,0.0,2,retain_candidate,Potentially useful predictor; final selection requires validation.
+utc_offset_hours,Int8,0.0,2,retain_candidate,Potentially useful predictor; final selection requires validation.
+date_index,Int32,0.0,1826,retain_candidate,Potentially useful predictor; final selection requires validation.
+hour_sin,float64,0.0,20,retain_candidate,Potentially useful predictor; final selection requires validation.
+hour_cos,float64,0.0,22,retain_candidate,Potentially useful predictor; final selection requires validation.
+weekday_sin,float64,0.0,7,retain_candidate,Potentially useful predictor; final selection requires validation.
+weekday_cos,float64,0.0,7,retain_candidate,Potentially useful predictor; final selection requires validation.
+month_sin,float64,0.0,11,retain_candidate,Potentially useful predictor; final selection requires validation.
+month_cos,float64,0.0,11,retain_candidate,Potentially useful predictor; final selection requires validation.
+assigned_climate_id,Int64,0.0,2,retain_for_traceability_not_directly_as_numeric_feature,Identifier or temporal audit field.
+assigned_station_name,category,0.0,2,retain_for_traceability_not_directly_as_numeric_feature,Identifier or temporal audit field.
+Longitude (x),float64,0.0,2,retain_candidate,Potentially useful predictor; final selection requires validation.
+Latitude (y),float64,0.0,2,retain_candidate,Potentially useful predictor; final selection requires validation.
+Temp (°C),float64,0.053624,564,retain_candidate,Potentially useful predictor; final selection requires validation.
+Dew Point Temp (°C),float64,0.054765,541,retain_candidate,Potentially useful predictor; final selection requires validation.
+Rel Hum (%),float64,0.054765,87,retain_candidate,Potentially useful predictor; final selection requires validation.
+Precip. Amount (mm),float64,50.046778,108,retain_for_eda_then_review_model_specific_handling,Substantial missingness but potentially meaningful weather information.
+Wind Dir (10s deg),float64,50.835159,36,retain_for_eda_then_review_model_specific_handling,Substantial missingness but potentially meaningful weather information.
+Wind Spd (km/h),float64,50.006846,65,retain_for_eda_then_review_model_specific_handling,Substantial missingness but potentially meaningful weather information.
+Visibility (km),float64,50.007986,30,retain_for_eda_then_review_model_specific_handling,Substantial missingness but potentially meaningful weather information.
+Stn Press (kPa),float64,0.053624,664,retain_candidate,Potentially useful predictor; final selection requires validation.
+Hmdx,float64,82.395491,22,review_for_exclusion_or_special_handling,Very high missingness; usefulness must be demonstrated.
+Wind Chill,float64,89.980376,34,review_for_exclusion_or_special_handling,Very high missingness; usefulness must be demonstrated.
+Weather,category,78.64184,70,review_encoding_or_redundancy,Categorical/descriptive field may duplicate encoded calendar information.

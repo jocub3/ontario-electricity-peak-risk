@@ -1,0 +1,109 @@
+﻿feature_name,feature_family,source_columns,description,forecasting_candidate,peak_risk_candidate,computation_scope,leakage_risk
+fsa,spatial,fsa,Forward Sortation Area identifier.,True,True,static_dataset,none
+timestamp,traceability,timestamp,"Retained for audit, geographic reference, or alignment, but excluded from the initial predictor set.",False,False,static_dataset,none
+total_consumption_kwh,target,total_consumption_kwh,Observed electricity consumption target.,False,False,target_only,target_only
+reported_premise_count,operational_exogenous,reported_premise_count,"Number of premises represented in the hourly consumption record. Potential predictor, but its availability at forecast time must be confirmed before use in production forecasting.",True,True,availability_review,none
+source_segment_count,existing,source_segment_count,Existing cleaned predictor retained for preliminary modeling review.,True,True,static_dataset,none
+customer_type_count,existing,customer_type_count,Existing cleaned predictor retained for preliminary modeling review.,True,True,static_dataset,none
+price_plan_count,existing,price_plan_count,Existing cleaned predictor retained for preliminary modeling review.,True,True,static_dataset,none
+timestamp_utc,traceability,timestamp_utc,"Retained for audit, geographic reference, or alignment, but excluded from the initial predictor set.",False,False,static_dataset,none
+timestamp_toronto,traceability,timestamp_toronto,"Retained for audit, geographic reference, or alignment, but excluded from the initial predictor set.",False,False,static_dataset,none
+date,traceability,date,"Retained for audit, geographic reference, or alignment, but excluded from the initial predictor set.",False,False,static_dataset,none
+year,existing,year,Existing cleaned predictor retained for preliminary modeling review.,True,True,static_dataset,none
+quarter,existing,quarter,Existing cleaned predictor retained for preliminary modeling review.,True,True,static_dataset,none
+month,existing,month,Existing cleaned predictor retained for preliminary modeling review.,True,True,static_dataset,none
+week_of_year,existing,week_of_year,Existing cleaned predictor retained for preliminary modeling review.,True,True,static_dataset,none
+day_of_year,existing,day_of_year,Existing cleaned predictor retained for preliminary modeling review.,True,True,static_dataset,none
+day_of_month,existing,day_of_month,Existing cleaned predictor retained for preliminary modeling review.,True,True,static_dataset,none
+hour,existing,hour,Existing cleaned predictor retained for preliminary modeling review.,True,True,static_dataset,none
+hour_group,existing,hour_group,Existing cleaned predictor retained for preliminary modeling review.,True,True,static_dataset,none
+weekday,existing,weekday,Existing cleaned predictor retained for preliminary modeling review.,True,True,static_dataset,none
+is_weekend,existing,is_weekend,Existing cleaned predictor retained for preliminary modeling review.,True,True,static_dataset,none
+is_workday,existing,is_workday,Existing cleaned predictor retained for preliminary modeling review.,True,True,static_dataset,none
+is_monday,existing,is_monday,Existing cleaned predictor retained for preliminary modeling review.,True,True,static_dataset,none
+is_friday,existing,is_friday,Existing cleaned predictor retained for preliminary modeling review.,True,True,static_dataset,none
+season,existing,season,Existing cleaned predictor retained for preliminary modeling review.,True,True,static_dataset,none
+is_business_hour,existing,is_business_hour,Existing cleaned predictor retained for preliminary modeling review.,True,True,static_dataset,none
+is_peak_hour_window,existing,is_peak_hour_window,Existing cleaned predictor retained for preliminary modeling review.,True,True,static_dataset,none
+is_month_start,existing,is_month_start,Existing cleaned predictor retained for preliminary modeling review.,True,True,static_dataset,none
+is_month_end,existing,is_month_end,Existing cleaned predictor retained for preliminary modeling review.,True,True,static_dataset,none
+is_year_start,existing,is_year_start,Existing cleaned predictor retained for preliminary modeling review.,True,True,static_dataset,none
+is_year_end,existing,is_year_end,Existing cleaned predictor retained for preliminary modeling review.,True,True,static_dataset,none
+is_public_holiday,existing,is_public_holiday,Existing cleaned predictor retained for preliminary modeling review.,True,True,static_dataset,none
+holiday_name,existing,holiday_name,Existing cleaned predictor retained for preliminary modeling review.,True,True,static_dataset,none
+is_day_before_holiday,existing,is_day_before_holiday,Existing cleaned predictor retained for preliminary modeling review.,True,True,static_dataset,none
+is_day_after_holiday,existing,is_day_after_holiday,Existing cleaned predictor retained for preliminary modeling review.,True,True,static_dataset,none
+days_to_holiday,existing,days_to_holiday,Existing cleaned predictor retained for preliminary modeling review.,True,True,static_dataset,none
+days_after_holiday,existing,days_after_holiday,Existing cleaned predictor retained for preliminary modeling review.,True,True,static_dataset,none
+is_long_weekend,existing,is_long_weekend,Existing cleaned predictor retained for preliminary modeling review.,True,True,static_dataset,none
+is_daylight_saving_time,existing,is_daylight_saving_time,Existing cleaned predictor retained for preliminary modeling review.,True,True,static_dataset,none
+is_dst_transition_day,existing,is_dst_transition_day,Existing cleaned predictor retained for preliminary modeling review.,True,True,static_dataset,none
+is_spring_forward_day,existing,is_spring_forward_day,Existing cleaned predictor retained for preliminary modeling review.,True,True,static_dataset,none
+is_fall_back_day,existing,is_fall_back_day,Existing cleaned predictor retained for preliminary modeling review.,True,True,static_dataset,none
+utc_offset_hours,existing,utc_offset_hours,Existing cleaned predictor retained for preliminary modeling review.,True,True,static_dataset,none
+date_index,existing,date_index,Existing cleaned predictor retained for preliminary modeling review.,True,True,static_dataset,none
+hour_sin,existing,hour_sin,Existing cleaned predictor retained for preliminary modeling review.,True,True,static_dataset,none
+hour_cos,existing,hour_cos,Existing cleaned predictor retained for preliminary modeling review.,True,True,static_dataset,none
+weekday_sin,existing,weekday_sin,Existing cleaned predictor retained for preliminary modeling review.,True,True,static_dataset,none
+weekday_cos,existing,weekday_cos,Existing cleaned predictor retained for preliminary modeling review.,True,True,static_dataset,none
+month_sin,existing,month_sin,Existing cleaned predictor retained for preliminary modeling review.,True,True,static_dataset,none
+month_cos,existing,month_cos,Existing cleaned predictor retained for preliminary modeling review.,True,True,static_dataset,none
+assigned_climate_id,traceability,assigned_climate_id,"Retained for audit, geographic reference, or alignment, but excluded from the initial predictor set.",False,False,static_dataset,none
+assigned_station_name,traceability,assigned_station_name,"Retained for audit, geographic reference, or alignment, but excluded from the initial predictor set.",False,False,static_dataset,none
+Longitude (x),traceability,Longitude (x),"Retained for audit, geographic reference, or alignment, but excluded from the initial predictor set.",False,False,static_dataset,none
+Latitude (y),traceability,Latitude (y),"Retained for audit, geographic reference, or alignment, but excluded from the initial predictor set.",False,False,static_dataset,none
+Temp (°C),existing,Temp (°C),Existing cleaned predictor retained for preliminary modeling review.,True,True,static_dataset,none
+Dew Point Temp (°C),existing,Dew Point Temp (°C),Existing cleaned predictor retained for preliminary modeling review.,True,True,static_dataset,none
+Rel Hum (%),existing,Rel Hum (%),Existing cleaned predictor retained for preliminary modeling review.,True,True,static_dataset,none
+Precip. Amount (mm),existing,Precip. Amount (mm),Existing cleaned predictor retained for preliminary modeling review.,True,True,static_dataset,none
+Wind Dir (10s deg),existing,Wind Dir (10s deg),Existing cleaned predictor retained for preliminary modeling review.,True,True,static_dataset,none
+Wind Spd (km/h),existing,Wind Spd (km/h),Existing cleaned predictor retained for preliminary modeling review.,True,True,static_dataset,none
+Visibility (km),existing,Visibility (km),Existing cleaned predictor retained for preliminary modeling review.,True,True,static_dataset,none
+Stn Press (kPa),existing,Stn Press (kPa),Existing cleaned predictor retained for preliminary modeling review.,True,True,static_dataset,none
+Hmdx,existing,Hmdx,Existing cleaned predictor retained for preliminary modeling review.,True,True,static_dataset,none
+Wind Chill,existing,Wind Chill,Existing cleaned predictor retained for preliminary modeling review.,True,True,static_dataset,none
+Weather,existing,Weather,Existing cleaned predictor retained for preliminary modeling review.,True,True,static_dataset,none
+month_name,administrative_or_redundant,month_name,Removed from the baseline feature table by explicit configuration.,False,False,static_dataset,none
+weekday_name,administrative_or_redundant,weekday_name,Removed from the baseline feature table by explicit configuration.,False,False,static_dataset,none
+hour_sin,temporal_cyclical,hour,Sine cyclical encoding of hour with period 24.,True,True,static_dataset,low
+hour_cos,temporal_cyclical,hour,Cosine cyclical encoding of hour with period 24.,True,True,static_dataset,low
+weekday_sin,temporal_cyclical,weekday,Sine cyclical encoding of weekday with period 7.,True,True,static_dataset,low
+weekday_cos,temporal_cyclical,weekday,Cosine cyclical encoding of weekday with period 7.,True,True,static_dataset,low
+month_sin,temporal_cyclical,month,Sine cyclical encoding of month with period 12.,True,True,static_dataset,low
+month_cos,temporal_cyclical,month,Cosine cyclical encoding of month with period 12.,True,True,static_dataset,low
+day_of_year_sin,temporal_cyclical,day_of_year,Sine cyclical encoding of day_of_year with period 365.25.,True,True,static_dataset,low
+day_of_year_cos,temporal_cyclical,day_of_year,Cosine cyclical encoding of day_of_year with period 365.25.,True,True,static_dataset,low
+total_consumption_kwh_lag_1h,target_lag,total_consumption_kwh,Electricity consumption observed 1 hour(s) before the current timestamp within the same FSA.,True,True,historical_only,low_if_computed_after_temporal_ordering
+total_consumption_kwh_lag_2h,target_lag,total_consumption_kwh,Electricity consumption observed 2 hour(s) before the current timestamp within the same FSA.,True,True,historical_only,low_if_computed_after_temporal_ordering
+total_consumption_kwh_lag_3h,target_lag,total_consumption_kwh,Electricity consumption observed 3 hour(s) before the current timestamp within the same FSA.,True,True,historical_only,low_if_computed_after_temporal_ordering
+total_consumption_kwh_lag_24h,target_lag,total_consumption_kwh,Electricity consumption observed 24 hour(s) before the current timestamp within the same FSA.,True,True,historical_only,low_if_computed_after_temporal_ordering
+total_consumption_kwh_lag_48h,target_lag,total_consumption_kwh,Electricity consumption observed 48 hour(s) before the current timestamp within the same FSA.,True,True,historical_only,low_if_computed_after_temporal_ordering
+total_consumption_kwh_lag_168h,target_lag,total_consumption_kwh,Electricity consumption observed 168 hour(s) before the current timestamp within the same FSA.,True,True,historical_only,low_if_computed_after_temporal_ordering
+total_consumption_kwh_rolling_mean_3h,target_rolling,total_consumption_kwh,"Mean of the previous 3 hourly consumption observations, excluding the current hour.",True,True,historical_only,low_if_shift_is_preserved
+total_consumption_kwh_rolling_std_3h,target_rolling,total_consumption_kwh,"Std of the previous 3 hourly consumption observations, excluding the current hour.",True,True,historical_only,low_if_shift_is_preserved
+total_consumption_kwh_rolling_min_3h,target_rolling,total_consumption_kwh,"Min of the previous 3 hourly consumption observations, excluding the current hour.",True,True,historical_only,low_if_shift_is_preserved
+total_consumption_kwh_rolling_max_3h,target_rolling,total_consumption_kwh,"Max of the previous 3 hourly consumption observations, excluding the current hour.",True,True,historical_only,low_if_shift_is_preserved
+total_consumption_kwh_rolling_mean_6h,target_rolling,total_consumption_kwh,"Mean of the previous 6 hourly consumption observations, excluding the current hour.",True,True,historical_only,low_if_shift_is_preserved
+total_consumption_kwh_rolling_std_6h,target_rolling,total_consumption_kwh,"Std of the previous 6 hourly consumption observations, excluding the current hour.",True,True,historical_only,low_if_shift_is_preserved
+total_consumption_kwh_rolling_min_6h,target_rolling,total_consumption_kwh,"Min of the previous 6 hourly consumption observations, excluding the current hour.",True,True,historical_only,low_if_shift_is_preserved
+total_consumption_kwh_rolling_max_6h,target_rolling,total_consumption_kwh,"Max of the previous 6 hourly consumption observations, excluding the current hour.",True,True,historical_only,low_if_shift_is_preserved
+total_consumption_kwh_rolling_mean_24h,target_rolling,total_consumption_kwh,"Mean of the previous 24 hourly consumption observations, excluding the current hour.",True,True,historical_only,low_if_shift_is_preserved
+total_consumption_kwh_rolling_std_24h,target_rolling,total_consumption_kwh,"Std of the previous 24 hourly consumption observations, excluding the current hour.",True,True,historical_only,low_if_shift_is_preserved
+total_consumption_kwh_rolling_min_24h,target_rolling,total_consumption_kwh,"Min of the previous 24 hourly consumption observations, excluding the current hour.",True,True,historical_only,low_if_shift_is_preserved
+total_consumption_kwh_rolling_max_24h,target_rolling,total_consumption_kwh,"Max of the previous 24 hourly consumption observations, excluding the current hour.",True,True,historical_only,low_if_shift_is_preserved
+total_consumption_kwh_rolling_mean_168h,target_rolling,total_consumption_kwh,"Mean of the previous 168 hourly consumption observations, excluding the current hour.",True,True,historical_only,low_if_shift_is_preserved
+total_consumption_kwh_rolling_std_168h,target_rolling,total_consumption_kwh,"Std of the previous 168 hourly consumption observations, excluding the current hour.",True,True,historical_only,low_if_shift_is_preserved
+total_consumption_kwh_rolling_min_168h,target_rolling,total_consumption_kwh,"Min of the previous 168 hourly consumption observations, excluding the current hour.",True,True,historical_only,low_if_shift_is_preserved
+total_consumption_kwh_rolling_max_168h,target_rolling,total_consumption_kwh,"Max of the previous 168 hourly consumption observations, excluding the current hour.",True,True,historical_only,low_if_shift_is_preserved
+temperature_change_1h,weather_change,Temp (°C),Change in Temp (°C) relative to 1 hour(s) earlier.,True,True,historical_plus_current_exogenous,low
+temperature_change_24h,weather_change,Temp (°C),Change in Temp (°C) relative to 24 hour(s) earlier.,True,True,historical_plus_current_exogenous,low
+humidity_change_1h,weather_change,Rel Hum (%),Change in Rel Hum (%) relative to 1 hour(s) earlier.,True,True,historical_plus_current_exogenous,low
+pressure_change_1h,weather_change,Stn Press (kPa),Change in Stn Press (kPa) relative to 1 hour(s) earlier.,True,True,historical_plus_current_exogenous,low
+temperature_rolling_mean_6h,weather_rolling,Temp (°C),"Mean Temp (°C) over the previous 6 hours, excluding the current hour.",True,True,historical_only,low
+temperature_rolling_mean_24h,weather_rolling,Temp (°C),"Mean Temp (°C) over the previous 24 hours, excluding the current hour.",True,True,historical_only,low
+humidity_rolling_mean_6h,weather_rolling,Rel Hum (%),"Mean Rel Hum (%) over the previous 6 hours, excluding the current hour.",True,True,historical_only,low
+humidity_rolling_mean_24h,weather_rolling,Rel Hum (%),"Mean Rel Hum (%) over the previous 24 hours, excluding the current hour.",True,True,historical_only,low
+heating_degree_c,weather_nonlinear,Temp (°C),Positive temperature deficit below 18 °C.,True,True,current_exogenous,low
+cooling_degree_c,weather_nonlinear,Temp (°C),Positive temperature excess above 18 °C.,True,True,current_exogenous,low
+temperature_x_hour,interaction,Temp (°C) | hour,Interaction between current temperature and hour of day.,True,True,current_exogenous,low
+temperature_x_weekend,interaction,Temp (°C) | is_weekend,Interaction between current temperature and weekend status.,True,True,current_exogenous,low
