@@ -1,0 +1,31 @@
+{
+  "forecast_origin": "2026-04-30 23:00:00",
+  "fsas": [
+    "L4T",
+    "M5R",
+    "M5S",
+    "M6G",
+    "M9R",
+    "M9W"
+  ],
+  "horizons": 24,
+  "demand_history_status": "PASS",
+  "weather_grid_status": "PASS",
+  "feature_contract_status": "PASS",
+  "domain_warning_count": 0,
+  "prediction_generated": false,
+  "official_threshold": null,
+  "decision_threshold_used": null,
+  "threshold_override_used": false,
+  "model_loaded_from_cache": null,
+  "runtime_seconds": {
+    "config": 0.07401149999714107,
+    "data_loading": 8.825893900000665,
+    "operational_input_preparation": 0.602662599998439,
+    "input_validation": 0.5961435999997775,
+    "feature_construction": 2.027791399999842,
+    "feature_contract_validation": 0.006129299999884097,
+    "model_frame_construction": 0.1332207000014023,
+    "total": 14.891327099998307
+  }
+}

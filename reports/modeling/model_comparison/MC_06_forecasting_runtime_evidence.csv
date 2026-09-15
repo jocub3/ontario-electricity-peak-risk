@@ -1,0 +1,6 @@
+model,family,runtime_seconds_evidence,runtime_minutes_evidence,runtime_source
+Seasonal Naive,Baseline,,,unavailable
+Random Forest Regressor,Bagging,,,unavailable
+SARIMAX Rolling,Statistical Time Series,2223.858715899987,37.06431193166645,runtime_diagnostics:sum(task_seconds)
+XGBoost Regressor,Gradient Boosting,,,unavailable
+LightGBM Regressor,Gradient Boosting,,,unavailable

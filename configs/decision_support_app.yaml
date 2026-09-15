@@ -1,0 +1,64 @@
+phase:
+  name: decision_support_application
+  branch: app/decision-support
+
+application:
+  title: "Ontario Electricity Demand & Peak-Risk Decision Support"
+  default_mode: "public_demo"
+  public_demo_only: true
+  timezone: "America/Toronto"
+  official_peak_threshold: 0.06
+  horizons: 24
+  fsas:
+    - L4T
+    - M5R
+    - M5S
+    - M6G
+    - M9R
+    - M9W
+
+paths:
+  ifb_config: "configs/inference_feature_builder.yaml"
+  weather_sensitivity_config: "configs/weather_sensitivity.yaml"
+
+  operational_demand_dir: "data/operational/demand"
+  operational_weather_forecast_dir: "data/operational/weather/forecast"
+
+  app_data_dir: "data/app"
+  available_origins: "data/app/available_origins.csv"
+  demo_origins: "data/app/demo_origins.csv"
+  demo_predictions: "data/app/demo_predictions.parquet"
+  demo_weather_scenarios: "data/app/demo_weather_scenarios.parquet"
+  demo_metadata: "data/app/demo_metadata.json"
+
+  weather_sensitivity_master: "outputs/weather_sensitivity/WSA_sensitivity_master.parquet"
+
+  explainability_global: "outputs/explainability/EXPL_01_global_importance_summary.csv"
+  explainability_family: "outputs/explainability/EXPL_01_family_importance_by_horizon.csv"
+  explainability_rf_local: "outputs/explainability/EXPL_06_RF_operational_explanation.csv"
+  explainability_xgb_local: "outputs/explainability/EXPL_06_XGB_operational_explanation.csv"
+
+  final_holdout_overview: "docs/final_holdout_2025/Final_Holdout_2025_Overview.md"
+  explainability_overview: "docs/explainability/Explainability_Phase_Overview.md"
+  weather_sensitivity_overview: "docs/weather_sensitivity/Weather_Sensitivity_Analysis_Overview.md"
+
+  outputs_dir: "outputs/decision_support"
+  reports_dir: "reports/decision_support"
+  docs_dir: "docs/decision_support"
+
+demo:
+  # Valid forecast origins are discovered from actual operational files.
+  # No forecast origin is invented by this phase.
+  max_origins: 3
+  selection_strategy: "spread"
+  require_complete_fsa_coverage: true
+  required_history_hours: 168
+  required_weather_hours_ahead: 24
+  generate_weather_scenarios: true
+
+deployment:
+  # Public Streamlit version reads only precomputed Parquet/JSON artifacts.
+  load_model_artifacts: false
+  include_large_models_in_repo: false
+  app_entrypoint: "dashboard/app.py"
+  requirements_file: "dashboard/requirements_dashboard.txt"

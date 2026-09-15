@@ -1,0 +1,71 @@
+phase:
+  name: "random_forest_forecasting_final_refinement"
+  branch: "forecasting/random-forest-final-refinement"
+  evaluate_final_holdout: false
+
+incumbent:
+  n_estimators: 160
+  max_depth: null
+  min_samples_leaf: 5
+  max_features: 0.7
+
+refinement:
+  # Small, local search around the winning candidate configuration.
+  representative_horizons: [1, 12, 24]
+  minimum_mae_improvement_pct_to_replace_incumbent: 0.25
+
+  parameter_grid:
+    # R0 — incumbent; always re-tested under exactly the same refinement run.
+    - refinement_id: "R0_incumbent"
+      n_estimators: 160
+      max_depth: null
+      min_samples_leaf: 5
+      max_features: 0.7
+
+    # R1 — test whether a few more trees reduce variance.
+    - refinement_id: "R1_more_trees"
+      n_estimators: 220
+      max_depth: null
+      min_samples_leaf: 5
+      max_features: 0.7
+
+    # R2 — slightly less leaf regularization.
+    - refinement_id: "R2_leaf_3"
+      n_estimators: 180
+      max_depth: null
+      min_samples_leaf: 3
+      max_features: 0.7
+
+    # R3 — slightly broader feature sampling.
+    - refinement_id: "R3_features_08"
+      n_estimators: 180
+      max_depth: null
+      min_samples_leaf: 5
+      max_features: 0.8
+
+selection:
+  primary_metric: "mae"
+  guardrails:
+    - "rmse"
+    - "mape"
+    - "fold_mae_range"
+    - "horizon_mae_range"
+
+paths:
+  original_model_config: "configs/random_forest_regressor.yaml"
+  modeling_foundation_config: "configs/modeling_foundation.yaml"
+
+  # Existing candidate outputs are used only as reference/documentation.
+  original_reports_dir: "reports/modeling/forecasting/random_forest"
+  original_outputs_dir: "outputs/modeling/forecasting/random_forest"
+
+  reports_dir: "reports/modeling/forecasting/random_forest_final_refinement"
+  outputs_dir: "outputs/modeling/forecasting/random_forest_final_refinement"
+  docs_dir: "docs/modeling/forecasting/random_forest_final_refinement"
+
+freeze:
+  algorithm: "RandomForestRegressor"
+  horizons: 24
+  feature_policy: "Use the existing Random Forest forecasting feature set unchanged."
+  preprocessing_policy: "Use the existing Random Forest forecasting preprocessing unchanged."
+  holdout_policy: "The final 2025 holdout remains untouched until this refinement is approved and frozen."

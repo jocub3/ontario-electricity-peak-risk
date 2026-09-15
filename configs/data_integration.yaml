@@ -13,5 +13,3 @@ fsa_station_mapping:
   L4T: {climate_id: 6158731, station_name: TORONTO INTL A}
   M9W: {climate_id: 6158731, station_name: TORONTO INTL A}
   M9R: {climate_id: 6158731, station_name: TORONTO INTL A}
-
-

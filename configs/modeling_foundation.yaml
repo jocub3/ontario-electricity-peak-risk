@@ -4,7 +4,7 @@ paths:
   reports_dir: "reports/modeling_foundation"
   docs_dir: "docs/modeling_foundation"
   outputs_dir: "outputs/modeling_foundation"
-  
+
 modeling:
   random_seed: 42
 

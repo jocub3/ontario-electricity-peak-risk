@@ -1,0 +1,38 @@
+model:
+  name: "sarimax_rolling"
+  branch: "forecasting/sarimax"
+  horizons: 24
+  target_prefix: "target_h"
+  evaluate_final_holdout: false
+
+  # Reuse the specification already selected by the original tuning run.
+  # The uploaded best_specification.json selected:
+  # order=(2,0,1), seasonal_order=(1,0,0,24), trend="c".
+  best_specification_path: "outputs/modeling/forecasting/sarimax/best_specification.json"
+
+  fit:
+    method: "lbfgs"
+    maxiter: 75
+
+  execution:
+    # Use all history before the validation origin by default.
+    # Set an integer (for example 17520 for 2 years) only if runtime remains excessive.
+    max_training_hours: null
+    minimum_training_hours: 2160
+    progress_every_origins: 250
+
+  smoke_test:
+    fold: "fold_2023"
+    fsa: "L4T"
+    origins: 48
+
+paths:
+  modeling_foundation_config: "configs/modeling_foundation.yaml"
+  feature_dataset: "data/processed/feature_dataset.parquet"
+  forecast_targets: "data/processed/target_definition/forecast_target_complete.parquet"
+
+  # Separate paths preserve the original SARIMAX outputs for comparison.
+  reports_dir: "reports/modeling/forecasting/sarimax_rolling"
+  docs_dir: "docs/modeling/forecasting/sarimax_rolling"
+  outputs_dir: "outputs/modeling/forecasting/sarimax_rolling"
+  figures_dir: "reports/figures/modeling/forecasting/sarimax_rolling"

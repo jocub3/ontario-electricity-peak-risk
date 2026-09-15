@@ -1,0 +1,49 @@
+model:
+  name: "xgboost_classifier"
+  branch: "peak-risk/xgboost-classifier"
+  horizons: 24
+  target_prefix: "peak_h"
+  probability_threshold: 0.50
+  peak_percentile: 0.975
+  evaluate_final_holdout: false
+  random_seed: 42
+
+  tuning:
+    representative_horizons: [1, 12, 24]
+    selection_metric: "pr_auc"
+    parameter_grid:
+
+      - n_estimators: 300
+        max_depth: 4
+        learning_rate: 0.05
+        subsample: 0.8
+        colsample_bytree: 0.8
+        min_child_weight: 3
+        reg_lambda: 1.0
+        imbalance_multiplier: 1.0
+      - n_estimators: 400
+        max_depth: 6
+        learning_rate: 0.05
+        subsample: 0.8
+        colsample_bytree: 0.8
+        min_child_weight: 5
+        reg_lambda: 1.0
+        imbalance_multiplier: 1.0
+      - n_estimators: 300
+        max_depth: 6
+        learning_rate: 0.08
+        subsample: 0.9
+        colsample_bytree: 0.9
+        min_child_weight: 5
+        reg_lambda: 2.0
+        imbalance_multiplier: 0.75
+
+
+paths:
+  modeling_foundation_config: "configs/modeling_foundation.yaml"
+  feature_dataset: "data/processed/feature_dataset.parquet"
+  forecast_targets: "data/processed/target_definition/forecast_target_complete.parquet"
+  reports_dir: "reports/modeling/peak_risk/xgboost"
+  docs_dir: "docs/modeling/peak_risk/xgboost"
+  outputs_dir: "outputs/modeling/peak_risk/xgboost"
+  figures_dir: "reports/figures/modeling/peak_risk/xgboost"

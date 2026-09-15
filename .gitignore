@@ -3,6 +3,17 @@ __pycache__/
 *.py[cod]
 *$py.class
 *.so
+.Python
+
+build/
+dist/
+*.egg-info/
+
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
 
 # Virtual environments
 .venv/
@@ -12,6 +23,7 @@ ENV/
 
 # Jupyter
 .ipynb_checkpoints/
+**/.ipynb_checkpoints/
 
 # IDE / OS
 .vscode/
@@ -28,11 +40,32 @@ Thumbs.db
 data/raw/*
 data/interim/*
 # data/processed/*
+data/processed/target_definition/*
 !data/raw/.gitkeep
 !data/interim/.gitkeep
 !data/processed/.gitkeep
 !data/external/.gitkeep
 !data/sample/**
+
+# Models and generated outputs
+models/*
+!models/.gitkeep
+# outputs/*
+!outputs/.gitkeep
+# reports/figures/*
+!reports/figures/.gitkeep
+
+# Model artifacts
+*.joblib
+
+# Training checkpoints
+**/checkpoints/
+**/smoke_checkpoints/
+
+# Generated figures
+# reports/figures/*
+!reports/figures/.gitkeep
+
 
 # Power BI temporary / lock files
 ~$*.pbix

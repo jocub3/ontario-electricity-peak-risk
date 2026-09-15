@@ -1,0 +1,2 @@
+threshold,precision,recall,f1,balanced_accuracy,true_positive,false_positive,false_negative,true_negative,missed_peak_rate_pct,false_alarm_rate_pct,predicted_peak_rate_pct,actual_peak_rate_pct,n_observations
+0.06,0.930824467670836,0.5544648159144893,0.6949614769588603,0.7554388699547321,59758,4441,48018,97447,44.55351840855107,4.3587076005025125,30.61994429181929,51.4041514041514,209664

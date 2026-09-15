@@ -1,0 +1,38 @@
+{
+  "algorithm": "RandomForestRegressor",
+  "horizons": 24,
+  "hyperparameters": {
+    "n_estimators": 160,
+    "max_depth": null,
+    "min_samples_leaf": 5,
+    "max_features": 0.7
+  },
+  "numeric_features": [
+    "target_hour",
+    "target_weekday",
+    "target_month",
+    "target_is_weekend",
+    "target_hour_sin",
+    "target_hour_cos",
+    "target_weekday_sin",
+    "target_weekday_cos",
+    "target_month_sin",
+    "target_month_cos",
+    "target_lag_24h",
+    "target_lag_48h",
+    "target_lag_168h",
+    "origin_rolling_mean_24h",
+    "origin_rolling_std_24h",
+    "origin_rolling_mean_168h",
+    "origin__Temp (\u00b0C)",
+    "origin__Rel Hum (%)",
+    "origin__Stn Press (kPa)",
+    "origin__reported_premise_count"
+  ],
+  "categorical_features": [
+    "fsa",
+    "target_season"
+  ],
+  "training_start": "2021-01-01 00:00:00",
+  "training_end": "2025-12-30 23:00:00"
+}

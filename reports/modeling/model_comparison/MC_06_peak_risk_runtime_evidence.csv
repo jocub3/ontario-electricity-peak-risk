@@ -1,0 +1,6 @@
+model,family,runtime_seconds_evidence,runtime_minutes_evidence,runtime_source
+Logistic Regression,Baseline,,,unavailable
+HistGradientBoosting,Gradient Boosting,,,unavailable
+Random Forest Classifier,Bagging,1354.9238747000272,22.58206457833379,tuning_details:sum(task_seconds)
+XGBoost Classifier,Gradient Boosting,113.64910820001387,1.8941518033335645,tuning_details:sum(task_seconds)
+LightGBM Classifier,Gradient Boosting,88.6894203999691,1.4781570066661516,tuning_details:sum(task_seconds)

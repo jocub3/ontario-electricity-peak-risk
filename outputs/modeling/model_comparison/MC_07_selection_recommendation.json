@@ -1,0 +1,9 @@
+{
+  "forecasting_primary_candidate": "Random Forest Regressor",
+  "peak_risk_primary_candidate": "Logistic Regression",
+  "notes": [
+    "Primary candidates are selected by the pre-declared primary metric (Forecasting: MAE; Peak-Risk: PR-AUC).",
+    "Guardrails must be reviewed before the selection is considered final.",
+    "The 2025 holdout remains untouched during this phase."
+  ]
+}
