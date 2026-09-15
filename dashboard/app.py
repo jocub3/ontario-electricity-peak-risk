@@ -3,20 +3,13 @@ from __future__ import annotations
 
 import streamlit as st
 from dsa_app.data import load_repository
-from dsa_app.state import render_sidebar_controls
-from dsa_app.pages import selection, executive, forecast_risk, weather_sensitivity, model_insights, project_info
+from dsa_app.state import active_analysis, render_analysis_controls
+from dsa_app.pages import executive, forecast_risk, weather_sensitivity, model_insights, project_info
+from dsa_app.theme import app_css
 
 st.set_page_config(page_title="Ontario Electricity Peak-Risk", page_icon="⚡", layout="wide", initial_sidebar_state="expanded")
 
-st.markdown("""
-<style>
-.block-container {padding-top: 1.4rem; padding-bottom: 2rem; max-width: 1500px;}
-[data-testid="stMetricValue"] {font-size: 1.6rem;}
-</style>
-""", unsafe_allow_html=True)
-
-st.title("⚡ Ontario Electricity Demand & Peak-Risk Decision Support")
-st.caption("24-hour electricity-demand forecasting • Peak-Risk monitoring • temperature sensitivity • model interpretation")
+st.markdown(app_css(), unsafe_allow_html=True)
 
 try:
     repo = load_repository()
@@ -25,23 +18,59 @@ except Exception as exc:
     st.exception(exc)
     st.stop()
 
-page = st.sidebar.radio(
-    "Navigation",
-    ["Forecast Setup", "Executive Summary", "Forecast & Peak-Risk", "Weather Sensitivity", "Model Insights", "Project Information"],
+def _context():
+    origin, fsas = active_analysis(repo)
+    return origin, fsas, repo.prediction_slice(origin, fsas)
+
+
+def _decision_overview():
+    executive.render(repo, *_context())
+
+
+def _forecast_risk():
+    forecast_risk.render(repo, *_context())
+
+
+def _weather_scenarios():
+    weather_sensitivity.render(repo, *_context())
+
+
+def _model_methodology():
+    model_insights.render(repo, *_context())
+
+
+def _about_project():
+    project_info.render(repo, *_context())
+
+
+st.sidebar.markdown("## ⚡ Ontario Peak-Risk")
+st.sidebar.caption("Decision Support System")
+
+navigation = st.navigation(
+    {
+        "DECISION SUPPORT": [
+            st.Page(_decision_overview, title="Decision Overview", icon="📊", default=True),
+            st.Page(_forecast_risk, title="Forecast & Peak Risk", icon="📈"),
+            st.Page(_weather_scenarios, title="Weather Scenarios", icon="🌡️"),
+        ],
+        "TECHNICAL INFORMATION": [
+            st.Page(_model_methodology, title="Model & Methodology", icon="🧠"),
+            st.Page(_about_project, title="About the Project", icon="ℹ️"),
+        ],
+    },
+    position="sidebar",
 )
-origin, fsas = render_sidebar_controls(repo)
-data = repo.prediction_slice(origin, fsas)
+
+st.title("⚡ Ontario Electricity Demand & Peak-Risk Decision Support")
+st.caption("24-hour demand forecasting · Peak-Risk monitoring · temperature sensitivity · model interpretation")
+
+if navigation.title in {"Decision Overview", "Forecast & Peak Risk", "Weather Scenarios"}:
+    render_analysis_controls(repo)
 
 st.sidebar.divider()
-st.sidebar.caption(f"Active origin: {origin:%Y-%m-%d %H:%M}")
-st.sidebar.caption("Active FSAs: " + ", ".join(fsas))
-
-pages = {
-    "Forecast Setup": selection.render,
-    "Executive Summary": executive.render,
-    "Forecast & Peak-Risk": forecast_risk.render,
-    "Weather Sensitivity": weather_sensitivity.render,
-    "Model Insights": model_insights.render,
-    "Project Information": project_info.render,
-}
-pages[page](repo, origin, fsas, data)
+st.sidebar.caption("Public demo")
+st.sidebar.caption(
+    "Using this application requires recent demand history and a weather forecast "
+    "to be preloaded and validated before model execution."
+)
+navigation.run()
