@@ -225,7 +225,6 @@ def _tune_parameters(
                     random_seed=int(model_cfg["random_seed"]),
                 )
 
-                # Train model
                 pipeline.fit(X_train, y_train)
 
                 probability = pipeline.predict_proba(X_validation)[:, 1]
