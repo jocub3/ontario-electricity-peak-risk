@@ -1,0 +1,5 @@
+variable,historical_min,historical_p01,historical_p99,historical_max
+total_consumption_kwh,1377.7,2586.3289999999997,21178.170000000006,33712.2
+Temp (°C),-21.8,-11.9,29.4,35.8
+Rel Hum (%),14.0,28.0,100.0,100.0
+Stn Press (kPa),95.7,97.7,101.72,103.25

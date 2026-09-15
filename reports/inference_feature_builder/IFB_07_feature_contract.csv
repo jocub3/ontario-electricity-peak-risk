@@ -1,0 +1,45 @@
+model,feature,status,detail
+RandomForestRegressor,target_hour,PASS,available
+RandomForestRegressor,target_weekday,PASS,available
+RandomForestRegressor,target_month,PASS,available
+RandomForestRegressor,target_is_weekend,PASS,available
+RandomForestRegressor,target_hour_sin,PASS,available
+RandomForestRegressor,target_hour_cos,PASS,available
+RandomForestRegressor,target_weekday_sin,PASS,available
+RandomForestRegressor,target_weekday_cos,PASS,available
+RandomForestRegressor,target_month_sin,PASS,available
+RandomForestRegressor,target_month_cos,PASS,available
+RandomForestRegressor,target_lag_24h,PASS,available
+RandomForestRegressor,target_lag_48h,PASS,available
+RandomForestRegressor,target_lag_168h,PASS,available
+RandomForestRegressor,origin_rolling_mean_24h,PASS,available
+RandomForestRegressor,origin_rolling_std_24h,PASS,available
+RandomForestRegressor,origin_rolling_mean_168h,PASS,available
+RandomForestRegressor,origin__Temp (°C),PASS,available
+RandomForestRegressor,origin__Rel Hum (%),PASS,available
+RandomForestRegressor,origin__Stn Press (kPa),PASS,available
+RandomForestRegressor,origin__reported_premise_count,PASS,available
+RandomForestRegressor,fsa,PASS,available
+RandomForestRegressor,target_season,PASS,available
+XGBoostClassifier,target_hour,PASS,available
+XGBoostClassifier,target_weekday,PASS,available
+XGBoostClassifier,target_month,PASS,available
+XGBoostClassifier,target_is_weekend,PASS,available
+XGBoostClassifier,target_hour_sin,PASS,available
+XGBoostClassifier,target_hour_cos,PASS,available
+XGBoostClassifier,target_weekday_sin,PASS,available
+XGBoostClassifier,target_weekday_cos,PASS,available
+XGBoostClassifier,target_month_sin,PASS,available
+XGBoostClassifier,target_month_cos,PASS,available
+XGBoostClassifier,target_lag_24h,PASS,available
+XGBoostClassifier,target_lag_48h,PASS,available
+XGBoostClassifier,target_lag_168h,PASS,available
+XGBoostClassifier,origin_rolling_mean_24h,PASS,available
+XGBoostClassifier,origin_rolling_std_24h,PASS,available
+XGBoostClassifier,origin_rolling_mean_168h,PASS,available
+XGBoostClassifier,origin__Temp (°C),PASS,available
+XGBoostClassifier,origin__Rel Hum (%),PASS,available
+XGBoostClassifier,origin__Stn Press (kPa),PASS,available
+XGBoostClassifier,origin__reported_premise_count,PASS,available
+XGBoostClassifier,fsa,PASS,available
+XGBoostClassifier,target_season,PASS,available

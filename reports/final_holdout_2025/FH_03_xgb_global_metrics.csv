@@ -1,0 +1,2 @@
+model,operational_threshold,precision,recall,f1,balanced_accuracy,pr_auc,roc_auc,brier_score,true_negative,false_positive,false_negative,true_positive,actual_peak_rate_pct,predicted_peak_rate_pct,n_observations
+XGBoostClassifier,0.06,0.3410292154327565,0.9302338939435714,0.49908934300180896,0.898303730877994,0.7118038291008948,0.9635825960713476,0.042783007224280835,1014468,156468,6073,80975,6.919642857142858,18.874882351444853,1257984

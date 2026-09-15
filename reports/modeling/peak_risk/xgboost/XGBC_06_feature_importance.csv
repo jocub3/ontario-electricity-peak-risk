@@ -1,0 +1,31 @@
+﻿feature,importance
+target_hour_sin,0.18329632
+target_hour,0.12932028
+target_season_Summer,0.059518278
+origin__Temp (°C),0.048384357
+target_lag_24h,0.048135933
+target_month_cos,0.044291124
+target_month_sin,0.040972617
+target_season_Winter,0.03827856
+fsa_M9W,0.037248958
+target_hour_cos,0.037018094
+fsa_M5R,0.035795353
+fsa_M5S,0.027430383
+fsa_L4T,0.025816651
+target_is_weekend,0.023280427
+target_season_Spring,0.02130113
+target_season_Fall,0.0195739
+fsa_M6G,0.018835189
+target_month,0.018340705
+origin__reported_premise_count,0.017873567
+target_weekday,0.015771067
+fsa_M9R,0.015709827
+target_weekday_cos,0.013539295
+origin_rolling_mean_24h,0.013093074
+origin_rolling_std_24h,0.01280497
+origin_rolling_mean_168h,0.010441705
+origin__Rel Hum (%),0.009652946
+target_weekday_sin,0.009215698
+origin__Stn Press (kPa),0.0087843975
+target_lag_168h,0.0083816005
+target_lag_48h,0.007893595
