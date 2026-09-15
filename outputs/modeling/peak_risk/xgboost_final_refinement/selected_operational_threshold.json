@@ -1,0 +1,23 @@
+{
+  "selected_threshold": 0.06,
+  "selection_rule": "Thresholds must satisfy configured minimum Recall and Precision in every development fold; among feasible thresholds maximize worst-fold F1, then worst-fold Recall, mean F1, mean Precision.",
+  "minimum_recall_each_fold": 0.6,
+  "minimum_precision_each_fold": 0.2,
+  "selected_summary": {
+    "threshold": 0.06,
+    "min_precision": 0.2565577650283741,
+    "mean_precision": 0.3954984818506678,
+    "max_precision": 0.5344391986729616,
+    "min_recall": 0.6072741244445089,
+    "mean_recall": 0.7912596500109289,
+    "max_recall": 0.9752451755773489,
+    "worst_fold_f1": 0.4062447236532704,
+    "mean_f1": 0.48738907735970316,
+    "f1_range": 0.16228870741286555,
+    "worst_fold_balanced_accuracy": 0.7710615271758321,
+    "mean_balanced_accuracy": 0.8498323437571776,
+    "max_missed_peak_rate_pct": 39.27258755554911,
+    "mean_missed_peak_rate_pct": 20.874034998907106,
+    "mean_false_alarm_rate_pct": 9.159496249657362
+  }
+}
