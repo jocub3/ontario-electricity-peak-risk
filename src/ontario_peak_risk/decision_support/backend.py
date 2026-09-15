@@ -109,21 +109,28 @@ class DemoRepository:
         if data.empty:
             return {}
 
+        combined = (
+            data.groupby("target_timestamp", as_index=False)
+            .agg(combined_demand_kwh=("forecast_consumption_kwh", "sum"))
+            .sort_values("target_timestamp")
+        )
+        combined_row = combined.loc[combined["combined_demand_kwh"].idxmax()]
         demand_idx = data["forecast_consumption_kwh"].idxmax()
         risk_idx = data["peak_risk_score"].idxmax()
         demand_row = data.loc[demand_idx]
         risk_row = data.loc[risk_idx]
+        alerts = data[data["peak_alert"].astype(bool)]
 
         return {
-            "expected_maximum_demand_kwh": float(
-                demand_row["forecast_consumption_kwh"]
-            ),
+            "maximum_combined_demand_kwh": float(combined_row["combined_demand_kwh"]),
+            "maximum_combined_demand_hour": pd.Timestamp(combined_row["target_timestamp"]),
+            "maximum_fsa_demand_kwh": float(demand_row["forecast_consumption_kwh"]),
             "maximum_demand_fsa": str(demand_row["fsa"]),
-            "maximum_demand_hour": pd.Timestamp(
-                demand_row["target_timestamp"]
-            ),
+            "maximum_fsa_demand_hour": pd.Timestamp(demand_row["target_timestamp"]),
             "highest_risk_score": float(risk_row["peak_risk_score"]),
             "highest_risk_fsa": str(risk_row["fsa"]),
             "highest_risk_hour": pd.Timestamp(risk_row["target_timestamp"]),
-            "peak_risk_alerts": int(data["peak_alert"].astype(bool).sum()),
+            "unique_alert_hours": int(alerts["target_timestamp"].nunique()),
+            "fsa_hour_alerts": int(len(alerts)),
+            "alert_fsas": int(alerts["fsa"].nunique()),
         }

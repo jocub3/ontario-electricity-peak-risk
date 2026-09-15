@@ -39,7 +39,7 @@ precomputed Parquet/JSON outputs only.
 
 ## Deployment Boundary
 
-The public application does **not** load the approximately 13 GB Random
+The public application does **not** load the Random
 Forest artifact bundle. Model execution remains an offline/local pipeline
 concern. The web application remains interactive because users can select
 forecast origins, FSAs, horizons, and weather scenarios from the
