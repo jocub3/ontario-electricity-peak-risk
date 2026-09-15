@@ -1,0 +1,27 @@
+project:
+  name: "Ontario Electricity Demand Forecasting and Peak-Risk Decision Support System"
+  random_seed: 42
+
+paths:
+  raw_data: "data/raw"
+  interim_data: "data/interim"
+  processed_data: "data/processed"
+  models: "models"
+  outputs: "outputs"
+
+data:
+  frequency: "h"
+  forecast_horizon: 24
+  target_column: "electricity_consumption"
+  timestamp_column: "timestamp"
+
+split:
+  train_end: null
+  validation_end: null
+  test_end: null
+
+peak_risk:
+  percentile_threshold: 0.975
+
+weather_scenarios:
+  temperature_offsets_celsius: [0, 2, 5, -2, -5]

@@ -1,0 +1,13 @@
+phase:
+  name: "integrated_prediction_pipeline"
+  branch: "pipeline/integrated-prediction"
+
+paths:
+  artifacts_dir: "artifacts/final_models"
+  outputs_dir: "outputs/integrated_pipeline"
+  docs_dir: "docs/integrated_pipeline"
+  figures_dir: "reports/figures/integrated_pipeline"
+
+prediction:
+  horizons: 24
+  peak_operational_threshold: 0.06

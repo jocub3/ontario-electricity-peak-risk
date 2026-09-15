@@ -1,0 +1,35 @@
+model:
+  name: "sarimax"
+  branch: "forecasting/sarimax"
+  horizons: 24
+  target_prefix: "target_h"
+  evaluate_final_holdout: false
+
+  strategy: "direct_multi_horizon_by_fsa"
+
+  tuning:
+    representative_horizons: [1, 12, 24]
+    representative_fsas: ["L4T", "M9W"]
+    specifications:
+      - order: [1, 0, 1]
+        seasonal_order: [1, 0, 0, 24]
+        trend: "c"
+      - order: [2, 0, 1]
+        seasonal_order: [1, 0, 0, 24]
+        trend: "c"
+      - order: [1, 0, 2]
+        seasonal_order: [1, 0, 1, 24]
+        trend: "c"
+
+  fit:
+    maxiter: 100
+    method: "lbfgs"
+
+paths:
+  modeling_foundation_config: "configs/modeling_foundation.yaml"
+  feature_dataset: "data/processed/feature_dataset.parquet"
+  forecast_targets: "data/processed/target_definition/forecast_target_complete.parquet"
+  reports_dir: "reports/modeling/forecasting/sarimax"
+  docs_dir: "docs/modeling/forecasting/sarimax"
+  outputs_dir: "outputs/modeling/forecasting/sarimax"
+  figures_dir: "reports/figures/modeling/forecasting/sarimax"
